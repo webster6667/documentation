@@ -10,10 +10,9 @@
 * **<a href="./pages/solid">OOP</a>**
 * **<a href="./pages/cookie">HTTP Cookie</a>**
 * **<a href="./pages/http">HTTP</a>**
-* **<a href="./pages/http">Authorization</a>**
+* **<a href="./pages/http">Авторизация</a>**
 * **<a href="./pages/mobile-first">Mobile First</a>**
-* **<a href="./pages/http">Mobile First</a>**
-* **<a href="./pages/progressive-degradation">Progressive Degradation</a>**
-* **<a href="./pages/adaptive-responsive-page-proofs">Adaptive and Responsive Page Proofs</a>**
-* **<a href="./pages/progressive-rendering">Progressive Rendering</a>**
-* **<a href="./pages/semantics-page-proofs">Semantics Page Proofs</a>**
+* **<a href="./pages/progressive-degradation">Постепенная деградация или прогрессивное улучшение</a>**
+* **<a href="./pages/adaptive-responsive-page-proofs">Адаптивная и отзывчивая верстка</a>**
+* **<a href="./pages/progressive-rendering">Прогрессивный рендеринг</a>**
+* **<a href="./pages/semantics-page-proofs">Семантическая верстка</a>**
