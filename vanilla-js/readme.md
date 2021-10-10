@@ -11,3 +11,7 @@
 * **<a href="./pages/scope">Scope / область видимости</a>**
 * **<a href="./pages/closure">Замыкание</a>**
 * **<a href="./pages/higher-order-functions">Higher Order Functions / функции высшего порядка</a>**
+
+
+
+1.this, prototype, class, constructor, object,  
