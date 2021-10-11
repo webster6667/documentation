@@ -2,6 +2,7 @@
 * **<a href="#compare">Сравнение объекта</a>**
 * **<a href="#clone">Клонирование объекта</a>**
 * **<a href="#key-exist">Проверка наличия ключа</a>**
+* **<a href="#values-cycle">Перебор свойств</a>**
 
 ## <a name="create">Создание объектов</a>
 * Сложный и более детальный, при помощи <a href="./../create-with-descriptors">`Object.create(objectPrototype, valuesWithDescriptrs)`</a> - рассмотренн в отдельной главе
@@ -146,3 +147,7 @@ if ('city' in user) console.log('in return true')
     * вернет `false`, если ключь есть, но равен `undefined, null, NaN, false, 0, ''`
 * При помощи `in`    
     *  всегда вернет true, если ключь определен
+    
+## <a name="values-cycle">Перебор свойств</a>
+Для перебора ключей используется ранее изученный цикл `for in`  
+Он захватывает свойства прототипа, по этому для того что бы удостоверится что это свойство объекта, нужно использовать `myObject.hasOwnProperty(value)`    
