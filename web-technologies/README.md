@@ -7,10 +7,10 @@
 * **<a href="./pages/cors">Определение браузерных возможностей пользователя</a>**
 * **<a href="./pages/babel">Babel</a>**
 * **<a href="./pages/solid">SOLID</a>**
-* **<a href="./pages/solid">OOP</a>**
+* **<a href="./pages/oop">OOP</a>**
 * **<a href="./pages/cookie">HTTP Cookie</a>**
 * **<a href="./pages/http">HTTP</a>**
-* **<a href="./pages/http">Авторизация</a>**
+* **<a href="./pages/authorization">Авторизация</a>**
 * **<a href="./pages/mobile-first">Mobile First</a>**
 * **<a href="./pages/progressive-degradation">Постепенная деградация или прогрессивное улучшение</a>**
 * **<a href="./pages/adaptive-responsive-page-proofs">Адаптивная и отзывчивая верстка</a>**
