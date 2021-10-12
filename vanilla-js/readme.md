@@ -11,11 +11,11 @@
 * **<a href="./pages/scope">Scope / область видимости</a>**
 * **<a href="./pages/closure">Замыкание</a>**
 * **<a href="./pages/higher-order-functions">Higher Order Functions / функции высшего порядка</a>**
-* **<a href="./pages/string">Методы строк !</a>**
+* **<a href="./pages/string">Методы строк</a>**
 * **<a href="./pages/objects">Регулярные выражения !</a>**
-* **<a href="./pages/objects">Методы чисел !</a>**
+* **<a href="./pages/objects">Методы чисел</a>**
 * **<a href="./pages/objects">Объекты</a>**
-* **<a href="./pages/objects">Классы !</a>**
+* **<a href="./pages/objects">Классы </a>**
 * **<a href="./pages/objects">Массивы !</a>**
 * **<a href="./pages/objects">Промисы !</a>**
 * **<a href="./pages/objects">Async/await !</a>**
