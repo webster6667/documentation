@@ -75,6 +75,43 @@ addEventListener('scroll', throttle(scrollHandler, 100))
 
 <br>
 
+`debounce`
+```javascript
+const debounce = (fn, ms) => {
+  let timeout;
+
+  return function (...args) {
+    const fnCall = () => {
+      fn.apply(this, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(fnCall, ms);
+
+    return timeout;
+  };
+};
+
+const validateData = (e) => {
+  let $input = e.target;
+
+  if ($input.value.length > 3) {
+    console.log("ошибка");
+  }
+};
+
+const myInput = document.querySelector("#myInput");
+myInput.oninput = debounce(validateData, 500);
+```
+1. Оборачиваем вызываемую функцию
+
+2. Сохраняем timeoutId в замыкании
+
+3. Устанавливаем таймер через который должна вызватся функция
+
+4. Если функцию вызывают опять, и в timeoutId есть значение
+
+5. Удаляем старый таймаут, ставим новый
+
 ## Когда полезно замыкание
 * Когда нужно определить какие либо параметры функции, еще до ее вызова
 * Когда нужно сохранять состояние переменных после выполения функции
