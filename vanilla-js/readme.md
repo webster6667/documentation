@@ -11,7 +11,7 @@
 * **<a href="./pages/scope">Scope / область видимости</a>**
 * **<a href="./pages/closure">Замыкание</a>**
 * **<a href="./pages/higher-order-functions">Higher Order Functions / функции высшего порядка</a>**
-* **<a href="./pages/objects">Методы строк !</a>**
+* **<a href="./pages/string">Методы строк !</a>**
 * **<a href="./pages/objects">Регулярные выражения !</a>**
 * **<a href="./pages/objects">Методы чисел !</a>**
 * **<a href="./pages/objects">Объекты</a>**
