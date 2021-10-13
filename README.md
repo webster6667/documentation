@@ -1,5 +1,6 @@
 # Заметки
 
+* **<a href="/emoji-instruction">Emoji Instruction</a>**
 * **<a href="/web-technologies">Web Technologies</a>**
 * **<a href="/vanilla-js">Vanilla Js</a>**
 * **<a href="/web-technologies">React</a>**
