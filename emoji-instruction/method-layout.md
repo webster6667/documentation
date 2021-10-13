@@ -1,4 +1,4 @@
-💠 **myArray.splice(`startIndex, deleteQuantity, elAdd`)**
+💠 **myArray.splice`(startIndex, deleteQuantity, elAdd)`**
 
 <br>
 
