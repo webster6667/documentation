@@ -63,11 +63,11 @@ ___
 
 &emsp;&emsp; 🔹 `Symbol('mySymbol')` не преобразуется автоматически к строке  
 &emsp;&emsp; 👆 Для этого есть методы:   
-&emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))`   
-&emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()`
+&emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` => `"Symbol('mySymbol')"`   
+&emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` => `"Symbol('mySymbol')"`
 
 ##### 👉 **<a href="../../readme.md">Подробней</a>**
      
 <br>
 
-`typeof x` - вернет тип указанной переменной x 
+💠 `typeof x` - вернет тип указанной переменной `x` 
