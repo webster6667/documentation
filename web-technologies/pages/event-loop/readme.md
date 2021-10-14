@@ -4,6 +4,11 @@
   </p>
 </a>
 
+https://www.youtube.com/watch?v=SUkauGm52Qs&ab_channel=PlatinumDEV
+
+* Макро задачи - таймаут
+* Микро задачи - промис, try/catch, Promis job, быстрее выполнится промис
+
 # Event loop
 
 JavaScript - однопоточный язык программирования, это значит что в текущий момент времени, мы можем выполнять только одну задачу.

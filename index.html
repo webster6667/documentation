@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+
+        function wrapper(fn, limit) {
+            let callCount = 0;
+
+            function Wrapper() {
+                
+            }
+            
+            return new Wrapper()
+            
+        }
+
+        function logger() {
+            console.log("my-log");
+        }
+
+        const instance = wrapper(logger, 3);
+
+        console.log(instance)
+        
+        // instance.reset()
+        
+        // instance.reset();
+        // instance();
+        // instance();
+    
+    </script>
+    
+</head>
+
+<body>
+
+</body>
+</html>
