@@ -66,7 +66,7 @@ ___
 &emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` => `"Symbol('mySymbol')"`   
 &emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` => `"Symbol('mySymbol')"`
 
-##### 👉 **<a href="../../readme.md">Подробней</a>**
+##### 👉 **<a href="pages/symbol/readme.md">Подробней</a>**
      
 <br>
 
