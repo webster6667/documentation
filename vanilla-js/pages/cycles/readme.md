@@ -2,7 +2,9 @@
 
 💠 **whine**   
 👆🏽 Тело цикла выполняется, пока `condition === true`
-```
+```javascript
+let condition = true
+
 while (condition) {
   //тело цикла
 }
@@ -12,7 +14,9 @@ while (condition) {
 
 💠 **do while**   
 👆🏽 Выполняется тело цикла, если `condition === true`, выполняет следующую итерацию
-```
+```javascript
+let condition = true
+
 do {
  //тело цикла
 } while (condition)
@@ -28,7 +32,9 @@ do {
 &emsp;&emsp; 🔹 Создает блочную переменную `let i = 0`            
 
 
-```
+```javascript
+let condition = true
+
 for (let i = 0; condition; i++) {
 
 }
@@ -44,7 +50,7 @@ for (let i = 0; condition; i++) {
 🛑 Не желателен для массивов:  
 * Не гарантирует порядок элементов   
 * Может затянуть лишние свойства из прототипа
-```
+```javascript
 const user = {
   name: 'Alex',
   surname: 'Mirgorodsky'	
@@ -70,7 +76,7 @@ for (let key in user) {
 
 &emsp;&emsp; 🔹 Нет доступа к ключам    
 
-```
+```javascript
 const users = [
     {
         name: 'Alex'
