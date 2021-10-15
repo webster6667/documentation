@@ -158,8 +158,10 @@ console.log(usersWithReact)
 ```
 [![Edit hopeful-pine-4hgg2](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/hopeful-pine-4hgg2?fontsize=14&hidenavigation=1&theme=dark)
 
-#####❗ Нельзя использовать директивы с логическими операторами
+##### ❗ Нельзя использовать директивы с логическими операторами
+
 🔹 `if (isTrue) continue` - Работает     
+
 🔹 `isTrue ? continue : i++` - Не работает
 
 
