@@ -2,7 +2,7 @@
 
 <br>
 
-💠 **Symbol.for`('mySymbol').description`**
+💠 **Symbol`('mySymbol').description`**  
 👆🏽 Вернет имя метки символа
 
 <br><br>
