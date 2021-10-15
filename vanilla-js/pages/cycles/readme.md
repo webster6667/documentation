@@ -8,6 +8,7 @@ while (condition) {
 }
 ```
 
+<br>
 
 💠 **do while**   
 👆🏽 Выполняется тело цикла, если `condition === true`, выполняет следующую итерацию
@@ -17,6 +18,7 @@ do {
 } while (condition)
 ```
 
+<br>
 
 💠 **for**   
 👆🏽 Тело цикла  выполняется, пока `condition === true`   
@@ -32,6 +34,7 @@ for (let i = 0; condition; i++) {
 }
 ```
 
+<br>
 
 ## 🚩 for in/off
 
@@ -57,6 +60,8 @@ for (let key in user) {
 }
 ```
 
+<br>
+
 💠 **for of**   
 👆🏽 Цикл для массивом , перебирает значения массива 
 
@@ -79,6 +84,8 @@ for (let user of users) {
     console.log(user); // => {name: 'Alex'}
 }
 ```
+
+<br>
 
 ⚡️ **for of: для объектов**
 
@@ -106,8 +113,12 @@ for (let key of Object.keys(user)) {
 💠 **break**   
 👆🏽 Остановить цикл
 
+<br>
+
 💠 **continue**   
 👆🏽 Пропустить шаг
+
+<br>
 
 💠 **Метки**   
 👆🏽 Имя цикла `myCycle: for(;;)`, через которое можно воздействовать на цикл, из внутренних циклов
