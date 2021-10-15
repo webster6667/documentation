@@ -47,7 +47,7 @@ var myVar = 'string'
 💠 Использование `let, const` до объявления
 
 ```javascript
-console.log(let) // => выбросит ошибку
+console.log(myVar) // => выбросит ошибку
 
 let myVar = 'string'
 ```
