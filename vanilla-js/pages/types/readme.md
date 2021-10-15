@@ -49,7 +49,7 @@ ___
 &emsp;&emsp; 🛑 `typeof null` - вернет `object`(баг языка)  
 
 &emsp;&emsp; 🛑 `null` трансформируется в `0`, всегда, кроме не строгово равенства `==`  
-&emsp;&emsp;&emsp;&emsp; 👆 `null == null`: **true**
+&emsp;&emsp;&emsp;&emsp; 👆 `null == null`: **true**  
 &emsp;&emsp;&emsp;&emsp; 👆 `null == 0`: **false**
 
 <br>
