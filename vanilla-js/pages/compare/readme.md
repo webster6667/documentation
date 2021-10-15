@@ -88,5 +88,6 @@
 &emsp;&emsp; 🔹 Сравнение с `NaN` всегда вернет `false`, даже при `NaN === NaN`
 
 &emsp;&emsp; 🔹 НЕСРАВНЕННЫЙ `undefined`    
-&emsp;&emsp;&emsp;&emsp; 👆 Сравнение с undefined всегда вернет false, кроме `undefined == null`, `undefined == undefined`, `undefined === undefined`
+&emsp;&emsp;&emsp;&emsp; 👆 Сравнение с undefined всегда вернет false, 
+&emsp;&emsp;&emsp;&emsp; кроме `undefined == null`, `undefined == undefined`, `undefined === undefined`
 
