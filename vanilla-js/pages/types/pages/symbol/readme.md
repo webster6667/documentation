@@ -1,4 +1,4 @@
-#Symbol 
+# Symbol 
 
 <br>
 
@@ -30,4 +30,4 @@ console.log(symbol3 == symbol4) //true
 ```
 
 
-### **<a href="../../readme.md">Назад</a>**
+### ⟵ **<a href="../../readme.md">Назад</a>**

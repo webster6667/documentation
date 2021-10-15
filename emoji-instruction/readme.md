@@ -1,4 +1,5 @@
 https://getemoji.com/
+https://fsymbols.com/signs/arrow/
 
 🔴🟠🟡🟢🔵🟣🟤⚫⚪🔘🛑⭕
 

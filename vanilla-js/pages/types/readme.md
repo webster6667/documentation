@@ -59,7 +59,7 @@ ___
 &emsp;&emsp; 🔹 Создается без new - `Symbol('mySymbol')`   
    
 &emsp;&emsp; 🔹 Всегда вернет уникальное значение  
-&emsp;&emsp; 👆 Если вызывается без метода `for`
+&emsp;&emsp;&emsp;&emsp; 👆 Если вызывается без метода `for`
 
 &emsp;&emsp; 🔹 Не виден циклами 
   
@@ -70,7 +70,7 @@ ___
 &emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` => `"Symbol('mySymbol')"`   
 &emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` => `"Symbol('mySymbol')"`
 
-##### 👉 **<a href="pages/symbol/readme.md">Подробней</a>**
+##### 📗  **<a href="pages/symbol/readme.md">Подробней</a>**
      
 <br>
 
