@@ -41,7 +41,7 @@ myInput.oninput = debounce(validateData, 500);
 
 <br><br>
 
-💠 **Throttle`(fn, ms)`**
+💠 **Throttle`(fn, ms)`**  
 👆🏽 Выполняент `fn`, и игнорирует все вызовы `fn`, которые приходят в течении `ms`  
 
 ```javascript
