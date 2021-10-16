@@ -160,6 +160,6 @@ console.log(elementSizes.getSizes()); // => {width: 0, height: 0}
 
 ---
 
-##### 📗  **<a href="pages/examplex/readme.md">Больше примеров замыкания</a>**
+##### 📗  **<a href="examplex/readme.md">Больше примеров замыкания</a>**
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
