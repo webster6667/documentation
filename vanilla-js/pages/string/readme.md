@@ -76,9 +76,9 @@
 'abcd'.startsWith('abc') // true
 
 
+'abcd'.startsWith('bc', 1) // => true
 //🎯 Поиск начнется с символа с индексом 1 => 'b'
 //🎯 'bcd' начинается на 'bc'
-'abcd'.startsWith('bc', 1) // => true
 ```
 <br><br>
 
@@ -91,9 +91,10 @@
 ```javascript
 'abcd'.endsWith('cd') // => true
 
+
+'abcd'.endsWith('bc', 3) // => true
 //🎯 Поиск будет вестить в 3-x символах => 'abc'
 //🎯 'abc' заканчивается на 'bc'
-'abcd'.endsWith('bc', 3) // => true
 ```
    
 <br><br>
