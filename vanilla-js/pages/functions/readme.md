@@ -126,8 +126,8 @@ sayHi(); // Hello
 &emsp;&emsp;&emsp;&emsp; 👆 **[].join.call`(arguments)`**  
 &emsp;&emsp;&emsp;&emsp; Отдолжит метод который раотает с `this` у массива
 
-```
-function myFunc(a, b, d) => {
+```javascript
+function myFunc(a, b, d) {
     return arguments
 }
 
