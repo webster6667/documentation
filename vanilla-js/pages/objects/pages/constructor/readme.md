@@ -9,6 +9,8 @@
 ```javascript
 function User(name) {
   this.name = name
+  
+  return this // this явно возвращать не нужно, тут это для примера
 }
 
 console.log(User('Ben')) // => window
