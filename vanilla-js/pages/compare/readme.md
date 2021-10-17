@@ -37,12 +37,20 @@
      
 &emsp;&emsp; 🔹 `false == 0 ` --> `0 == 0`
       
-&emsp;&emsp; 🔹 `’my-string’ > 1` --> `NaN > 1`
+&emsp;&emsp; 🛑 Сравнение с `NaN` всегда вернет `false` 
         
-&emsp;&emsp;&emsp;&emsp; 👆 Сравнение с `NaN` всегда вернет `false`
+&emsp;&emsp;&emsp;&emsp; 👆 `’my-string’ > 1` --> `NaN > 1`
 
-&emsp;&emsp; 🔹 `null == 0` --> `null == 0` = `false`   
-&emsp;&emsp;&emsp;&emsp; 👆 При не строгом сравнении `==` **null** ничему не равно кроме `undefined` и `null`      
+&emsp;&emsp; 🔹 `null >= 0` --> `0 >= 0` = `true`
+
+&emsp;&emsp; 🔹 `null > 0` --> `0 > 0` = `false`
+
+
+&emsp;&emsp; 🛑 При не строгом сравнении `==` **null** ничему не равно кроме `undefined` и `null`      
+&emsp;&emsp;&emsp;&emsp; 👆 `null == 0` --> `null == 0` = `false`    
+&emsp;&emsp;&emsp;&emsp; 👆 `null == null` --> `null == null` = `true`        
+&emsp;&emsp;&emsp;&emsp; 👆 `null == undefined` --> `null == undefined` = `true`        
+
 
 <br>
 <br>
