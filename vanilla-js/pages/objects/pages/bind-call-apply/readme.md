@@ -56,7 +56,8 @@ const myObject = {
 
 myFn.apply(myObject, ['Hi']) // Hi Ben
 ```
-___
+
+<br>
 
 ## 🚩 Собственная реализация метода `bind`
 
