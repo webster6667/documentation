@@ -73,8 +73,8 @@ ___
 
 &emsp;&emsp; 🔹 `Symbol('mySymbol')` не преобразуется автоматически к строке  
 &emsp;&emsp;&emsp;&emsp; 👆 Для этого есть методы:   
-&emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` => `"Symbol('mySymbol')"`   
-&emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` => `"Symbol('mySymbol')"`
+&emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` --> `"Symbol('mySymbol')"`   
+&emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` --> `"Symbol('mySymbol')"`
 
 ##### 📗  **<a href="pages/symbol/readme.md">Подробней</a>**
      
