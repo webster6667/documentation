@@ -71,4 +71,6 @@ const myObject = Object.create(
 console.log(myObject.getUserName());
 ```
 
+<br>
+
 ### ⟵ **<a href="../../readme.md">Назад</a>**
