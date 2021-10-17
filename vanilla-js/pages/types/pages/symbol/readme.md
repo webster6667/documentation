@@ -4,6 +4,17 @@
 
 💠 **Symbol`('mySymbol').description`**  
 👆🏽 Вернет имя метки символа
+```javascript
+const value1 = Symbol('mySymbol')
+
+value1.description // => mySymbol
+
+
+const value2 = Symbol()
+
+value2.description // => undefined
+```
+
 
 <br><br>
 
