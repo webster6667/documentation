@@ -87,4 +87,4 @@ addEventListener('scroll', throttle(scrollHandler, 100))
 
 <br>
 
-### ⟵ **<a href="../../readme.md">Назад</a>**
+### ⟵ **<a href="../readme.md">Назад</a>**
