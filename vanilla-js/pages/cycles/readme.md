@@ -103,6 +103,10 @@ const user = {
   surname: 'Mirgorodsky'	
 }
 
+for (let [key, value] of Object.entries(user)) {
+  console.log(key) // => name
+  console.log(value)// => 'Alex'
+}
 
 for (let key of Object.keys(user)) {
   let value = user[key] 

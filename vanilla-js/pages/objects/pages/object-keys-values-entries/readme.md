@@ -1,12 +1,39 @@
 # Трансформация объекта в массив
 ```javascript
-const user = {
+const myObject = {
     name: 'Ben',
     age: 22
 }
 ```
 
-* `Object.keys` - вернет ключи объекта `['name', 'age']` 
-* `Object.values` - вернет значениея объекта `['Ben', 2]` 
-* `Object.entries` - вернет значениея объекта `[ ["name","Ben"], ["age",22] ]`
-* `Object.fromEntries(array)` - преобразует результат `Object.entries(object)`, обратно в объект 
+<br>
+
+💠 **Object.keys`(myObject)`**   
+👆🏽 Вернет ключи объекта 
+```javascript
+Object.keys(myObject) // => ['name', 'age']
+``` 
+
+<br>
+<br>
+
+💠 **Object.entries`(myObject)`**   
+👆🏽 Вернет массисы ключ/значения объекта 
+```javascript
+Object.entries(myObject) // => [ ["name","Ben"], ["age",22] ]
+``` 
+
+<br>
+<br>
+
+💠 **Object.fromEntries`(objectEntries)`** 
+👆🏽 Вернет результат работы `Object.entries(myObject)`, обратно в объект
+```javascript
+const objectEntries = Object.entries(myObject) // => [ ["name","Ben"], ["age",22] ]
+
+Object.fromEntries(objectEntries) // {name: 'Ben',age: 22}
+```
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>** 
