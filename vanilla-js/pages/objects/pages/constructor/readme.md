@@ -36,3 +36,7 @@ const user1 = new User('Ben') //=> {name: 'userName'}
 const  user2 = new User2('Jon')  //=> {name: 'Jon'} 
 // Конструктор вернул this, примитив откинул
 ```
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
