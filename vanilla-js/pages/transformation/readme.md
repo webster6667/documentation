@@ -80,13 +80,24 @@
 
 💠 **Правила**
 
-&emsp;&emsp; 🔹 `Boolean(1)` = `true`  
-&emsp;&emsp; 🔹 `Boolean('0')` = `true`  
-&emsp;&emsp; 🔹 `Boolean('string')` = `true`  
-&emsp;&emsp; 🔹 `Boolean(0)` = `false`  
-&emsp;&emsp; 🔹 `Boolean(null)` = `false`  
-&emsp;&emsp; 🔹 `Boolean(undefined)` = `false`  
+&emsp;&emsp; 🔹 `Boolean(1)` = `true`
+
+&emsp;&emsp; 🔹 `Boolean(-1)` = `true`
+  
+&emsp;&emsp; 🔹 `Boolean('0')` = `true`
+  
+&emsp;&emsp; 🔹 `Boolean('string')` = `true`
+  
+&emsp;&emsp; 🔹 `Boolean(0)` = `false`
+
 &emsp;&emsp; 🔹 `Boolean('')` = `false`  
+  
+&emsp;&emsp; 🔹 `Boolean(null)` = `false`
+  
+&emsp;&emsp; 🔹 `Boolean(undefined)` = `false`
+
+&emsp;&emsp; 🔹 `Boolean(NaN)` = `false`
+  
     
 <br>
 
