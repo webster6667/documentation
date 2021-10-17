@@ -18,7 +18,7 @@ Object.keys(myObject) // => ['name', 'age']
 <br>
 
 💠 **Object.entries`(myObject)`**   
-👆🏽 Вернет массисы ключ/значения объекта 
+👆🏽 Вернет массивы `[ключ,значения]` объекта 
 ```javascript
 Object.entries(myObject) // => [ ["name","Ben"], ["age",22] ]
 ``` 
@@ -26,7 +26,7 @@ Object.entries(myObject) // => [ ["name","Ben"], ["age",22] ]
 <br>
 <br>
 
-💠 **Object.fromEntries`(objectEntries)`** 
+💠 **Object.fromEntries`(objectEntries)`**     
 👆🏽 Вернет результат работы `Object.entries(myObject)`, обратно в объект
 ```javascript
 const objectEntries = Object.entries(myObject) // => [ ["name","Ben"], ["age",22] ]
