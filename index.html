@@ -6,30 +6,17 @@
     
     <script>
 
-        function wrapper(fn, limit) {
-            let callCount = 0;
-
-            function Wrapper() {
-                
-            }
+        function User(name) {
+            this.name = name
             
-            return new Wrapper()
-            
+            return this
         }
 
-        function logger() {
-            console.log("my-log");
-        }
-
-        const instance = wrapper(logger, 3);
-
-        console.log(instance)
+        const user1 = User('Ben'),
+            user2 = new User('Jon')
         
-        // instance.reset()
-        
-        // instance.reset();
-        // instance();
-        // instance();
+        console.log(user1)
+        console.log(user2)
     
     </script>
     
