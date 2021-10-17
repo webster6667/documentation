@@ -71,9 +71,9 @@
 
 💠 Сравнение с `null`, `undefined` и `NaN`  
 
-&emsp;&emsp; 🔹 При строгом равенстве `null === undefined` = `false`
+&emsp;&emsp; 🛑 При не строгом `null == undefined` = `true`(баг языка)
 
-&emsp;&emsp; 🔹 При не строгом `null == undefined` = `true`(баг языка)
+&emsp;&emsp; 🔹 При строгом равенстве `null === undefined` = `false`
 
 &emsp;&emsp; 🔹 При не строгом равенстве **null остается null**    
 &emsp;&emsp;&emsp;&emsp; 👆 `(null == '0')` --> `(null == 0)` = `false`
@@ -90,8 +90,8 @@
 &emsp;&emsp; 🔹 Сравнение с `NaN` всегда вернет `false`, даже при `NaN === NaN`
 
 &emsp;&emsp; 🔹 НЕСРАВНЕННЫЙ `undefined`    
-&emsp;&emsp;&emsp;&emsp; 👆 Сравнение с `undefined` всегда вернет `false`   
-&emsp;&emsp;&emsp;&emsp; кроме `undefined == null`, `undefined == undefined`, `undefined === undefined`
+&emsp;&emsp;&emsp;&emsp; 👆 Сравнение с `undefined` всегда вернет `false`     
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Кроме `undefined == null`, `undefined == undefined`, `undefined === undefined`
 
 <br>
 
