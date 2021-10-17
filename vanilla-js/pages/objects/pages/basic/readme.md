@@ -221,3 +221,7 @@ if ('city' in user) console.log('in return true') // true
 <br>
     
 ## 🚩 <a href="../../../cycles/readme.md#for-in-of">Перебор свойств</a>
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
