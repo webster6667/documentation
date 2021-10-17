@@ -58,7 +58,7 @@
 
 <br>
 
-💠 myString.includes`(subStr)`  
+💠 **myString.includes`(subStr)`**  
 👆🏽 Ищет подстроку по всему тексту
 ```javascript
 'abc'.includes('ab') // true
@@ -66,7 +66,7 @@
 
 <br><br>
 
-💠 myString.startsWith`(subStr, startIndex = 0)`  
+💠 **myString.startsWith`(subStr, startIndex = 0)`**  
 👆🏽 Проверяет начинается ли текст искомыми символами(`subStr`), начиная с (включая),
 
 &emsp;&emsp; 🔹 `startIndex`: индекс символа с которого начнется сравнение  
