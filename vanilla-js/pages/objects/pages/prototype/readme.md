@@ -71,6 +71,8 @@ console.log(user1.getName())//Ben
 🔹 Значение определяемое в `[[Prototype]]` должно быть либо объектом, либо `null`    
 &emsp;&emsp; 👆 Запись других типов данных будет про игнорированна
 
+🔸 Изменение `[[Prototype]]` после создания объекта, ресурсозатратно
+
 <br>
 
 ## 🚩 Методы определения прототипа
@@ -80,12 +82,39 @@ console.log(user1.getName())//Ben
 💠 **Object.setPrototypeOf`(myObject, proto)`**   
 👆🏽 Задаст прототип существующему объекту
 
+🔸 Сильно ресурсозатратно
+
+```javascript
+const user = {
+  name: 'Ben'
+}
+
+Object.setPrototypeOf(user, {
+  getName: function() {
+    return `${this.name}`
+  }
+})
+
+console.log(user.getName()) // => 'Ben'
+```
+
 <br>
 <br>
 
 💠 **Object.create`(proto, descriptors)`**   
 👆🏽 Метод создания объекта, указав прототип, и список дескрипторов
-  
+```javascript
+const methodList = {
+  getName: function() {
+    return this.name
+  }
+}
+
+const user = Object.create(methodList)
+user.name = 'Ben'
+
+console.log(user.getName())
+```  
 
 <br>
 <br>
@@ -99,6 +128,10 @@ console.log(user1.getName())//Ben
 &emsp;&emsp; 🔹 По дефолту в `prototype`, хранится `constructor` объекта  
 &emsp;&emsp;&emsp;&emsp; 👆 По этому лучше не перезаписывать `prototype`, а расширять новыми методами       
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Что бы не стереть конструктор объекта
+```javascript
+
+```
+
 
 <br><br>
 
