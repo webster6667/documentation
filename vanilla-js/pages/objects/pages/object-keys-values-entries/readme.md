@@ -17,6 +17,15 @@ Object.keys(myObject) // => ['name', 'age']
 <br>
 <br>
 
+💠 **Object.values`(myObject)`**   
+👆🏽 Вернет значения объекта 
+```javascript
+Object.values(myObject) // => ['Ben', 22]
+``` 
+
+<br>
+<br>
+
 💠 **Object.entries`(myObject)`**   
 👆🏽 Вернет массивы `[ключ,значения]` объекта 
 ```javascript
