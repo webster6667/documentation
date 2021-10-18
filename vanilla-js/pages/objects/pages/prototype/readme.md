@@ -148,6 +148,11 @@ let user2 = new user1.constructor("Jon");
 
 &emsp;&emsp;&emsp;&emsp; 👆 По этому лучше не перезаписывать `prototype`, а расширять новыми методами       
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Что бы не стереть свойство `constructor` объекта
+
+<br>
+<br>
+
+##### myObject.prototype - example
 ```javascript
 function User(name) {
   this.name = name
