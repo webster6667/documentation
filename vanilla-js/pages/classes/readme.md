@@ -145,6 +145,8 @@ class DomElement {
 	}
 } 
 
+
+
 class Div extends DomElement {
     
 	getHeight() {
@@ -181,6 +183,8 @@ class DomElement {
 		return `${this._width}px`; 
 	}
 } 
+
+
 
 class Div extends DomElement {
 
@@ -223,6 +227,8 @@ class DomElement {
 	}
 } 
 
+
+
 class Nav extends DomElement {
 
 	constructor(selector = '#root', isNavOpen = true) {
@@ -257,6 +263,8 @@ class DomElement {
     return `${this._width}px`;
   }
 }
+
+
 
 class Nav extends DomElement {
   constructor(selector = "#root", isNavOpen = true) {
