@@ -10,3 +10,4 @@
 * **<a href="./pages/bind-call-apply">bind, call, apply</a>**
 * **<a href="./pages/constructor">Конструктор</a>**
 * **<a href="./pages/prototype">Прототипы</a>**
+* **<a href="./pages/default-prototype">Встроенные прототипы</a>**

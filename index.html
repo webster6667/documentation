@@ -6,18 +6,41 @@
     
     <script>
 
-        function User(name) {
-            this.name = name
-            
-            return this
+        //Функция
+        function getUserData(age, phone) {
+            return `${this.name} ${age} ${phone}`;
         }
 
-        const user1 = User('Ben'),
-            user2 = new User('Jon')
+        //Контекст для проброса
+        const context = {
+            name: "Jac"
+        };
+
+        //Реализация bind
+        // console.log(getUserData.bind(context, 22)('+7 978'));
+
+        Function.prototype.myBind = function(context, ...args) {
+            
+            return (...argsChild) => {
+                const id = Symbol()
+                
+                context[id] = this
+
+                const bindedFnResult = context[id](...args.concat(argsChild))
+                
+                delete context[id]
+                
+                return bindedFnResult
+            }
+            
+        }
         
-        console.log(user1)
-        console.log(user2)
-    
+        const bindenFn = getUserData.myBind(context, 22),
+              bindenFnResult = bindenFn('+7 978')
+        
+        console.log(bindenFnResult)
+
+
     </script>
     
 </head>
