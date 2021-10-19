@@ -63,7 +63,7 @@ const filtredArray = people.filter(((item) => item.id !== 2)) // => [{id: 1}, {i
 <br>
 
 💠 **myArray.splice`(startIndex, deleteCount)`**   
-👆🏽 Удалит указанное кол-во элементов массива, начиная с указанного индекса(`включая`)
+👆🏽 Удалит указанное кол-во элементов массива, начиная с указанного индекса(`включая startIndex`)
     
 &emsp;&emsp; 🔹 Принимает отрицательный `startIndex`               
 &emsp;&emsp;&emsp;&emsp; 👆 Если `startIndex` отрицательный, поиск индекса для удалениея, начнется с конца   
