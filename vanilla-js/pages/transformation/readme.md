@@ -15,7 +15,11 @@
 &emsp;&emsp; 🔹 `String(true)` = `'true'`  
 &emsp;&emsp; 🔹 `String(null)` = `'null'`  
 &emsp;&emsp; 🔹 `String(undefined)` = `'undefined'`  
-&emsp;&emsp; 🔹 `String(1)` = `'1'`        	
+&emsp;&emsp; 🔹 `String(NaN)` = `'NaN'`      
+&emsp;&emsp; 🔹 `String(1)` = `'1'`          	
+&emsp;&emsp; 🔹 `String({a: 1})` = `'[object Object]'`  
+&emsp;&emsp; 🔹 `String([1, 2])` = `'1, 2'`  
+
 	
 
 ## 🚩 Численное
