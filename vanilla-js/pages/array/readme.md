@@ -100,7 +100,7 @@ const filtredArray = people.filter(((item) => item.id !== 2)) // => [{id: 1}, {i
 <br>
 
 
-💠 **myArray.foreach`((index, item, fullArray))`**   
+💠 **myArray.forEach`((index, item, fullArray))`**   
 👆🏽 Перебос с индексом, но уже в функции
 
 <br>
