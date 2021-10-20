@@ -34,17 +34,17 @@ function cacheDecorator(fn) {
   };
 }
 
-//Функция два раза выполнит вычисление 
+//🎯 Без декоратора функция два раза выполнит вычисление 
 console.log(getNumberSquared(2));
 console.log(getNumberSquared(2));
 
-//Оборачиваем функцию в кеш декоратор
+//🎯 Оборачиваем функцию в кеш декоратор
 const getNumberSquaredWithCache = cacheDecorator(getNumberSquared);
 
-//Функция первый раз выполнит вычисление
+//🎯 Функция первый раз выполнит вычисление
 console.log(getNumberSquaredWithCache(2));
 
-//Второй раз возьмет результат этого вычисления из кеша
+//🎯 Второй раз возьмет результат этого вычисления из кеша
 console.log(getNumberSquaredWithCache(2));
 ```
 [![Edit decorator](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/decorator-jyl4b?fontsize=14&hidenavigation=1&theme=dark)
