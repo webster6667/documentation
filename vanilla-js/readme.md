@@ -16,7 +16,7 @@
 * **<a href="./pages/numbers/readme.md">Методы чисел</a>**
 * **<a href="./pages/objects/readme.md">Объекты</a>**
 * **<a href="./pages/classes/readme.md">Классы</a>**
-* **<a href="./pages/array/readme.md">Массивы !</a>**
+* **<a href="./pages/array/readme.md">Массивы</a>**
 * **<a href="./pages/objects/readme.md">Промисы !</a>**
 * **<a href="./pages/objects/readme.md">Async/await !</a>**
 * **<a href="./pages/objects/readme.md">try/catch !</a>**
