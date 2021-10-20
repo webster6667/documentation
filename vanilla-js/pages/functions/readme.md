@@ -68,7 +68,7 @@ console.log(fn("my-data")); // => 'my-data'
 <br>
 
 &emsp;&emsp; 🔹 Доступна до объявления    
-&emsp;&emsp;&emsp;&emsp; 👆 `Hoisting`  
+&emsp;&emsp;&emsp;&emsp; 👆 Срабатывает `Hoisting`  
 
 <br>
 <br>
@@ -79,7 +79,7 @@ console.log(fn("my-data")); // => 'my-data'
 <br>
 
 &emsp;&emsp; 🔹 Не доступна до объявления    
-&emsp;&emsp;&emsp;&emsp; 👆 либо находится в `ВМЗ`, либо `undefined`  
+&emsp;&emsp;&emsp;&emsp; 👆 Либо находится в `ВМЗ`, либо `undefined`  
 
 &emsp;&emsp; 🔹 Возможно переопределить  
 &emsp;&emsp;&emsp;&emsp; 👆Если лежит не в `const`
