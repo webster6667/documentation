@@ -22,7 +22,7 @@ const isTrue = true
 &emsp;&emsp; 🔹 Подходит для установки значния по умолчанию      
 
 ```javascript
-const valueTrue = null || 0 || undefined || 1 // => 1
+const valueTrue = null || 0 || 1 || undefined // => 1
 const lastValueFromFalseList = null || undefined || 0 || '' // => ''
 
 
