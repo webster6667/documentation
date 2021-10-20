@@ -63,8 +63,8 @@
 ```javascript
 'abc'.includes('ab') // true
 ```
-📗 **'[`a, b`, c]'**   
-&emsp;&emsp;  🎯 `ab`, есть в `abc`
+&emsp;&emsp; 📗 **'[`a, b`, c]'**   
+&emsp;&emsp;&emsp;&emsp;  🎯 `ab`, есть в `abc`
 
 <br><br>
 
@@ -81,9 +81,9 @@
 'abcd'.startsWith('bc', 1) // => true
 ```
 
-📗 **'a, [`b, c,` d]'**  
-&emsp;&emsp; 🎯 Поиск начнется с символа с индексом `1` => `b`      
-&emsp;&emsp; 🎯 `bcd` начинается на `bc`
+&emsp;&emsp; 📗 **'a, [`b, c,` d]'**  
+&emsp;&emsp;&emsp;&emsp; 🎯 Поиск начнется с символа с индексом `1` => `b`      
+&emsp;&emsp;&emsp;&emsp; 🎯 `bcd` начинается на `bc`
 
 <br><br>
 
