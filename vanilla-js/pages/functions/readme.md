@@ -190,7 +190,7 @@ sayHi(); // Hello
 &emsp;&emsp;&emsp;&emsp; Переобразует псевдо массив в массив
   
 &emsp;&emsp;&emsp;&emsp; 👆 **[].join.call`(arguments)`**  
-&emsp;&emsp;&emsp;&emsp; Отдолжит метод который раотает с `this` у массива
+&emsp;&emsp;&emsp;&emsp; Отдолжит метод у массива, который работает с `this` 
 
 ```javascript
 function myFunc(a, b, d) {
