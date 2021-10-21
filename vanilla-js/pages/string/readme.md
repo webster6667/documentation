@@ -147,6 +147,8 @@
 
 &emsp;&emsp; 🔹 Принимает `indexBeforeFinish` с отрицательным числом  
 &emsp;&emsp;&emsp;&emsp; 👆 Тогда отсчет конечной точки выбора, начинается с конца строки
+
+##### С отрицательным indexBeforeFinish
 ```javascript
 let str = 'abcde'
 
@@ -163,6 +165,7 @@ str.slice(1, -1) === slice(1, str.length - 1) // => true
 
 <br>
 
+##### С положительным indexBeforeFinish
 ```javascript
 'abcd'.slice(1, 3) // => 'bc'
 ```
