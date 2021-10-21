@@ -160,8 +160,11 @@
 ```javascript
 let str = 'abcdeaуd'
 
-str.slice(1, -1) === slice(1, str.length - 1)
+str.slice(1, -1) === slice(1, str.length - 1) // => true
 ```
+`a, b, c, d, e, a, у`, d
+&emsp;&emsp; 📗 **['a, `b, c`, d]'**    
+
 
 <br><br>      
 
