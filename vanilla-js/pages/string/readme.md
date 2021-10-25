@@ -5,6 +5,8 @@
 * **<a href="#case">Изменение регистра</a>**
 * **<a href="#search-string">Поиск подстроки</a>**
 * **<a href="#get-string">Получение подстроки</a>**
+* **<a href="#search-replace">Поиск с заменой</a>**
+* **<a href="./../reg-exp/pages/methods/readme.md">Работа с RegExp</a>**
 * **<a href="#split">Разбить строку, на элементы массива, по разделителю</a>**
 * **<a href="#join">Склеить строку из элементов массива, используя разделитель</a>**
 * **<a href="#symbol-code">Коды символов</a>**
@@ -104,8 +106,6 @@
 
 
 'abcd'.endsWith('bc', 3) // => true
-//🎯 Поиск будет вестить в 3-x символах => 'abc'
-//🎯 'abc' заканчивается на 'bc'
 ```
 
 &emsp;&emsp; 📗 **'[a, `b, c,`] d'**  
@@ -248,7 +248,9 @@ str.substr(-3, 2) === substr(str.length - 3, 2) // => true
 &emsp;&emsp; 🔹 Если `delimiter` отсутствует в строке, вернется вся строка в массиве `['myStr']`  
 
 &emsp;&emsp; 🔹 Возвращает новый массив   
-&emsp;&emsp;&emsp;&emsp; 👆 Удобно для создания цепи          
+&emsp;&emsp;&emsp;&emsp; 👆 Удобно для создания цепи
+
+&emsp;&emsp; 🔹 Принимает регулярное выражение в `delimiter`                
 ```javascript
 console.log('Ben, Jon, Den'.split(',')) // => ["Ben", " Jon", " Den"]
 ```
@@ -276,8 +278,116 @@ console.log(["Ben", "Jon", "Den"].join(', ')); // => 'Ben, Jon, Den '
 ```
 
 <br>
+
+## 🚩 <a name="search-replace">Поиск с заменой</a>
+
+<br>
+
+💠 **myString.replace`(searchSubStr || regExp, strToRepalce || replaceFn)`**   
+👆🏽 Метод для поиска подстроки и замены
+
+
+<br>
+
+&emsp;&emsp; 🔹 Аргументом для поиска может быть `строка` или `regExp`
+  
+&emsp;&emsp; 🔹 Аргументом для замены может быть `строка` или `функция`
+
+<br>  
+
+&emsp;&emsp; 🔹 Аргументом для замены `строка`, работает со спец символами  
+&emsp;&emsp;&emsp;&emsp; 🎯 **`$$`**	 - вставляет знак `$`  
+```javascript
+const myString = "string for replace"
+
+myString.replace(/for/i, "$$") // => 'string $ replace'
+```
+
+&emsp;&emsp;&emsp;&emsp; 🎯 **`$&`**	 - вставляет найденное совпадение
+```javascript
+const myString = "1, 2, three, four"
+myString.replace(/\d/g, "[$&]") // => '[1], [2], three, four'
+```
+
+&emsp;&emsp;&emsp;&emsp; 🎯 **"$`"**	 - вставляет всю строку до совпадения
+```javascript
+const myString = "string for replace"
+myString.replace(/for/i, "[$`]") // => 'string [string ] replace'
+```
+
+&emsp;&emsp;&emsp;&emsp; 🎯 **"$'"**	 - вставляет всю строку после совпадения
+```javascript
+const myString = "string for replace"
+myString.replace(/for/i, "[$']") // => 'string [ replace] replace'
+```
+
+&emsp;&emsp;&emsp;&emsp; 🎯 **"$n"**	 - вставляет содержимое `n-й` скобочной группы
+```javascript
+const myString = "John Smith"
+myString.replace(/(\w+) (\w+)/i, '$2, $1') // => 'Smith, John'
+```
+
+&emsp;&emsp;&emsp;&emsp; 🎯 **"$<name>"** - вставляет содержимое, указанной именнованной скобки
+```javascript
+const myString = "John Smith"
+console.log(myString.replace(/(?<name>\w+) (?<surname>\w+)/i, '$<surname>, $<name>')) // => 'Smith, John'
+```
+
+<br>
+
+&emsp;&emsp; 🔹 Аргументом для замены `функция`: **fn`(match, p1, p2, ..., pn, offset, input, groups)`**	
+
+&emsp;&emsp;&emsp;&emsp; 🎯 `match` - найденное совпадение
+
+&emsp;&emsp;&emsp;&emsp; 🎯 `p1, p2, ..., pn` - скобочные группы(`включая именнованные`)    
+&emsp;&emsp;&emsp;&emsp; Если в `regExp` нет скобочных групп, этих параметров не будет
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 После `match`, сразу пойдет `offset`   
+```javascript
+const myString = "user: John Smith"
+console.log(myString.replace(/\w+ \w+/i, (match, offset, input, groups) => {
+  
+  console.log('mathch',match) // => 'John Smith'
+  
+  console.log('ofset', offset) // => 6 
+
+  return match
+}))
+```
+
+
+&emsp;&emsp;&emsp;&emsp; 🎯 `offset` - Индекс символа, на котором началось совпадение
+
+&emsp;&emsp;&emsp;&emsp; 🎯 `input` - Вся строка для поиска
+
+&emsp;&emsp;&emsp;&emsp; 🎯 `groups` - Объект только именнованных скобок
+
+```javascript
+const myString = "user: John Smith"
+myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input, groups) => {
+  
+  console.log('mathch',match)                 // => 🎯 'John Smith'
+  
+  console.log('group first',name)             // => 🎯 'John'
+
+  console.log('group second(named)', surname) // => 🎯 'Smith'
+
+  console.log('ofset', offset)                // => 🎯 6 
+
+  console.log('search string: ', input)       // => 🎯 'user: John Smith'
+
+  console.log('only named group: ', groups)   // => 🎯 {surname: "Smith"}
+
+  return `${name}`
+}) // => 🎯 user: John 
+```
+
+<br>
+   
+## 🚩 <a href="./../reg-exp/pages/methods/readme.md">Работа с RegExp</a>   
+   
+<br>   
            
-## 🚩 **<a name="symbol-code">Коды символов</a>**
+## 🚩 <a name="symbol-code">Коды символов</a>
 > Используются для более точного определения нажатой клавиши 
 
 <br>
