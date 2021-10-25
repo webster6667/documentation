@@ -309,25 +309,25 @@ const myString = "1, 2, three, four"
 myString.replace(/\d/g, "[$&]") // => '[1], [2], three, four'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **"$`"**	 - вставляет всю строку до совпадения
+&emsp;&emsp;&emsp;&emsp; 🎯 **``"$`"``**	 - вставляет всю строку до совпадения
 ```javascript
 const myString = "string for replace"
 myString.replace(/for/i, "[$`]") // => 'string [string ] replace'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **"$'"**	 - вставляет всю строку после совпадения
+&emsp;&emsp;&emsp;&emsp; 🎯 **`"$'"`**	 - вставляет всю строку после совпадения
 ```javascript
 const myString = "string for replace"
 myString.replace(/for/i, "[$']") // => 'string [ replace] replace'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **"$n"**	 - вставляет содержимое `n-й` скобочной группы
+&emsp;&emsp;&emsp;&emsp; 🎯 **`"$n"`**	 - вставляет содержимое `n-й` скобочной группы
 ```javascript
 const myString = "John Smith"
 myString.replace(/(\w+) (\w+)/i, '$2, $1') // => 'Smith, John'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **"$<name>"** - вставляет содержимое, указанной именнованной скобки
+&emsp;&emsp;&emsp;&emsp; 🎯 **`"$<name>"`** - вставляет содержимое, указанной именнованной скобки
 ```javascript
 const myString = "John Smith"
 console.log(myString.replace(/(?<name>\w+) (?<surname>\w+)/i, '$<surname>, $<name>')) // => 'Smith, John'
