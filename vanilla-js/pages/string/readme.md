@@ -111,7 +111,7 @@ const regExp = /(best)/g,
 let result,
     count = 0
 
-while (result = regExp.test(searchString)) { // 🎯 Будет идти по совпадениям, пока result не вернет null
+while (result = regExp.test(searchString)) { // 🎯 Будет идти по совпадениям, пока result не вернет false
   count++
 }
 
