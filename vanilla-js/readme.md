@@ -12,7 +12,7 @@
 * **<a href="./pages/closure/readme.md">Замыкание</a>**
 * **<a href="./pages/higher-order-functions/readme.md">Higher Order Functions / функции высшего порядка</a>**
 * **<a href="./pages/string/readme.md">Методы строк</a>**
-* **<a href="./pages/reg-exp/readme.md">Регулярные выражения !</a>**
+* **<a href="./pages/reg-exp/readme.md">Регулярные выражения</a>**
 * **<a href="./pages/numbers/readme.md">Методы чисел</a>**
 * **<a href="./pages/objects/readme.md">Объекты</a>**
 * **<a href="./pages/classes/readme.md">Классы</a>**

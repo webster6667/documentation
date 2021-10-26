@@ -2,7 +2,7 @@
 
 * **<a href="https://regex101.com/">Тестировщик регулярных выражений</a>**  
 * **<a href="./pages/syntax/readme.md">Синтаксис</a>**  
-* **<a href="./pages/syntax/readme.md">Квантификаторы</a>**
+* **<a href="./pages/quantifiers/readme.md">Квантификаторы</a>**
 
 <br>
 
