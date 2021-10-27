@@ -32,6 +32,7 @@ new Promise((resolve, reject) => {
   .catch(e => console.log(e)) // => не отработает
 ```
 
+<br>
 
 &emsp;&emsp; 🔹 `reject`   
 &emsp;&emsp;&emsp;&emsp; 🎯 Приводит промис в состояние `rejected`
