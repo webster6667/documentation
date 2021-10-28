@@ -90,7 +90,22 @@ try {
 &emsp;&emsp; 🔹 На практике используеться:    
 &emsp;&emsp;&emsp;&emsp; 🎯 Для отстуков вне зависимости от результата  
 &emsp;&emsp;&emsp;&emsp; 🎯 Для обнуления переменных после работы `try/catch`
-         
+
+```javascript
+async function getData(url) {
+
+  try {
+    let response = await fetch(url).then(result => result.json());
+  
+    return response
+  } catch { // => 🎯 поймает ошибку если запрос упадет
+    console.log('was error')
+  } finally {
+    console.log('answered url', url) // => 🎯 Логирует url, не зависимо от результата
+  }
+
+}
+```         
 
 <br>
 
