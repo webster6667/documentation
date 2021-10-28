@@ -18,5 +18,5 @@
 * **<a href="./pages/classes/readme.md">Классы</a>**
 * **<a href="./pages/array/readme.md">Массивы</a>**
 * **<a href="./pages/promise/readme.md">Промисы</a>**
-* **<a href="./pages/async-await/readme.md">Async/await !</a>**
+* **<a href="./pages/async-await/readme.md">Async/await</a>**
 * **<a href="./pages/objects/readme.md">try/catch !</a>**
