@@ -242,7 +242,22 @@ for (let entry of myMap) {
 }
 ``` 
 
-<br>
+<br><br>
+
+💠 **map.forEach`((value, key, map) => {...})`**   
+👆🏽 Метод для перебора коллекции
+```javascript
+const myMap = new Map([
+  ['name', 'Ben'],
+  ['age', 22]
+])
+
+myMap.forEach((value, key, map) => {
+    console.log(key)   // => 'name'
+    console.log(value) // => 'Ben'
+});
+```
+
 <br>
 
 ## 🚩 Трансформация Map и Object
