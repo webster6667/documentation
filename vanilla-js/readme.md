@@ -17,6 +17,10 @@
 * **<a href="./pages/objects/readme.md">Объекты</a>**
 * **<a href="./pages/classes/readme.md">Классы</a>**
 * **<a href="./pages/array/readme.md">Массивы</a>**
+* **<a href="./pages/array/readme.md">Map, Set !</a>**
+* **<a href="./pages/array/readme.md">WeekMap, WeekSet !</a>**
 * **<a href="./pages/try-catch/readme.md">try/catch</a>**
 * **<a href="./pages/promise/readme.md">Промисы</a>**
 * **<a href="./pages/async-await/readme.md">Async/await</a>**
+* **<a href="./pages/async-await/readme.md">Итераторы !</a>**
+* **<a href="./pages/async-await/readme.md">Генераторы !</a>**
