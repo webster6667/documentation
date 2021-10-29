@@ -39,6 +39,11 @@ const myMap = new Map([
 
 💠 **new Map`()`**   
 👆🏽 Создаёт коллекцию
+```javascript
+const map = new Map([
+  ['name', 'Ben']
+]);
+```
  
 <br>
 <br>
@@ -46,7 +51,7 @@ const myMap = new Map([
 💠 **map.set`(key, value)`**   
 👆🏽 Запишет в `map` ключ `key` с значением `value`
 
-&emsp;&emsp; 🔹 `set` возвращает объект `map`
+&emsp;&emsp; 🔹 `set` возвращает объект `map`  
 &emsp;&emsp;&emsp;&emsp; 👆 Это позовляет создавать цепочки           
  
 ```javascript
