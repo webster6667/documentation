@@ -216,6 +216,10 @@ mySet.forEach((value, valueAgain, set) => {
 })
 ```
 
+## 🚩 WeekSet
+
+
+
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**

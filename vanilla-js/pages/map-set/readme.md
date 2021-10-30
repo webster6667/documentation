@@ -1,5 +1,5 @@
-* **<a href="./pages/map/readme.md">Map</a>**
-* **<a href="./pages/set/readme.md">Set</a>**
+* **<a href="./pages/map/readme.md">Map, WeekMap</a>**
+* **<a href="./pages/set/readme.md">Set, WeekSet</a>**
 
 <br>
 
