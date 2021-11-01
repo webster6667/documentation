@@ -44,9 +44,9 @@ console.log(myGeneratorFirst.next()) // => {value: 2, done: false}
 console.log(myGeneratorSecond.next()) // => {value: 1, done: false}
 ```       
 
-🔹 Когда `myGenerator.next()` доходит до конструкции `return`:   
-&emsp;&emsp; 🎯 Возвращает `{value: returnValue, done: true}`  
-&emsp;&emsp; 🎯 Игнорирует все `yield` после `return`, возвращая `{value: undefined, done: true}` 
+🔹 Когда `myGenerator.next()` доходит до конструкции `return`:     
+&emsp;&emsp; 🎯 Возвращает `{value: returnValue, done: true}`    
+&emsp;&emsp; 🎯 Игнорирует все `yield` после `return`, возвращая `{value: undefined, done: true}`   
 
 <br>
 <br>
@@ -186,9 +186,9 @@ console.log(generator.next(2))
 <br>
       
             
-🔹 При помощи метода `myGenerator.return()`, можо остановить генератор
-&emsp;&emsp; 🎯 Сам метод ничего не вернет
-&emsp;&emsp; 🎯 Все следующие вызовы экземпляра генератора будут возвращать `{value: undefined, done: true}`
+🔹 При помощи метода `myGenerator.return()`, можо остановить генератор  
+&emsp;&emsp; 🎯 Сам метод ничего не вернет  
+&emsp;&emsp; 🎯 Все следующие вызовы экземпляра генератора будут возвращать `{value: undefined, done: true}`  
 ```javascript
 function* generate() {
   yield 1
