@@ -10,6 +10,6 @@
 * **<a href="./pages/types-and-interfaces/readme.md">Типы и интерфейсы</a>**
 * **<a href="./pages/classes/readme.md">Классы</a>**
 * **<a href="./pages/classes/readme.md">Пространство имен ✍🏼</a>**
-* **<a href="./pages/classes/readme.md">Generic ✍🏼</a>**
+* **<a href="./pages/generic/readme.md">Generic ✍🏼</a>**
 * **<a href="./pages/classes/readme.md">Утилиты ✍🏼</a>**
 * **<a href="./pages/classes/readme.md">Ts-config ✍🏼</a>**
