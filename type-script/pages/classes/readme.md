@@ -54,7 +54,24 @@ class User implements HumanI, HumanT {
 }
 
 const den:User = new User('hi', 'bye')
-```            
+``` 
+
+🔹 Для типизации конструктора класса, используеться ключевое слово `new`  
+&emsp;&emsp; 👆 При этом свойства и метода класса, описываються  в отдлеьном интерфейсе    
+
+```typescript
+interface IClass {
+  sayHi(phrase:string):string
+}
+
+type IConstructor<T> = new (name:string) => T
+
+function createObject(cl: IConstructor<IClass>) {
+  const user = new cl('Jon')
+
+  user.sayHi('hi')
+}
+```                  
 
 <br>
 
