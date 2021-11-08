@@ -11,6 +11,9 @@ const myObject = {
 type A = keyof (typeof myObject) // => A: "name" | "age"
 ```       
 
+<br>
+<br>
+
 🔹 Использование в `generic`
 ```typescript
 function getData<ObjectTypes, ObjectKeys extends keyof ObjectTypes>(object: ObjectTypes, key: ObjectKeys) {
@@ -22,6 +25,9 @@ const result = getData({name: 'Ben', age: 22}, 'name')
 &emsp;&emsp; 🎯 `ObjectTypes` содержит типизированый объект `{name: string, age: number}`              
 &emsp;&emsp; 🎯 `ObjectKeys` при помощи `keyof` вынимает все ключи в виде строки из `ObjectTypes`  `'name' | 'age'`  
 &emsp;&emsp; 🎯 Тем самым описывая что вторым аргументом функции может быть только ключ, который есть в объекте первого аргумента
+
+<br>
+<br>    
 
 🔹 Использование в цикле `key in`
 ```typescript
@@ -46,7 +52,7 @@ type ValidationSchemeForm = ValidationScheme<FormProps>
 
 <br>
 
-👆 `[K in keyof T]` конструкция делает следующиее
+👆 `[K in keyof T]` конструкция делает следующиее  
 &emsp;&emsp; 🎯 `keyof T` получает все ключи из полученного `generic`, `'name' | 'age'`  
 &emsp;&emsp; 🎯 Все ключи перебираються в цикле, создавая новый типизированный объект с свойствами `{value: T[K], check: boolean}`   
 &emsp;&emsp; 🎯 В переменную `K` по очередно попадают все ключи из `keyof T`: `'name', 'age'`   
