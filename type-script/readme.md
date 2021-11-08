@@ -16,7 +16,3 @@
 * **<a href="./pages/classes/readme.md">Утилиты ✍🏼</a>**
 * **<a href="./pages/classes/readme.md">Ts-config ✍🏼</a>**
 * **<a href="./pages/additional/readme.md">Доп моменты</a>**
-
-<br>
-
-### ⟵ **<a href="../../readme.md">Назад</a>**
