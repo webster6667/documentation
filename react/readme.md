@@ -1,3 +1,6 @@
 # React
+> Библиотека для реализации логики пользовательских интерфейсов
 
-* **<a href="./pages/types/readme.md">Type script</a>**
+* **<a href="./pages/jsx/readme.md">JSX</a>**
+
+* **<a href="./pages/typed-react/readme.md">Type script</a>**
