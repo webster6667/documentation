@@ -44,6 +44,15 @@ function myFn(a: any, b: any):void {
 
 &emsp;&emsp; 🛑 Приведение к типу уже типизированных данных, вызовет ошибку       
 
+<br>
+
+&emsp;&emsp; 🔹 Ключевое слово `const`, блокирует объект от изменения
+```typescript
+const myObject1 = {name: 'Ben', age: 22}          // => {name: string, age: number}
+const myObject2 = {name: 'Ben', age: 22} as const // => {readonly name: "Ben", readonly age: 22}
+const myObject3 = <const>{name: 'Ben', age: 22}   // => {readonly name: "Ben", readonly age: 22}
+```
+
 <br><br>
 
 💠 **Объединение типов**   

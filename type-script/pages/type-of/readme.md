@@ -8,7 +8,9 @@ const userAge = 22
 type User = {
   age: typeof userAge // => age: number
 }
-```      
+```   
+&emsp;&emsp; 👆 `typeof any` возвращает типы, которые могут быть ключами объекта `(string | number | symbol)`    
+   
 
 🔹 Объект      
 ```typescript

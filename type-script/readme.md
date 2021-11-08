@@ -5,11 +5,18 @@
 * **<a href="./pages/types/readme.md">Основные типы данных</a>**
 * **<a href="./pages/functions/readme.md">Функции</a>**
 * **<a href="./pages/type-transform/readme.md">Преобразование типов данных</a>**
-* **<a href="./pages/type-of/readme.md">Type of ✍🏼(type-of класса)</a>**
+* **<a href="./pages/type-of/readme.md">Typeof ✍🏼(type-of класса)</a>**
 * **<a href="./pages/arrays/readme.md">Массивы</a>**
 * **<a href="./pages/types-and-interfaces/readme.md">Типы и интерфейсы</a>**
 * **<a href="./pages/classes/readme.md">Классы</a>**
 * **<a href="./pages/classes/readme.md">Пространство имен ✍🏼</a>**
-* **<a href="./pages/generic/readme.md">Generic ✍🏼</a>**
+* **<a href="./pages/generic/readme.md">Generic</a>**
+* **<a href="./pages/keyof/readme.md">Keyof</a>**
+* **<a href="./pages/let-const/readme.md">let и const</a>**
 * **<a href="./pages/classes/readme.md">Утилиты ✍🏼</a>**
 * **<a href="./pages/classes/readme.md">Ts-config ✍🏼</a>**
+* **<a href="./pages/additional/readme.md">Доп моменты</a>**
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
