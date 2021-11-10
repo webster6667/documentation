@@ -56,4 +56,4 @@ function MyApp(props) {
 
 <br>
 
-### ⟵ **<a href="../../readme.md">Назад</a>**
+⟵ **<a href="../../readme.md">Назад</a>**
