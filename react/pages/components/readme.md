@@ -18,7 +18,7 @@
 * **<a href="./pages/functional/readme.md">Функциональные</a>**
 * **<a href="./pages/classes/readme.md">Классовые</a>**
 * **<a href="./pages/life-cicle/readme.md">Этапы жизненного цикла</a>**
-* **<a href="./pages/rerender/readme.md">Ререндер компонента</a>**
+* **<a href="./pages/dom-update/readme.md">Ререндер компонента</a>**
 * **<a href="./pages/hoc/readme.md">Компоненты высшего порядка</a>**
 
 
