@@ -1,5 +1,7 @@
 # Git
 
+* **<a href="./pages/config/readme.md">Config</a>**
+
 * **<a href="./pages/types/readme.md">Rebase</a>**
 * **<a href="./pages/types/readme.md">Interactive rebase</a>**
 * **<a href="./pages/types/readme.md">Cheri pick</a>**
