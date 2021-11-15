@@ -20,6 +20,7 @@
 * **<a href="./pages/life-cicle/readme.md">Этапы жизненного цикла</a>**
 * **<a href="./pages/dom-update/readme.md">Ререндер компонента</a>**
 * **<a href="./pages/hoc/readme.md">Компоненты высшего порядка</a>**
+* **<a href="./pages/prop-types/readme.md">PropTypes</a>**
 
 
 <br>
