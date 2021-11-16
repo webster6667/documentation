@@ -1,6 +1,12 @@
 # Git
 
 * **<a href="./pages/config/readme.md">Config</a>**
+* **<a href="./pages/cycle/readme.md">Цикл работы гит</a>**
+* **<a href="./pages/index/readme.md">Индекс</a>**
+* **<a href="./pages/commit-style/readme.md">Правила коммита</a>**
+
+
+
 
 * **<a href="./pages/types/readme.md">Rebase</a>**
 * **<a href="./pages/types/readme.md">Interactive rebase</a>**
