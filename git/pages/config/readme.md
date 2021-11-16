@@ -13,7 +13,7 @@
 
 <p align="center" style="text-align:center">
       <img src="./img/illustration.png" alt="illustration" width="500"/>
-  </p>
+</p>
 
 💠 **Виды конфиг файлов**  
 
