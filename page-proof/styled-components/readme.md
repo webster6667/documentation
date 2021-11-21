@@ -5,6 +5,7 @@
 * **<a href="./pages/styled-component/readme.md">Создание стилизированного компонента</a>**
 * **<a href="./pages/syntaxis/readme.md">Синтаксис стилей в styled-components</a>**
 * **<a href="./pages/props/readme.md">Взаимодействие с пропсами</a>**
+* **<a href="./pages/object-styled-components/readme.md">Object style</a>**
 * **<a href="./pages/extends/readme.md">Наследование стилей ✍🏼</a>**
 * **<a href="./pages/animations/readme.md">Анимация ✍🏼</a>**
 * **<a href="./pages/thems/readme.md">Темы</a>**

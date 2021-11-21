@@ -90,3 +90,24 @@ const Box = styled.div({
 
 })
 ```
+
+<br>
+<br>
+
+🔹 Работа с `media-queries`
+
+```javascript
+const Container = styled.div({
+  padding: '0 20px'
+
+  '@media(min-width: 788px)': {
+    padding: '0 25px'
+  }
+
+})
+```
+
+<br>
+
+⟵ **<a href="../../readme.md">Назад</a>**
+
