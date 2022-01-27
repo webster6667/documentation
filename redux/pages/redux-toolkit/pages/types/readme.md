@@ -1,7 +1,7 @@
 # Типизация redux-toolkit
 
 💠 Типизация слайса
-```javascript
+```typescript
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 
 interface InitialStateProps {
