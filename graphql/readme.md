@@ -3,4 +3,8 @@
 
 * **<a href="./pages/scema/readme.md">Схемы</a>**
 * **<a href="./pages/server/readme.md">express graphql server</a>**
-* **<a href="./pages/server/readme.md">react client</a>**
+* **<a href="./pages/react-client/readme.md">react client</a>**
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
