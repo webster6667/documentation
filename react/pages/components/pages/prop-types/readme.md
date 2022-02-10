@@ -72,7 +72,7 @@ export default App;
 
 💠 **Свойства и методы PropTypes**
 
-&emsp;&emsp; 🎯 `instanceOf(constructorName)`
+&emsp;&emsp; 🎯 `instanceOf(constructorName)`  
 &emsp;&emsp;&emsp;&emsp; 👆 Говорит о том что, описанный пропс должен быть экземляром указанного констуктора 
 ```javascript
 MyComponent.propTypes = {
@@ -92,7 +92,7 @@ MyComponent.propTypes = {
 
 <br>
 
-&emsp;&emsp; 🎯 `oneOfType([type1, ..., typeN]])`
+&emsp;&emsp; 🎯 `oneOfType([type1, ..., typeN]])`  
 &emsp;&emsp;&emsp;&emsp; 👆 Описывает список типов которые может принять пропс
 ```javascript
 MyComponent.propTypes = {
@@ -144,7 +144,7 @@ MyComponent.propTypes = {
 
 <br>
 
-&emsp;&emsp; 🎯 `isRequired`
+&emsp;&emsp; 🎯 `isRequired`  
 &emsp;&emsp;&emsp;&emsp; 👆 Можно добавить к любому типу    
 &emsp;&emsp;&emsp;&emsp; 🛑 Без типа `isRequired` не работет. Если тип неизвестен но поле обязательно, добавляем к типу `any`
 ```javascript
@@ -172,7 +172,7 @@ User.propTypes = {
 
 <br>
 
-&emsp;&emsp; 🎯 Кастомная функция типизатор для `arrayOf` или `objectOf`
+&emsp;&emsp; 🎯 Кастомная функция типизатор для `arrayOf` или `objectOf`  
 &emsp;&emsp;&emsp;&emsp; 👆 Пробегаеться по всем свойствам объекта или массива    
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `propValues` - массив 
