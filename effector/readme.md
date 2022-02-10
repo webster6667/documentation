@@ -1,4 +1,4 @@
 # Эффектор
 > Стейт менеджер работающий как на фронтенде так и на node js
 
-* **<a href="./pages/scema/readme.md">Основы</a>**
+* **<a href="./pages/basics/readme.md">Основы</a>**
