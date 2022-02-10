@@ -5,16 +5,15 @@
 👆🏽 Надстройка над fireEvent, рекомендуеться использовать userEvent вместо fireEvent  
 
 ```typescript
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 test("input changes value", async () => {
     render(<input type='text' role='textbox' />);
-    const input = await screen.getByRole("textbox");
-    fireEvent.change(input, {
-      target: { value: "test" }
-    });
 
-    expect(screen.getByRole("textbox").value).toBe("test");
+    userEvent.type(screen.getByRole("textbox"), "react");
+
+    expect(screen.getByRole<HTMLInputElement>("textbox").value).toBe("react");
   });
 ```
 
