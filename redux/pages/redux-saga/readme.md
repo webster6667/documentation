@@ -3,6 +3,5 @@
 
 * **<a href="./pages/basics/readme.md">Основы</a>**
 * **<a href="./pages/init/readme.md">Инициализация</a>**
-
-
+* **<a href="./pages/effects/readme.md">Эффекты</a>**
 
