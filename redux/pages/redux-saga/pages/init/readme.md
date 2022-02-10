@@ -121,3 +121,7 @@ export function* rootWatcher() {
     yield all(retrySagas)
 }
 ```
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
