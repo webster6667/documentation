@@ -9,3 +9,4 @@
 * **<a href="/git/readme.md">Git</a>**
 * **<a href="/type-script/readme.md">Type Script</a>**
 * **<a href="/testing/readme.md">Testing</a>**
+* **<a href="/graphql/readme.md">Graphql</a>**
