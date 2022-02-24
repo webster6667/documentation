@@ -13,11 +13,26 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 ```
 
+<br>
+<br>
+
+🔹 imp:ppt - импорт проптайпсов
+```javascript
+import PropTypes from 'prop-types';
+```
+
 <br><br>
 
 🔹 imp:stc - импорт стилизированных компонентов
 ```javascript
 import styled, {css} from 'styled-components'
+```
+
+<br><br>
+
+🔹 imp:stc:e - импорт стилизированных компонентов emotions
+```javascript
+import styled, {css} from '@emotion/styled/macro'
 ```
 
 <br><br>
@@ -31,10 +46,15 @@ import { $componentName$ } from './styles'
 
 🔹 imp:stc:th - импорт главной темы стилизированных компонентов
 ```javascript
-import { theme } from '@src/styled'
+import { theme } from '@app-theme'
+```
 
-const { tablet, desktop } = theme.mediaMobileFirst
-const { mainFont, border } = theme.colors
+<br>
+<br>
+
+🔹 imp:mu - импорт material ui 
+```javascript
+import {$name$} from '@mui/material'
 ```
 
 <br><br>
@@ -101,3 +121,4 @@ import {$name$} from '@ui/$path$'
 ```javascript
 import {$name$} from '@styled-mixins/$path$'
 ```
+

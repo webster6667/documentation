@@ -2,7 +2,137 @@
 
 💠 `string` - строка
 
-💠 `number` - число, целое или с плавающей точкой, с ограниченной длинной  
+💠 `number` - число, целое или с плавающей точкой, с ограниченной длинной
+
+___
+<br>
+
+
+&emsp;&emsp; 🔹 `NaN` - результат ошибки математической операции
+
+&emsp;&emsp;&emsp;&emsp; 🛑 `typeof NaN === 'number'`
+
+&emsp;&emsp;&emsp;&emsp; 🛑 `NaN` не равна сама себе(`баг языка`)
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Для определения `NaN` есть специальная функция `isNan(prop)`
+
+<br>
+<br>
+
+&emsp;&emsp; 🔹 `Infinity` - бесконечность       
+
+&emsp;&emsp;&emsp;&emsp; 👆 Тип числа больше любого числа, включая себя самого
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity > Infinity 👉🏼 false` 
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity == Infinity 👉🏼 true`
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity === Infinity 👉🏼 true`
+
+<br>
+
+&emsp;&emsp;&emsp;&emsp; 🛑 `isNaN(Infinity / Infinity) === true`
+
+<br>
+<br>
+
+&emsp;&emsp;&emsp;&emsp; 👆 Может быть получено при:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Делении числа больше нуля на ноль
+```javascript
+1 / 0  // 👉🏼 Infinity
+0 / 0  // 👉🏼 NaN
+```
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Просто объявленно
+```javascript
+const a = Infinity
+```
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 При математических операциях с `Infinity`
+
+<br>
+<br>
+
+&emsp;&emsp;&emsp;&emsp; 👆 Матеметические операции с `Infinity`
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Сложение
+
+```
+ n + Infinity    👉🏼 Infinity
+-n + Infinity    👉🏼 Infinity
+
+Infinity + n     👉🏼 Infinity
+Infinity + -n    👉🏼 Infinity
+
+ 
+ n + -Infinity   👉🏼 -Infinity
+-n + -Infinity   👉🏼 -Infinity
+
+-Infinity + n    👉🏼 -Infinity
+-Infinity + -n   👉🏼 -Infinity
+```
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Вычитание
+
+```
+ n - Infinity    👉🏼 -Infinity
+-n - Infinity    👉🏼 -Infinity
+
+Infinity - n     👉🏼 Infinity
+Infinity - -n    👉🏼 Infinity
+
+ 
+ n - -Infinity   👉🏼 Infinity
+-n - -Infinity   👉🏼 Infinity
+
+-Infinity - n    👉🏼 -Infinity
+-Infinity - -n   👉🏼 -Infinity
+```
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Умножение
+
+```
+ 0 * Infinity    👉🏼 NaN
+ n * Infinity    👉🏼 Infinity
+-n * Infinity    👉🏼 -Infinity
+
+Infinity * 0     👉🏼 NaN
+Infinity * n     👉🏼 Infinity
+Infinity * -n    👉🏼 -Infinity
+
+ 0 * - Infinity  👉🏼 NaN
+ n * -Infinity   👉🏼 -Infinity
+-n * -Infinity   👉🏼 Infinity
+
+-Infinity * 0    👉🏼 NaN
+-Infinity * n    👉🏼 -Infinity
+-Infinity * -n   👉🏼 Infinity
+```
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Деление
+
+```
+ 0 / Infinity    👉🏼 0
+ n * Infinity    👉🏼 0
+-n * Infinity    👉🏼 -0
+
+Infinity / 0     👉🏼 Infinity
+Infinity / n     👉🏼 Infinity
+Infinity / -n    👉🏼 -Infinity
+
+ 0 / -Infinity   👉🏼 -0
+ n / -Infinity   👉🏼 -0
+-n / -Infinity   👉🏼 0
+
+-Infinity / 0    👉🏼 -Infinity
+-Infinity / n    👉🏼 -Infinity
+-Infinity / -n   👉🏼 Infinity
+```
+
+<br>
+
+___
 
 💠 `bigInt` - число, целое или с плавающей точкой, неограниченно длинной  
 
@@ -12,26 +142,16 @@ ___
 
 💠 `object` - вложенные объекты, массивы или функции
 
-&emsp;&emsp; 🔹 `{a: 1}` не равен `{a: 1}` - нужно делать сравнивание по ключам и значениям  
-&emsp;&emsp; Так как это две разные ссылки на объект  
+&emsp;&emsp; 🔹 `{a: 1}` не равен `{a: 1}`   
+&emsp;&emsp;&emsp;&emsp; 👆 Нужно делать сравнивание по ключам и значениям , так как это ссылки на два разных объект  
 
-&emsp;&emsp;&emsp;&emsp; ⚡ Либо хак `JSON.stringify({a: 1}) === JSON.stringify({a: 1})`, вернет `true`      
-&emsp;&emsp;&emsp;&emsp; 👆 Проблема хака в том, что одинаковые свойства но разные позиции выдадут `false`   
+&emsp;&emsp; ⚡ Хак `JSON.stringify({a: 1}) === JSON.stringify({a: 1})`, вернет `true`      
+&emsp;&emsp;&emsp;&emsp; 🛑 Сравнение одинаковых объектов но с разными позициями через `JSON.stringify` вернет `false`
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Хоть объекты одинаковый, форматирование к строке вернет две разные строки  
     
-&emsp;&emsp; 🛑 `typeof () => true`  вернет `function`, но тип функции это объект(особенности typeof)
+&emsp;&emsp; 🛑 `typeof () => true`  вернет `function`, но тип функции это объект(`особенности typeof`)
 
-<br>
 
-💠 `NaN` - результат ошибки математической операции
-
-&emsp;&emsp; 🛑 `NaN` не является отдельным типом данных    
-&emsp;&emsp;&emsp;&emsp; 👆 Это специальное числовое значение   
-
-&emsp;&emsp; 🛑 `NaN` не равна сама себе(баг языка)
-
-&emsp;&emsp; 🔹 Для определения `NaN` есть специальная функция `isNan(prop)`
-
-<br>
 
 💠 `undefined` - значение всех переменных, до тех пор как им не присвоят значение
     
