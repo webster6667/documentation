@@ -158,19 +158,21 @@ JSON.stringify({a: 1, b: 2}) === JSON.stringify({b: 2, a: 1}) // 👉🏼 false
 
 💠 `undefined` - значение всех переменных, до тех пор как им не присвоят значение
     
-&emsp;&emsp; 🛑 `undefined == null` = `true`(баг языка)
+&emsp;&emsp; 🛑 `undefined == null 👉🏼 true`(баг языка)
     
-&emsp;&emsp; 🔹 `undefined` сравнение с undefined может вернуть `true` только в трех случаях  
+&emsp;&emsp; 🔹 сравнение с `undefined` может вернуть `true` только в трех случаях  
 
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined === undefined`   
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined == undefined`   
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined == null`   
+&emsp;&emsp;&emsp;&emsp; 🎯 `undefined === undefined`   
+&emsp;&emsp;&emsp;&emsp; 🎯 `undefined == undefined`   
+&emsp;&emsp;&emsp;&emsp; 🎯 `undefined == null`   
 
 &emsp;&emsp; 🔹 Преобразовании `undefined` к числу, вернет `NaN`
 
-&emsp;&emsp; 🔹 `undefined` не преобразуется к числу, при не строгом сравнении  
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined >= 2` --> `NaN == 2`    
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined == 2` --> `undefined == 2`  
+&emsp;&emsp; 🔹 `undefined` преобразуется к числу только при математическом сравнении  
+&emsp;&emsp;&emsp;&emsp; 👆 При нестрогом сравнении, преобразование не происходит
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `undefined >= 2` 👉🏼 `NaN == 2`    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `undefined == 2` 👉🏼 `undefined == 2`  
 
 
 <br>
@@ -179,9 +181,12 @@ JSON.stringify({a: 1, b: 2}) === JSON.stringify({b: 2, a: 1}) // 👉🏼 false
 
 &emsp;&emsp; 🛑 `typeof null` - вернет `object`(баг языка)  
 
-&emsp;&emsp; 🛑 `null` трансформируется в `0`, всегда, кроме не строгово равенства `==`  
-&emsp;&emsp;&emsp;&emsp; 👆 `null == null`: **true**  
-&emsp;&emsp;&emsp;&emsp; 👆 `null == 0`: **false**
+&emsp;&emsp; 🛑 `null` преобразуется к числу `(0)`, только при математическом сравнении    
+&emsp;&emsp;&emsp;&emsp; 👆 При нестрогом сравнении, преобразование не происходит
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `null == null` 👉🏼 `null == null` 👉🏼 `true`     
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `null == 0` 👉🏼 `null == 0` 👉🏼 `true`  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `null >= 0` 👉🏼 `0 >= 0` 👉🏼 `true`  
 
 <br>
 
@@ -199,8 +204,9 @@ JSON.stringify({a: 1, b: 2}) === JSON.stringify({b: 2, a: 1}) // 👉🏼 false
 
 &emsp;&emsp; 🔹 `Symbol('mySymbol')` не преобразуется автоматически к строке  
 &emsp;&emsp;&emsp;&emsp; 👆 Для этого есть методы:   
-&emsp;&emsp;&emsp;&emsp; 👆 `String(Symbol('mySymbol'))` --> `"Symbol('mySymbol')"`   
-&emsp;&emsp;&emsp;&emsp; 👆 `Symbol('mySymbol').toString()` --> `"Symbol('mySymbol')"`
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `String(Symbol('mySymbol'))` 👉🏼 `"Symbol('mySymbol')"`     
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Symbol('mySymbol').toString()` 👉🏼 `"Symbol('mySymbol')"`
 
 ##### 📗  **<a href="pages/symbol/readme.md">Подробней</a>**
      
