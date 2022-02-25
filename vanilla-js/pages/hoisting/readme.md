@@ -20,7 +20,7 @@
 
 💠 Использование `function declaration` до объявления
 ```javascript
-const text = myFunc('abcd') // => 'my string is: abcd'
+const text = myFunc('abcd') // 👉🏼 'my string is: abcd'
 
 function myFunc(str = '') {
   return `my string is: ${str}`
@@ -33,7 +33,7 @@ function myFunc(str = '') {
 
 💠 Использование `var` до объявления
 ```javascript
-console.log(myVar) // => undefined
+console.log(myVar) // 👉🏼 undefined
 
 var myVar = 'string'
 ```
@@ -48,7 +48,7 @@ var myVar = 'string'
 💠 Использование `let, const` до объявления
 
 ```javascript
-console.log(myVar) // => выбросит ошибку
+console.log(myVar) // 👉🏼 выбросит ошибку
 
 let myVar = 'string'
 ```
