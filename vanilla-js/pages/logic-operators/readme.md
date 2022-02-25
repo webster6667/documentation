@@ -6,8 +6,8 @@
 &emsp;&emsp; 🔹 Подходит для отображения комопнента, если значения перед ним `true`      
 
 ```javascript
-const valueFalse = 1 && 2 && null && 3 // => null
-const lastValueFromTruesList = 1 && 2 && 3 // => 3
+const valueFalse = 1 && 2 && null && 3 // 👉🏼 null
+const lastValueFromTruesList = 1 && 2 && 3 // 👉🏼 3
 
 
 const isTrue = true
@@ -22,12 +22,12 @@ const isTrue = true
 &emsp;&emsp; 🔹 Подходит для установки значния по умолчанию      
 
 ```javascript
-const valueTrue = null || 0 || 1 || undefined // => 1
-const lastValueFromFalseList = null || undefined || 0 || '' // => ''
+const valueTrue = null || 0 || 1 || undefined // 👉🏼 1
+const lastValueFromFalseList = null || undefined || 0 || '' // 👉🏼 ''
 
 
 const option = null
-const {value = ''} = option || {} // => {}
+const {value = ''} = option || {} // 👉🏼 {}
 ```    
 
 <br>
@@ -39,7 +39,7 @@ const {value = ''} = option || {} // => {}
 
 ```javascript
 let valueFromOptions = true, //Прийдет из опций функции
-    isDisabled = !valueFromOptions // => false    
+    isDisabled = !valueFromOptions // 👉🏼 false    
 ```
 
 <br>
@@ -47,8 +47,8 @@ let valueFromOptions = true, //Прийдет из опций функции
 💠 `??`   
 👆🏽 Возвращает первое значение `не равное null или undefined`, либо последнее значение из списка
 ```javascript
-const notNullOrUndefined = null ?? undefined ?? 2 ?? 3 ?? null // => 2
-const notNullOrUndefinedLast = null ?? undefined ?? null // => null
+const notNullOrUndefined = null ?? undefined ?? 2 ?? 3 ?? null // 👉🏼 2
+const notNullOrUndefinedLast = null ?? undefined ?? null // 👉🏼 null
 ```
 
 <br>
