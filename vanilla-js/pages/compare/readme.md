@@ -64,8 +64,8 @@
 
 > В связи с этими правилами, имеем следующее преобразование
 
-&emsp;&emsp; 🔹 `undefined == 1` 👉🏼 `undefined == 1`  
-&emsp;&emsp; 🔹 `undefined >= 1` 👉🏼 `NaN == 1`  
+&emsp;&emsp; 🔹 `undefined == 1` 👉🏼 `undefined == 1` 👉🏼 `false`     
+&emsp;&emsp; 🔹 `undefined >= 1` 👉🏼 `NaN == 1` 👉🏼 `false`    
 &emsp;&emsp; 🔹 `null == 0` 👉🏼 `null == 0` 👉🏼 `false`      
 &emsp;&emsp; 🔹 `null >= 0` 👉🏼 `0 == 0` 👉🏼 `true`  
     
