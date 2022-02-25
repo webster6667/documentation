@@ -80,13 +80,15 @@
 &emsp;&emsp;&emsp;&emsp; 👆 `null == '0'` 👉🏼 `null == 0` 👉🏼 `false`
 
 &emsp;&emsp; 🔹 При сравнении с математическими операторами **null преобразуется к 0**   
-&emsp;&emsp;&emsp;&emsp; 👆 `null >= '0'` 👉🏼 `0 >= 0` 👉🏼 `true`
+&emsp;&emsp;&emsp;&emsp; 👆 `null >= '0'` 👉🏼 `0 >= 0` 👉🏼 `true`  
+&emsp;&emsp;&emsp;&emsp; 👆 `null > '0'` 👉🏼 `0 > 0` 👉🏼 `false`
 
 &emsp;&emsp; 🔹 При не строгом равенстве  **undefined остается undefined**    
 &emsp;&emsp;&emsp;&emsp; 👆 `undefined == '0'` 👉🏼 `undefined == 0` 👉🏼 `false`
 
 &emsp;&emsp; 🔹 При сравнении с математическими операторами **undefined преобразуется к NaN**   
-&emsp;&emsp;&emsp;&emsp; 👆 `undefined >= '0'` 👉🏼 `NaN >= 0` 👉🏼 `false`
+&emsp;&emsp;&emsp;&emsp; 👆 `undefined >= '0'` 👉🏼 `NaN >= 0` 👉🏼 `false`  
+&emsp;&emsp;&emsp;&emsp; 👆 `undefined > '0'` 👉🏼 `NaN > 0` 👉🏼 `false`
 
 &emsp;&emsp; 🔹 Сравнение с `NaN` всегда вернет `false`, даже при `NaN === NaN`
 
