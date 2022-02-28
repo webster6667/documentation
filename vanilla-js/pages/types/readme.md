@@ -37,8 +37,8 @@ ___
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Делении числа больше нуля на ноль
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ♦ `1 / 0 👉🏼 Infinity`    
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ♦ `0 / 0 👉🏼 NaN`
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🥏 `1 / 0 👉🏼 Infinity`    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🥏 `0 / 0 👉🏼 NaN`
 
 <br>
 
