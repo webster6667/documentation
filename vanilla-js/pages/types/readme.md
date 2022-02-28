@@ -21,114 +21,39 @@ ___
 
 &emsp;&emsp; 🔹 `Infinity` - бесконечность       
 
-&emsp;&emsp;&emsp;&emsp; 👆 Тип числа больше любого числа, включая себя самого
+&emsp;&emsp;&emsp;&emsp; 🛑 `Infinity / Infinity 👉🏼 NaN`
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity > Infinity 👉🏼 false` 
+&emsp;&emsp;&emsp;&emsp; ⚪ Число больше любого числа, включая себя самого
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity == Infinity 👉🏼 true`
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity > Infinity 👉🏼 false` 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity === Infinity 👉🏼 true`
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity == Infinity 👉🏼 true`
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Infinity === Infinity 👉🏼 true`
+
+<br>
+
+&emsp;&emsp;&emsp;&emsp; ⚪ Может быть получено при:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Делении числа больше нуля на ноль
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ♦ `1 / 0 👉🏼 Infinity`    
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ♦ `0 / 0 👉🏼 NaN`
 
 <br>
 
-&emsp;&emsp;&emsp;&emsp; 🛑 `isNaN(Infinity / Infinity) === true`
-
-<br>
-<br>
-
-&emsp;&emsp;&emsp;&emsp; 👆 Может быть получено при:
-
-🎯 Делении числа больше нуля на ноль
-```javascript
-1 / 0  // 👉🏼 Infinity
-0 / 0  // 👉🏼 NaN
-```
-
-🎯 Просто объявленно
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 Просто объявленно
 ```javascript
 const a = Infinity
 ```
 
-🎯 При математических операциях с `Infinity`
-
-<br>
 <br>
 
-&emsp;&emsp;&emsp;&emsp; 👆 Матеметические операции с `Infinity`
 
-🎯 Сложение
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 При определенных математических операциях с `Infinity`
 
-```
- n + Infinity    👉🏼 Infinity
--n + Infinity    👉🏼 Infinity
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 📗  **<a href="pages/infinity/readme.md">Матеметические операции с `Infinity`</a>**
 
-Infinity + n     👉🏼 Infinity
-Infinity + -n    👉🏼 Infinity
-
- 
- n + -Infinity   👉🏼 -Infinity
--n + -Infinity   👉🏼 -Infinity
-
--Infinity + n    👉🏼 -Infinity
--Infinity + -n   👉🏼 -Infinity
-```
-
-🎯 Вычитание
-
-```
- n - Infinity    👉🏼 -Infinity
--n - Infinity    👉🏼 -Infinity
-
-Infinity - n     👉🏼 Infinity
-Infinity - -n    👉🏼 Infinity
-
- 
- n - -Infinity   👉🏼 Infinity
--n - -Infinity   👉🏼 Infinity
-
--Infinity - n    👉🏼 -Infinity
--Infinity - -n   👉🏼 -Infinity
-```
-
-🎯 Умножение
-
-```
- 0 * Infinity    👉🏼 NaN
- n * Infinity    👉🏼 Infinity
--n * Infinity    👉🏼 -Infinity
-
-Infinity * 0     👉🏼 NaN
-Infinity * n     👉🏼 Infinity
-Infinity * -n    👉🏼 -Infinity
-
- 0 * - Infinity  👉🏼 NaN
- n * -Infinity   👉🏼 -Infinity
--n * -Infinity   👉🏼 Infinity
-
--Infinity * 0    👉🏼 NaN
--Infinity * n    👉🏼 -Infinity
--Infinity * -n   👉🏼 Infinity
-```
-
-🎯 Деление
-
-```
- 0 / Infinity    👉🏼 0
- n * Infinity    👉🏼 0
--n * Infinity    👉🏼 -0
-
-Infinity / 0     👉🏼 Infinity
-Infinity / n     👉🏼 Infinity
-Infinity / -n    👉🏼 -Infinity
-
- 0 / -Infinity   👉🏼 -0
- n / -Infinity   👉🏼 -0
--n / -Infinity   👉🏼 0
-
--Infinity / 0    👉🏼 -Infinity
--Infinity / n    👉🏼 -Infinity
--Infinity / -n   👉🏼 Infinity
-```
 
 <br>
 
@@ -210,7 +135,7 @@ JSON.stringify({a: 1, b: 2}) === JSON.stringify({b: 2, a: 1}) // 👉🏼 false
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `String(Symbol('mySymbol'))` 👉🏼 `"Symbol('mySymbol')"`     
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Symbol('mySymbol').toString()` 👉🏼 `"Symbol('mySymbol')"`
 
-##### 📗  **<a href="pages/symbol/readme.md">Подробней</a>**
+##### 📗  **<a href="pages/symbol/readme.md">Свойства и методы symbol</a>**
      
 <br>
 
