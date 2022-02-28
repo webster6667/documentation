@@ -52,6 +52,7 @@ console.log(getNumberSquaredWithCache(2));
 [![Edit decorator](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/decorator-jyl4b?fontsize=14&hidenavigation=1&theme=dark)
 
 <br>
+<br>
 
 💠 Определять параметры функции, до ее вызова
 ```javascript
@@ -76,6 +77,7 @@ const sendLog = sendLoggerWrapper(appsLogger, 1);
 sendLog("was payed"); //send: was payed, to application number: 1 
 ```
 
+<br>
 <br>
 
 💠 Сохранять результат работы экземпляра конкретной функции
@@ -112,6 +114,7 @@ console.log(clickCount()); // 👉🏼 2
 console.log(clickCount()); // 👉🏼 3
 ```
 
+<br>
 <br>
 
 💠 Создавать приватные переменные
