@@ -20,8 +20,8 @@ fn.logger = (data) => {
   return `log: ${data}`
 }
 
-console.log(fn.logger('my-data')) // => 'log: my-data'
-console.log(fn('my-data')) // => 'my-data'
+console.log(fn.logger('my-data')) // 👉🏼 'log: my-data'
+console.log(fn('my-data')) // 👉🏼 'my-data'
 ```
 
 &emsp;&emsp; 🔹 Свойства функции не обнуляются после вызова  
@@ -43,8 +43,8 @@ const fn = function (a) {
 
 fn.count = 0; // свойство функции
 
-console.log(fn("my-data")); // => 'my-data'
-console.log(fn.count); // => 1
+console.log(fn("my-data")); // 👉🏼 'my-data'
+console.log(fn.count); // 👉🏼 1
 ```
 
 &emsp;&emsp; 🔹 У каждой функци есть свои дефолтные свойство
@@ -54,12 +54,12 @@ console.log(fn.count); // => 1
 &emsp;&emsp;&emsp;&emsp; 🎯 `name` - Имя функции
 ```javascript
 const fn = (a, b) => {
-  console.log(fn.name, fn.length) // => 'fn' 2
+  console.log(fn.name, fn.length) // 👉🏼 'fn' 2
 
   return a;
 };
 
-console.log(fn("my-data")); // => 'my-data'
+console.log(fn("my-data")); // 👉🏼 'my-data'
 ```
 
 <br>
@@ -80,7 +80,7 @@ store.get = (key) => {
 };
 
 store.set("myKey", "myValue");
-console.log(store.get("myKey"));
+console.log(store.get("myKey")); // 👉🏼 "myValue"
 
 ```
 
