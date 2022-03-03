@@ -116,7 +116,7 @@ while (result = regExp.test(searchString)) { // 🎯 Будет идти по с
   count++
 }
 
-console.log(count) // => 2
+console.log(count) // 👉🏼 2
 ```
 
 <br><br>
@@ -130,14 +130,14 @@ console.log(count) // => 2
 &emsp;&emsp;&emsp;&emsp; 👆 Включая символ с индексом `startIndex`         
  
 ```javascript
-'abcd'.startsWith('abc') // true
+'abcd'.startsWith('abc') // 👉🏼 true
 
 
-'abcd'.startsWith('bc', 1) // => true
+'abcd'.startsWith('bc', 1) // 👉🏼 true
 ```
 
 &emsp;&emsp; 📗 **'a, [`b, c,` d]'**  
-&emsp;&emsp;&emsp;&emsp; 🎯 Поиск начнется с символа с индексом `1` => `b`      
+&emsp;&emsp;&emsp;&emsp; 🎯 Поиск начнется с символа с индексом `1` 👉🏼 `b`      
 &emsp;&emsp;&emsp;&emsp; 🎯 `bcd` начинается на `bc`
 
 <br><br>
@@ -151,10 +151,10 @@ console.log(count) // => 2
 &emsp;&emsp;&emsp;&emsp; 👆 Отсчет ведется с лева на право         
 
 ```javascript
-'abcd'.endsWith('cd') // => true
+'abcd'.endsWith('cd') // 👉🏼 true
 
 
-'abcd'.endsWith('bc', 3) // => true
+'abcd'.endsWith('bc', 3) // 👉🏼 true
 ```
 
 &emsp;&emsp; 📗 **'[a, `b, c,`] d'**  
@@ -176,15 +176,15 @@ console.log(count) // => 2
 &emsp;&emsp;&emsp;&emsp; 👆 Хак для избежание сравнениие с `-1`, работает для небольших строк  
 
 ```javascript
-'abcd'.indexOf('bc') // => 1
+'abcd'.indexOf('bc') // 👉🏼 1
 
-'abcd'.indexOf('ab') // => 0
+'abcd'.indexOf('ab') // 👉🏼 0
 
-'abcd'.indexOf('top') // => -1
+'abcd'.indexOf('top') // 👉🏼 -1
 ```
 &emsp;&emsp; 📗 **'[a, `b, c`, d]'**  
 &emsp;&emsp;&emsp;&emsp; 🎯 Совпадение с подстрокой `bc` началось на символе `b`  
-&emsp;&emsp;&emsp;&emsp; 🎯 Вернется его индекс => `1`
+&emsp;&emsp;&emsp;&emsp; 🎯 Вернется его индекс 👉🏼 `1`
 
 <br><br>
 
@@ -203,15 +203,15 @@ console.log(count) // => 2
 &emsp;&emsp;&emsp;&emsp; 👆 Хак для избежание сравнениие с `-1`, работает для небольших строк  
 
 ```javascript
-'abcd'.search('bc') // => 1
+'abcd'.search('bc') // 👉🏼 1
 
-'abcd'.search('ab') // => 0
+'abcd'.search('ab') // 👉🏼 0
 
-'abcd'.search('top') // => -1
+'abcd'.search('top') // 👉🏼 -1
 ```
 &emsp;&emsp; 📗 **'[a, `b, c`, d]'**  
 &emsp;&emsp;&emsp;&emsp; 🎯 Совпадение с подстрокой `bc` началось на символе `b`  
-&emsp;&emsp;&emsp;&emsp; 🎯 Вернется его индекс => `1`
+&emsp;&emsp;&emsp;&emsp; 🎯 Вернется его индекс 👉🏼 `1`
 
 <br>
 
@@ -235,8 +235,8 @@ console.log(count) // => 2
 
 &emsp;&emsp; 🔹 Принимает `indexBeforeFinish` с отрицательным числом  
 &emsp;&emsp;&emsp;&emsp; 👆 Отрицательное число указывает, что `indexBeforeFinish` будет равен `str.length` минус это отрицательное число, преобразованное в положительное     
-```
-str.slice(1, -1) === slice(1, str.length - 1) 👉🏼 true
+```javascript
+str.slice(1, -1) === slice(1, str.length - 1) // 👉🏼 true
 ```
 
 ##### Детальная работа с отрицательным indexBeforeFinish
@@ -262,7 +262,7 @@ str.slice(1, -1) === slice(1, str.length - 1) // 👉🏼 true
 ```
 &emsp;&emsp; 📗 **'[a, `b, c`, d]'**    
 &emsp;&emsp;&emsp;&emsp; 🎯 Будет взят символ с идексом `1` 👉🏼 `b`    
-&emsp;&emsp;&emsp;&emsp; 🎯 И все символы справа, до символа с индексом `3` => `c`
+&emsp;&emsp;&emsp;&emsp; 🎯 И все символы справа, до символа с индексом `3` 👉🏼 `c`
 
 <br><br>      
 
@@ -321,7 +321,7 @@ str.slice(1, -1) === slice(1, str.length - 1) // 👉🏼 true
 ```javascript
 let str = 'abcde'
 
-str.substr(-3, 2) === substr(str.length - 3, 2) // => true
+str.substr(-3, 2) === substr(str.length - 3, 2) // 👉🏼 true
 ```
 &emsp;&emsp; 📗 **'[a, b, `c, d`, e]'**    
 &emsp;&emsp;&emsp;&emsp; 🎯 `str.length - 1` укажет на индекс последнего символа в строке    
@@ -431,7 +431,9 @@ console.log( firstCoincidence.input );  // 🎯 Строку в которой �
 &emsp;&emsp; 🔹 Вызывается на самом регулярном выражении, а не на строке  
 &emsp;&emsp;&emsp;&emsp; 👆 Так как это метод регулярки
 
-&emsp;&emsp; 🔹 С флагом `g,` может начинать поиск с указанного индекса  
+<br>
+
+&emsp;&emsp; 🔹 С флагом `g`, может начинать поиск с указанного индекса  
 &emsp;&emsp;&emsp;&emsp; 👆 Так как `regExp` хранит в себе свойство `lastIndex`, указывающие индекс начала поиска       
 ```javascript
 const regExp = /best/g
@@ -440,8 +442,11 @@ regExp.lastIndex = 6
 const result = regExp.exec('best of the last') // 👉🏼 null, так как поиск начнеться с символа с индексом 6
 ```
 
+<br>
 
 &emsp;&emsp; 🔹 Без флага `g`, возвращает результат идентично `match`         
+
+<br>
 
 &emsp;&emsp; 🔹 С флагом `g`, работает следующим образом  
 &emsp;&emsp;&emsp;&emsp; 🎯 Возвращает найденное совпадени              
@@ -561,25 +566,25 @@ myString.replace(/\d/g, "[$&]") // 👉🏼 '[1], [2], three, four'
 &emsp;&emsp;&emsp;&emsp; 🎯 **$`** - вставляет всю строку до совпадения
 ```javascript
 const myString = "string for replace"
-myString.replace(/for/i, "[$`]") // => 'string [string ] replace'
+myString.replace(/for/i, "[$`]") // 👉🏼 'string [string ] replace'
 ```
 
 &emsp;&emsp;&emsp;&emsp; 🎯 **`$'`**	 - вставляет всю строку после совпадения
 ```javascript
 const myString = "string for replace"
-myString.replace(/for/i, "[$']") // => 'string [ replace] replace'
+myString.replace(/for/i, "[$']") // 👉🏼 'string [ replace] replace'
 ```
 
 &emsp;&emsp;&emsp;&emsp; 🎯 **`"$n"`** - вставляет содержимое `n-й` скобочной группы
 ```javascript
 const myString = "John Smith"
-myString.replace(/(\w+) (\w+)/i, '$2, $1') // => 'Smith, John'
+myString.replace(/(\w+) (\w+)/i, '$2, $1') // 👉🏼 'Smith, John'
 ```
 
 &emsp;&emsp;&emsp;&emsp; 🎯 **`"$<name>"`** - вставляет содержимое, указанной именнованной скобки
 ```javascript
 const myString = "John Smith"
-console.log(myString.replace(/(?<name>\w+) (?<surname>\w+)/i, '$<surname>, $<name>')) // => 'Smith, John'
+console.log(myString.replace(/(?<name>\w+) (?<surname>\w+)/i, '$<surname>, $<name>')) // 👉🏼 'Smith, John'
 ```
 
 <br>
