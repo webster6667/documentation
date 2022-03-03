@@ -59,6 +59,20 @@ import {$name$} from '@mui/material'
 
 <br><br>
 
+🔹 imp:. - именованный импорт
+```javascript
+import {$component$} from "./$path$"
+```
+
+<br><br>
+
+🔹 imp:@ - импорт алиаса
+```javascript
+import {$component$} from "@$aliasName$"
+```
+
+<br><br>
+
 🔹 imp:cmp - компонентов из папки
 ```javascript
 import {$name$} from './components/$path$'
@@ -80,19 +94,12 @@ import {$name$} from '@components/$path$'
 
 <br><br>
 
-🔹 imp:@tpg:h - Импорт заголовков
+🔹 imp:@tpg - Импорт типографики
 ```javascript
-import {$name$} from '@titles'
+import {$name$} from '@typography'
 ```
 
-<br>
-
-🔹 imp:@tpg:t - Импорт текста
-```javascript
-import {$name$} from '@text-components'
-```
-
-<br>
+<br><br>
 
 🔹 imp:ts:f - Импорт файла с типами
 ```javascript
@@ -122,3 +129,16 @@ import {$name$} from '@ui/$path$'
 import {$name$} from '@styled-mixins/$path$'
 ```
 
+<br><br>
+
+🔹 exp:. - экспорт дочерних компонентов
+```typescript
+export {$component$} from './$path$'
+```
+
+<br><br>
+
+🔹 exp:* - экспорт всех дочерних компонентов
+```typescript
+export * from './$path$'
+```

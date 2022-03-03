@@ -49,8 +49,3 @@ export const $name$ = $data$
 ```
 
 <br><br>
-
-🔹 exp. - экспорт дочерних компонентов
-```typescript
-export {$component$} from './$path$'
-```

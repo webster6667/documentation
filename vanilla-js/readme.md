@@ -10,6 +10,7 @@
 * **<a href="./pages/functions/readme.md">Функции</a>**
 * **<a href="./pages/scope/readme.md">Scope / область видимости</a>**
 * **<a href="./pages/closure/readme.md">Замыкание</a>**
+* **<a href="./pages/carry/readme.md">Каррирование</a>**
 * **<a href="./pages/higher-order-functions/readme.md">Higher Order Functions / функции высшего порядка</a>**
 * **<a href="./pages/string/readme.md">Методы строк</a>**
 * **<a href="./pages/reg-exp/readme.md">Регулярные выражения</a>**

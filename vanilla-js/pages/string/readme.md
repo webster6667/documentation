@@ -27,14 +27,14 @@
 
 💠 **myString`[index]`**
 ```javascript
-'abc'[1] // => 'b'
+'abc'[1] // 👉🏼 'b'
 ```  
 
 <br><br>
    
 💠 **myString.charAt`(index)`**  
 ```javascript
-'abc'.charAt(1) // => 'b'
+'abc'.charAt(1) // 👉🏼 'b'
 ```
 
 <br>
@@ -45,14 +45,14 @@
 
 💠 **myString.toUpperCase`()`**
 ```javascript
-'abc'.toUpperCase() // => 'ABC'
+'abc'.toUpperCase() // 👉🏼 'ABC'
 ```  
 
 <br><br>
 
-💠 **myString.toLowerCase`()`** ``  
+💠 **myString.toLowerCase`()`**  
 ```javascript
-'ABC'.toLowerCase() // => 'abc'
+'ABC'.toLowerCase() // 👉🏼 'abc'
 ```
 
 <br>
@@ -64,10 +64,10 @@
 💠 **myString.includes`(subStr)`**  
 👆🏽 Ищет подстроку по всему тексту
 ```javascript
-'abc'.includes('ab') // true
+'abc'.includes('ab') // 👉🏼 true
 ```
 &emsp;&emsp; 📗 **'[`a, b`, c]'**   
-&emsp;&emsp;&emsp;&emsp;  🎯 `ab`, есть в `abc`
+&emsp;&emsp;&emsp;&emsp;  👆 `ab`, есть в `abc`
 
 <br><br>
 
@@ -79,19 +79,20 @@
 &emsp;&emsp; 🔹 Вызывается на самом регулярном выражении  
 &emsp;&emsp;&emsp;&emsp; 👆 А не на строке, так как это метод регулярки
 
-&emsp;&emsp; 🔹 С флагом `g`, может начинать поиск с указанного индекса  
+&emsp;&emsp; 🔹 Регулярное выражение с флагом `g`, может начинать поиск с указанного индекса  
 &emsp;&emsp;&emsp;&emsp; 👆 Так как `regExp` хранит в себе свойство `lastIndex`, указывающие индекс начала поиска       
 ```javascript
 const regExp = /best/g
 regExp.lastIndex = 6
 
-const result = regExp.test('best of the last') // => false
+const result = regExp.test('best of the last') // 👉🏼 false, так как поиск начат с 6-го символа
 ```
 
 
-&emsp;&emsp; 🔹 Без флага `g`, возвращает `true/false`         
+&emsp;&emsp; 🔹 Регулярное выражение без флага `g`, возвращает `true/false`         
 
-&emsp;&emsp; 🔹 С флагом `g`, работает следующим образом  
+&emsp;&emsp; 🔹 Регулярное выражение с флагом `g`, работает следующим образом
+
 &emsp;&emsp;&emsp;&emsp; 🎯 Возвращает `true/false`              
 
 &emsp;&emsp;&emsp;&emsp; 🎯 Записывает в `regExp` свойство `lastIndex`, индекс символа совпадения
@@ -121,7 +122,7 @@ console.log(count) // => 2
 <br><br>
 
 💠 **myString.startsWith`(subStr, startIndex = 0)`**  
-👆🏽 Проверяет начинается ли текст искомыми символами(`subStr`)
+👆🏽 Проверяет начинается ли текст с `startIndex` искомыми символами(`subStr`)
 
 <br>
 
@@ -219,25 +220,30 @@ console.log(count) // => 2
 <br>
 
 💠 **myString.slice`(startIndex, indexBeforeFinish = myString.length)`**    
-👆🏽 Берет символы, начиная с индекса `startIndex`, заканчивая символом перед `indexBeforeFinish`
+👆🏽 Возвращает символы, начиная с индекса `startIndex(включая startIndex)`, заканчивая символом перед `indexBeforeFinish`
 
 <br>
 
 &emsp;&emsp; 🔹 Возвращает новую независимую строку      
 
-&emsp;&emsp; 🔹 Если `startIndex`, больше `indexBeforeFinish` вернет пустую строку   
+&emsp;&emsp; 🔹 Если `startIndex`, больше `indexBeforeFinish` вернет пустую строку     
+&emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.slice(3, 2) 👉🏼 ''`
+
 
 &emsp;&emsp; 🔹 Если не указать `indexBeforeFinish`, выборка будет происходить от `startIndex` до конца строки   
-&emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.slice(1)` = `'bcd'`    
+&emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.slice(1) 👉🏼 'bcd'`    
 
 &emsp;&emsp; 🔹 Принимает `indexBeforeFinish` с отрицательным числом  
-&emsp;&emsp;&emsp;&emsp; 👆 Тогда отсчет конечной точки выбора, начинается с конца строки
+&emsp;&emsp;&emsp;&emsp; 👆 Отрицательное число указывает, что `indexBeforeFinish` будет равен `str.length` минус это отрицательное число, преобразованное в положительное     
+```
+str.slice(1, -1) === slice(1, str.length - 1) 👉🏼 true
+```
 
-##### С отрицательным indexBeforeFinish
+##### Детальная работа с отрицательным indexBeforeFinish
 ```javascript
 let str = 'abcde'
 
-str.slice(1, -1) === slice(1, str.length - 1) // => true
+str.slice(1, -1) === slice(1, str.length - 1) // 👉🏼 true
 ```
    
 &emsp;&emsp; 📗 **'[a, `b, c, d,` e]'**    
@@ -250,12 +256,12 @@ str.slice(1, -1) === slice(1, str.length - 1) // => true
 
 <br>
 
-##### С положительным indexBeforeFinish
+##### Детальная работа с положительным indexBeforeFinish
 ```javascript
-'abcd'.slice(1, 3) // => 'bc'
+'abcd'.slice(1, 3) // 👉🏼 'bc'
 ```
 &emsp;&emsp; 📗 **'[a, `b, c`, d]'**    
-&emsp;&emsp;&emsp;&emsp; 🎯 Будет взят символ с идексом `1` => `b`    
+&emsp;&emsp;&emsp;&emsp; 🎯 Будет взят символ с идексом `1` 👉🏼 `b`    
 &emsp;&emsp;&emsp;&emsp; 🎯 И все символы справа, до символа с индексом `3` => `c`
 
 <br><br>      
@@ -265,21 +271,21 @@ str.slice(1, -1) === slice(1, str.length - 1) // => true
 
 <br>
 
-&emsp;&emsp; 🔹 Вернет символы с индексом от 1(`включая 1`) до 3(`не включая 3`)   
+&emsp;&emsp; 🔹 Вернет символы начиная с `startIndex(включая startIndex)` заканчивая символом перед `indexBeforeFinish`   
 &emsp;&emsp;&emsp;&emsp; 👆 ['a', `'b', 'c',` 'd']       
 
-&emsp;&emsp; 🔹 Отрицательные числа приводит к 0  
-&emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.substring(-1, 3)` --> `'abcd'.substring(0, 3)`         
+&emsp;&emsp; 🔹 Отрицательные числа преобразуються к 0  
+&emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.substring(-1, 3)` 👉🏼 `abcd'.substring(0, 3)`         
 
 &emsp;&emsp; 🔹 Если `startIndex` больше `indexBeforeFinish`, метод поменяет их местами и выборка произойдет верно  
 &emsp;&emsp;&emsp;&emsp; 👆 `'abcd'.substring(1, 3) === 'abcd'.substring(3, 1)`    
 
 ```javascript
-'abcd'.substring(1, 3) // => 'bc'
+'abcd'.substring(1, 3) // 👉🏼 'bc'
 ```      
 &emsp;&emsp; 📗 **'[a, `b, c`, d]'**    
-&emsp;&emsp;&emsp;&emsp; 🎯 Будет взят символ с идексом `1` => `b`    
-&emsp;&emsp;&emsp;&emsp; 🎯 И все символы справа, до символа с индексом `3` => `c`
+&emsp;&emsp;&emsp;&emsp; 🎯 Будет взят символ с идексом `1` 👉🏼 `b`    
+&emsp;&emsp;&emsp;&emsp; 🎯 И все символы справа, до символа с индексом `3` 👉🏼 `c`
 
 <br><br>
 
@@ -290,14 +296,25 @@ str.slice(1, -1) === slice(1, str.length - 1) // => true
 
 &emsp;&emsp; 🔹 `quantity`: Кол-во символов для выборки, начиная с символа имеющий `startIndex` индекс (`включая`)    
 &emsp;&emsp;&emsp;&emsp; 👆 Если указать `quantity` = `0`, то не будет взят даже `startIndex` символ   
+```javascript
+'abc'.substr(1, 0) // 👉🏼 ''
+```
 
+<br>
 
-&emsp;&emsp; 🔹 Если `length` отрицателен, метод возвращает пустую строку        
+&emsp;&emsp; 🔹 Если `quantity` отрицателен, метод возвращает пустую строку        
+```javascript
+'abc'.substr(1, -1) // 👉🏼 ''
+```
+
+<br>
 
 &emsp;&emsp; 🔹 Если `quantity` больше количества символов доступных справа, возьмутся только те что доступны   
 ```javascript
-'abcd'.substr(1, 8) // => 'bcd'
+'abcd'.substr(1, 8) // 👉🏼 'bcd'
 ```
+
+<br>
 
 &emsp;&emsp; 🔹 Принимает `startIndex` с отрицательным числом  
 &emsp;&emsp;&emsp;&emsp; 👆 Тогда отсчет символа старта, начинается с конца строки
@@ -356,12 +373,12 @@ let myString = "best of the best";
 
 let result = myString.match(/rest/);
 
-console.log(result);        // 🎯 => null
+console.log(result);        // 🎯 👉🏼 null
 console.log(result.length); // 🎯 Ошибка: у null нет свойства length
 
 let result = myString.match(/rest/) || [];
 
-console.log(result);        // 🎯 => []
+console.log(result);        // 🎯 👉🏼 []
 console.log(result.length); // 🎯 length пустово массива равно 0
 ```  
 
@@ -375,17 +392,20 @@ console.log(result.length); // 🎯 length пустово массива рав�
 
 &emsp;&emsp; ❗ Новый метод, может потребовать полифил      
 
-&emsp;&emsp; 🔹 Выдает ошибку в `regExp` без флага `g`     
+&emsp;&emsp; 🔹 Выдает ошибку если в `regExp` не установлен флаг `g`     
 
-&emsp;&emsp; 🔹 Возвращает не массив, а итерируемый объект    
-&emsp;&emsp;&emsp;&emsp; 🎯 Для приведения к массиву использовать `Array.from(resultObject)`     
+<br>
+
+&emsp;&emsp; 🔹 Возвращает итерируемый объект, а не массив    
+
+&emsp;&emsp;&emsp;&emsp; 🎯 Для приведения к массиву использовать `Array.from(resultObject)`         
 &emsp;&emsp;&emsp;&emsp; 🎯 Работает с `for of`, без приведения к массиву  
 
 <br>
 
 &emsp;&emsp; 🔹 При отсутствии совпадений, возвращает пустой итерируемый объект, а не `null`      
 
-&emsp;&emsp; 🔹 Каждое совпадение содержит в себе информацию как в результате `match`, без флага `g`
+&emsp;&emsp; 🔹 Каждое совпадение содержит в себе информацию как в результате `match`, без флага `g` `(содержит больше деталей совпадения)`
 ```javascript
 let myString = "best of the best";
 
@@ -408,8 +428,8 @@ console.log( firstCoincidence.input );  // 🎯 Строку в которой �
 
 <br>
 
-&emsp;&emsp; 🔹 Вызывается на самом регулярном выражении  
-&emsp;&emsp;&emsp;&emsp; 👆 А не на строке, так как это метод регулярки
+&emsp;&emsp; 🔹 Вызывается на самом регулярном выражении, а не на строке  
+&emsp;&emsp;&emsp;&emsp; 👆 Так как это метод регулярки
 
 &emsp;&emsp; 🔹 С флагом `g,` может начинать поиск с указанного индекса  
 &emsp;&emsp;&emsp;&emsp; 👆 Так как `regExp` хранит в себе свойство `lastIndex`, указывающие индекс начала поиска       
@@ -417,7 +437,7 @@ console.log( firstCoincidence.input );  // 🎯 Строку в которой �
 const regExp = /best/g
 regExp.lastIndex = 6
 
-const result = regExp.exec('best of the last') // => null
+const result = regExp.exec('best of the last') // 👉🏼 null, так как поиск начнеться с символа с индексом 6
 ```
 
 
@@ -460,17 +480,27 @@ while (result = regExp.exec(searchString)) { // 🎯 Будет идти по с
 
 💠 **myString.split`(delimiter)`**   
 👆🏽 Разобьет строку на массив, элементами массива, будут строки между `delimiter`
+```javascript
+'Ben, Jon, Den'.split(', ') // 👉🏼 ['Ben', 'Jon', 'Den']
+```
 
 <br>
 
-&emsp;&emsp; 🔹 Если `delimiter` отсутствует в строке, вернется вся строка в массиве `['myStr']`  
+&emsp;&emsp; 🔹 Если `delimiter` отсутствует в строке, вернется вся строка в массиве  
+```javascript
+'Ben, Jon, Den'.split() // 👉🏼 ["Ben, Jon, Den"]
+```
+
+<br>
 
 &emsp;&emsp; 🔹 Возвращает новый массив   
 &emsp;&emsp;&emsp;&emsp; 👆 Удобно для создания цепи
 
-&emsp;&emsp; 🔹 Принимает регулярное выражение в `delimiter`                
+&emsp;&emsp; 🔹 Принимает регулярное выражение в `delimiter`  
+&emsp;&emsp;&emsp;&emsp; 👆 Для указания нескольких разделителей
+
 ```javascript
-console.log('Ben, Jon, Den'.split(',')) // => ["Ben", " Jon", " Den"]
+'Ben, Jon. Abram; Ascold, Den'.split(/[.,;] /) // 👉🏼 ['Ben', 'Jon', 'Abram', 'Ascold', 'Den']
 ```
 
 <br>
@@ -479,20 +509,21 @@ console.log('Ben, Jon, Den'.split(',')) // => ["Ben", " Jon", " Den"]
 
 💠 **myString.join`(delimiter = ',')`**   
 👆🏽 Склеит элементы массива в строку, разделив их `delimiter`
+```javascript
+["Ben", "Jon", "Den"].join(', ') // 👉🏼 'Ben, Jon, Den'
+```
 
 <br>
 
-&emsp;&emsp; 🔹 Возвращает новую строку
-
-&emsp;&emsp; 🔹 Оставляет пробел в конце
+&emsp;&emsp; 🔹 Возвращает новую строку, не мутируя оригинальную
 
 &emsp;&emsp; 🔹 Если не указывать `delimiter`, склеит все через запятую, без пробелов
 
 ```javascript
-console.log(["Ben", "Jon", "Den"].join("")); // => 'BenJonDen '
-console.log(["Ben", "Jon", "Den"].join(" ")); // => 'Ben Jon Den '
-console.log(["Ben", "Jon", "Den"].join()); // => 'Ben,Jon,Den '
-console.log(["Ben", "Jon", "Den"].join(', ')); // => 'Ben, Jon, Den ' 
+["Ben", "Jon", "Den"].join("") // 👉🏼 'BenJonDen'
+["Ben", "Jon", "Den"].join(" ") // 👉🏼 'Ben Jon Den'
+["Ben", "Jon", "Den"].join() // 👉🏼 'Ben,Jon,Den'
+["Ben", "Jon", "Den"].join(', ') // 👉🏼 'Ben, Jon, Den' 
 ```
 
 <br>
@@ -514,32 +545,32 @@ console.log(["Ben", "Jon", "Den"].join(', ')); // => 'Ben, Jon, Den '
 <br>  
 
 &emsp;&emsp; 🔹 Аргументом для замены `строка`, работает со спец символами  
-&emsp;&emsp;&emsp;&emsp; 🎯 **`$$`**	 - вставляет знак `$`  
+&emsp;&emsp;&emsp;&emsp; 🎯 **`$$`** - вставляет знак `$`  
 ```javascript
 const myString = "string for replace"
 
-myString.replace(/for/i, "$$") // => 'string $ replace'
+myString.replace(/for/i, "$$") // 👉🏼 'string $ replace'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **`$&`**	 - вставляет найденное совпадение
+&emsp;&emsp;&emsp;&emsp; 🎯 **`$&`** - вставляет найденное совпадение
 ```javascript
 const myString = "1, 2, three, four"
-myString.replace(/\d/g, "[$&]") // => '[1], [2], three, four'
+myString.replace(/\d/g, "[$&]") // 👉🏼 '[1], [2], three, four'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **``"$`"``**	 - вставляет всю строку до совпадения
+&emsp;&emsp;&emsp;&emsp; 🎯 **$`** - вставляет всю строку до совпадения
 ```javascript
 const myString = "string for replace"
 myString.replace(/for/i, "[$`]") // => 'string [string ] replace'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **`"$'"`**	 - вставляет всю строку после совпадения
+&emsp;&emsp;&emsp;&emsp; 🎯 **`$'`**	 - вставляет всю строку после совпадения
 ```javascript
 const myString = "string for replace"
 myString.replace(/for/i, "[$']") // => 'string [ replace] replace'
 ```
 
-&emsp;&emsp;&emsp;&emsp; 🎯 **`"$n"`**	 - вставляет содержимое `n-й` скобочной группы
+&emsp;&emsp;&emsp;&emsp; 🎯 **`"$n"`** - вставляет содержимое `n-й` скобочной группы
 ```javascript
 const myString = "John Smith"
 myString.replace(/(\w+) (\w+)/i, '$2, $1') // => 'Smith, John'
@@ -564,9 +595,9 @@ console.log(myString.replace(/(?<name>\w+) (?<surname>\w+)/i, '$<surname>, $<nam
 const myString = "user: John Smith"
 console.log(myString.replace(/\w+ \w+/i, (match, offset, input, groups) => {
   
-  console.log('mathch',match) // => 'John Smith'
+  console.log('mathch',match) // 👉🏼 'John Smith'
   
-  console.log('ofset', offset) // => 6 
+  console.log('ofset', offset) // 👉🏼 6 
 
   return match
 }))
@@ -583,20 +614,20 @@ console.log(myString.replace(/\w+ \w+/i, (match, offset, input, groups) => {
 const myString = "user: John Smith"
 myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input, groups) => {
   
-  console.log('mathch',match)                 // => 🎯 'John Smith'
+  console.log('mathch',match)                 // 👉🏼 'John Smith'
   
-  console.log('group first',name)             // => 🎯 'John'
+  console.log('group first',name)             // 👉🏼 'John'
 
-  console.log('group second(named)', surname) // => 🎯 'Smith'
+  console.log('group second(named)', surname) // 👉🏼 'Smith'
 
-  console.log('ofset', offset)                // => 🎯 6 
+  console.log('ofset', offset)                // 👉🏼 6 
 
-  console.log('search string: ', input)       // => 🎯 'user: John Smith'
+  console.log('search string: ', input)       // 👉🏼 'user: John Smith'
 
-  console.log('only named group: ', groups)   // => 🎯 {surname: "Smith"}
+  console.log('only named group: ', groups)   // 👉🏼 {surname: "Smith"}
 
   return `${name}`
-}) // => 🎯 user: John 
+}) // 👉🏼 user: John 
 ```
    
 <br>   
@@ -608,8 +639,8 @@ myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input,
 
 &emsp;&emsp; 🔹 Коды букв идут в порядке возрастания и в алфавитном порядке      
 ```javascript
- 'A'.charCodeAt() // 65
- 'B'.charCodeAt() // 66
+ 'A'.charCodeAt() // 👉🏼 65
+ 'B'.charCodeAt() // 👉🏼 66
 ```
 
 <br><br>
@@ -617,7 +648,7 @@ myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input,
 💠 **myString.codePointAt`(symbolIndex = 0)`**   
 👆🏽 Получить код символа с указанным индексом в строке
 ```javascript
-'abc'.codePointAt(1) // => 98
+'abc'.codePointAt(1) // 👉🏼 98
 // 98 код символа `b`
 ```
 
@@ -627,7 +658,7 @@ myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input,
 💠 **myString.charCodeAt`(symbolIndex = 0)`**   
 👆🏽 Получить код символа с указанным индексом в строке
 ```javascript
-'abc'.charCodeAt(1) // => 98
+'abc'.charCodeAt(1) // 👉🏼 98
 // 98 код символа `b`
 ```
 
@@ -637,7 +668,7 @@ myString.replace(/(\w+) (?<surname>\w+)/i, (match, name, surname, offset, input,
 💠 **String.fromCodePoint`(symbolCode1, ..., symbolCodeN)`**   
 👆🏽 Получить код символа с указанным индексом в строке
 ```javascript
-String.fromCodePoint(98, 99) // => 'bc'
+String.fromCodePoint(98, 99) // 👉🏼 'bc'
 // 98 код символа `b`
 // 99 код символа `c`
 ```
@@ -648,7 +679,7 @@ String.fromCodePoint(98, 99) // => 'bc'
 💠 **String.fromCharCode`(symbolCode1, ..., symbolCodeN)`**   
 👆🏽 Получить код символа с указанным индексом в строке
 ```javascript
-String.fromCharCode(98, 99) // => 'bc'
+String.fromCharCode(98, 99) // 👉🏼 'bc'
 // 98 код символа `b`
 // 99 код символа `c`
 ```
