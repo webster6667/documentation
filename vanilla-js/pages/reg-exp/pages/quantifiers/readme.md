@@ -31,13 +31,19 @@ str.match(regexp) // 👉🏼 "witch" and her "broom"
 
 &emsp;&emsp;&emsp;&emsp; 👉🏼 a `"`witch" and her "broom" is one
 
+<br>
+
 &emsp;&emsp; 🎯 Берет второй символ регулярного выржения с жадным квантификатором `.+`
 
 &emsp;&emsp;&emsp;&emsp; 👉🏼 a `"witch" and her "broom" is one`
 
+<br>
+
 &emsp;&emsp; 🎯 Берет третьий символ регулярного выржения `"`
 
 &emsp;&emsp;&emsp;&emsp; 👉🏼 Понимает что после поиска жадного квантификатора захватил слишком много и строка для поиска закончилась
+
+<br>
 
 &emsp;&emsp; 🎯 Начинает отступать от конца строки, пока не найдет искомый символ
 
