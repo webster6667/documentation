@@ -49,3 +49,19 @@ export const $name$ = $data$
 ```
 
 <br><br>
+
+🔹 cnst:hnd - хендер
+```typescript
+const handle$name$ = ($props$) => {
+    $data$
+}
+```
+
+<br><br>
+
+🔹 hnd - хендер
+```typescript
+handle$name$ = ($props$) => {
+    $data$
+}
+```
