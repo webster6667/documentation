@@ -6,12 +6,9 @@
 * **<a href="./pages/bracket-groups/readme.md">Скобочные группы</a>**
 * **<a href="./pages/quantifiers/readme.md">Обратные ссылки</a>**
 * **<a href="./pages/quantifiers/readme.md">Опережающие и ретроспективные проверки</a>**
-* **<a href="./pages/quantifiers/readme.md">Запрет возврата</a>**
 
 <br>
 
-https://learn.javascript.ru/regexp-backreferences
-https://learn.javascript.ru/regexp-lookahead-lookbehind
 
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
