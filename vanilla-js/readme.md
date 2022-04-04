@@ -19,7 +19,7 @@
 * **<a href="./pages/classes/readme.md">Классы ✍🏼(дописать примеси)</a>**
 * **<a href="./pages/array/readme.md">Массивы</a>**
 * **<a href="./pages/map-set/readme.md">Map WeekMap, Set WeekSet</a>**
-* **<a href="./pages/array/readme.md">Дата / время ✍🏼</a>**
+* **<a href="./pages/date/readme.md">Дата / время</a>**
 * **<a href="./pages/try-catch/readme.md">try/catch</a>**
 * **<a href="./pages/try-catch/readme.md">Пользовательские ошибки ✍🏼</a>**
 * **<a href="./pages/promise/readme.md">Промисы</a>**
