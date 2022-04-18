@@ -15,16 +15,18 @@
 * **<a href="./pages/string/readme.md">Методы строк</a>**
 * **<a href="./pages/reg-exp/readme.md">Регулярные выражения</a>**
 * **<a href="./pages/numbers/readme.md">Методы чисел</a>**
-* **<a href="./pages/objects/readme.md">Объекты</a>**
+* **<a href="./pages/objects/readme.md">Объекты ✍🏼(дописать опциональную цепочку, сборщик мусора)</a>**
 * **<a href="./pages/classes/readme.md">Классы ✍🏼(дописать примеси)</a>**
 * **<a href="./pages/array/readme.md">Массивы</a>**
 * **<a href="./pages/map-set/readme.md">Map WeekMap, Set WeekSet</a>**
 * **<a href="./pages/date/readme.md">Дата / время</a>**
 * **<a href="./pages/try-catch/readme.md">try/catch</a>**
-* **<a href="./pages/try-catch/readme.md">Пользовательские ошибки ✍🏼</a>**
 * **<a href="./pages/promise/readme.md">Промисы</a>**
 * **<a href="./pages/async-await/readme.md">Async/await</a>**
 * **<a href="./pages/iterators/readme.md">Итераторы</a>**
 * **<a href="./pages/generators/readme.md">Генераторы</a>**
-* **<a href="./pages/async-await/readme.md">Proxy ✍🏼</a>**
-* **<a href="./pages/async-await/readme.md">Модули ✍🏼</a>**
+* **<a href="./pages/async-await/readme.md">Proxy</a>**
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
