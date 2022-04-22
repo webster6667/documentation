@@ -3,6 +3,7 @@
 * **<a href="/emoji-instruction/readme.md">Emoji Instruction</a>**
 * **<a href="/web-technologies/readme.md">Web Technologies</a>**
 * **<a href="/vanilla-js/readme.md">Vanilla Js</a>**
+* **<a href="/browser-js/readme.md">Browser Js</a>**
 * **<a href="/vanilla-js/readme.md">DOM Js</a>**
 * **<a href="/react/readme.md">React</a>**
 * **<a href="/redux/readme.md">Redux</a>**
