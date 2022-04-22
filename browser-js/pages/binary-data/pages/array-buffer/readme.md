@@ -37,16 +37,3 @@ for(let num of view) {
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
-
- ```javascript
-const newVar = {name, job} = {name: 'my', age: 25, job: 'it'}
-      
-
-// или
-
-const {name, job} = {name: 'my', age: 25, job: 'it'},
-      newVar = {task: 'copy'}
-
-    newVar = {...newVar, name, job}
-
-```
