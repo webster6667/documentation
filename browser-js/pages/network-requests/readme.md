@@ -2,7 +2,7 @@
 
 * **<a href="./pages/fetch/readme.md">Form Data</a>**
 * **<a href="./pages/fetch/readme.md">URL</a>**
-* * **<a href="./pages/encode/readme.md">URL</a>**
+* **<a href="./pages/encode/readme.md">Кодирование</a>**
 * **<a href="./pages/fetch/readme.md">Fetch</a>**
 * **<a href="./pages/fetch/readme.md">XML HTTP request</a>**
 * **<a href="./pages/fetch/readme.md">axios</a>**
