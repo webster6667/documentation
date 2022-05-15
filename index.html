@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    
-    <script>
-
-        //Функция
-        function getUserData(age, phone) {
-            return `${this.name} ${age} ${phone}`;
-        }
-
-        //Контекст для проброса
-        const context = {
-            name: "Jac"
-        };
-
-        //Реализация bind
-        // console.log(getUserData.bind(context, 22)('+7 978'));
-
-        Function.prototype.myBind = function(context, ...args) {
-            
-            return (...argsChild) => {
-                const id = Symbol()
-                
-                context[id] = this
-
-                const bindedFnResult = context[id](...args.concat(argsChild))
-                
-                delete context[id]
-                
-                return bindedFnResult
-            }
-            
-        }
-        
-        const bindenFn = getUserData.myBind(context, 22),
-              bindenFnResult = bindenFn('+7 978')
-        
-        console.log(bindenFnResult)
-
-
-    </script>
-    
 </head>
 
 <body>
+
+<style>
+    .upload-file-btn {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .upload-file-btn input {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+</style>
+
+<form id="my-form">
+    
+    <img id="preview-img" />
+    
+    <br>
+    
+    <button class="upload-file-btn">
+        <input id="input-file" type="file" name="file" accept="image/*">
+        Загрузить
+    </button>
+    
+</form>
+
+<script>
+    const inputFile = document.getElementById('input-file'),
+          previewImg = document.getElementById('preview-img')
+
+    inputFile.onchange = ({target: uploadInput}) => {
+        const file = uploadInput?.files && Array.from(uploadInput.files)[0],
+              previewUrl = URL.createObjectURL(file)
+
+        previewImg.src = previewUrl
+
+        previewImg.onload = function() {
+            URL.revokeObjectURL(previewUrl);
+        };
+
+    }
+</script>
 
 </body>
 </html>
