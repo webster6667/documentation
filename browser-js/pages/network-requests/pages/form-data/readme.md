@@ -69,72 +69,48 @@
 &emsp;&emsp; 👆 Таким образом, поля `<input type="file">` тоже отправляются, как это и происходит при синхронной отправке формы  
 
 ```html
-<style>
-        .upload-file-btn {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .upload-file-btn input {
-            position: absolute;
-            opacity: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            cursor: pointer;
-        }
-    </style>
+<form id="my-form">
+    <input type="text" name="firstName" value="John">
     
-    <form id="my-form">
-        <input type="text" name="firstName" value="John">
+    <img id="preview-img" />
     
-        <br>
-    
-        <img id="preview-img" />
-    
-        <br>
-        
+    <div>
         <button class="upload-file-btn">
             <input id="input-file" type="file" name="file" accept="image/*">
             Загрузить
         </button>
-        
-        <input type="submit">
-    </form>
     
-    <script>
-        const form = document.getElementById('my-form'),
-              inputFile = document.getElementById('input-file'),
-              previewImg = document.getElementById('preview-img'),
-              url = 'http://localhost:5001/api/upload-entirely'
-        
-        inputFile.onchange = ({target: uploadInput}) => {
-            const file = uploadInput?.files && Array.from(uploadInput.files)[0],
-                  reader = new FileReader();
+        <input type="submit">
+    </div>
+</form>
+    
+<script>
+    const form = document.getElementById('my-form'),
+          inputFile = document.getElementById('input-file'),
+          previewImg = document.getElementById('preview-img'),
+          url = '/upload'
+    
+    inputFile.onchange = ({target: uploadInput}) => {
+        const file = uploadInput.files[0],
+              reader = new FileReader();
 
-            reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
 
-            reader.onloadend = () => {
-                const {result: previewUrl} = reader
-                previewImg.src = previewUrl;
-            }
+        reader.onloadend = () => {
+            const {result: previewUrl} = reader
+            previewImg.src = previewUrl;
         }
+    }
 
-        form.onsubmit = async (e) => {
-            e.preventDefault();
-            
-
-            let response = await fetch(url, {
-                method: 'POST',
-                body: new FormData(form)
-            });
-
-            let result = await response.json();
-        };
-
-
-    </script>
+    form.onsubmit = async (e) => {
+        e.preventDefault();
+        
+        let response = await fetch(url, {
+            method: 'POST',
+            body: new FormData(form)
+        });
+    };
+</script>
 ```
 
 <br>

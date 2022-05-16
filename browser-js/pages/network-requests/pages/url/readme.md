@@ -5,29 +5,27 @@
 
 🔹 Конструктор создает относительные адреса 
 ```javascript
-const adminUrl = new URL('/admin/', 'https://javascript.info'), // 👉🏼 https://javascript.info/admin/
-      adminPostUrl = new URL('post', adminUrl) // 👉🏼 https://javascript.info/admin/post
-
-console.log(adminUrl, adminPostUrl);
+const adminUrl = new URL('/admin/', 'https://domain.ru'), // 👉🏼 https://domain.ru/admin/
+      adminPostUrl = new URL('post', adminUrl) // 👉🏼 https://domain.ru/admin/post
 ```
 
 &emsp;&emsp; 🛑 Если `url` начинаеться с `/`, то у `base` стираеться все что идет после доменного имени 
 ```javascript
-console.log(new URL('/post', 'https://javascript.info/admin/api/')) // 👉🏼 https://javascript.info/post
+new URL('/post', 'https://domain.ru/admin/api/') // 👉🏼 https://domain.ru/post
 ```
 
 &emsp;&emsp; 🛑 У пути, попавшего в `base`, перед склейкой с `url`, стираеться все что идет после последнего `/` 
 ```javascript
-console.log(new URL('post', 'https://javascript.info/admin/?params=1')) // 👉🏼 https://javascript.info/admin/post
+new URL('post', 'https://domain.ru/admin/?params=1') // 👉🏼 https://domain.ru/admin/post
 ```
+
+<br>
 
 🔹 Валидно воспринимаеться в `fetch`, `XMLHttpRequest` и `axios`
 ```javascript
-const url = new URL('repos/javascript-tutorial/en.javascript.info/commits', 'https://api.github.com')
+const url = new URL('post', 'https://domain.ru')
 
 fetch(url)
-    .then(res => res.json())
-    .then(commits => console.log(commits[0].author.login));
 ```
 
 🔹 Разбирает `url` на свойства 
@@ -103,23 +101,6 @@ for(let [name, value] of url.searchParams) {
 
 🔹 Генерирует `url` для `blob` файлов 
 ```html
-<style>
-    .upload-file-btn {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .upload-file-btn input {
-        position: absolute;
-        opacity: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        cursor: pointer;
-    }
-</style>
-
 <form id="my-form">
     
     <img id="preview-img" />
@@ -135,10 +116,10 @@ for(let [name, value] of url.searchParams) {
 
 <script>
     const inputFile = document.getElementById('input-file'),
-            previewImg = document.getElementById('preview-img')
+          previewImg = document.getElementById('preview-img')
     
     inputFile.onchange = ({target: uploadInput}) => {
-        const file = uploadInput?.files && Array.from(uploadInput.files)[0],
+        const file = Array.from(uploadInput.files)[0],
                 previewUrl = URL.createObjectURL(file) // 👉🏼 Генерирует url для blob
         
         previewImg.src = previewUrl
@@ -152,7 +133,7 @@ for(let [name, value] of url.searchParams) {
 ```
 
 &emsp;&emsp; 🛑 Важно очищать память от созданных `url`  
-&emsp;&emsp;&emsp;&emsp; 👆 Так как в `spa` они накапливаються
+&emsp;&emsp;&emsp;&emsp; 👆 Так как в `SPA` они накапливаються
 
 &emsp;&emsp; 📗 Альтернативным методом получение `URL`, `Blob` файла, являеться `FileReader()`
 

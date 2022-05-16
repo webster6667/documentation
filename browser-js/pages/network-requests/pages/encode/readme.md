@@ -5,7 +5,7 @@
 👆🏽 Нужен для кодирования `uri` целиком, со всеми `GET` параметрами
 
 ```javascript
-console.log(encodeURI('http://site.com/привет')); // 👉🏼 http://site.com/%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82
+encodeURI('http://site.com/привет'); // 👉🏼 http://site.com/%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82
 ```
 
 💠 **decodeURI`(uri)`**   
