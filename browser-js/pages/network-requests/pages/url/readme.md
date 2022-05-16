@@ -20,6 +20,7 @@ new URL('post', 'https://domain.ru/admin/?params=1') // 👉🏼 https://domain.
 ```
 
 <br>
+<br>
 
 🔹 Валидно воспринимаеться в `fetch`, `XMLHttpRequest` и `axios`
 ```javascript
@@ -30,7 +31,7 @@ fetch(url)
 
 🔹 Разбирает `url` на свойства 
 
-![](/Users/www1/WebSter/doc/browser-js/pages/network-requests/pages/url/img/illustration.png)
+![](./img/illustration.png)
 
 🔹 Предоставляет удобные методы для работы с `GET` параметрами
 
