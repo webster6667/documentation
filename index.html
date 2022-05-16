@@ -8,45 +8,54 @@
 <body>
 
 <form id="my-form">
-    <input type="text" name="firstName" value="John">
-    
-    <img id="preview-img" />
-    
-    <div>
-        <button class="upload-file-btn">
-            <input id="input-file" type="file" name="file" accept="image/*">
-            Загрузить
-        </button>
-        
         <input type="submit">
-    </div>
+        <p>Прогресс: <span id="percent" >0</span>%</p>
 </form>
 
 <script>
     const form = document.getElementById('my-form'),
-        inputFile = document.getElementById('input-file'),
-        previewImg = document.getElementById('preview-img'),
-        url = 'http://localhost:5001/api/upload-entirely'
-
-    inputFile.onchange = ({target: uploadInput}) => {
-        const file = uploadInput.files[0],
-            reader = new FileReader();
-
-        reader.readAsDataURL(file);
-
-        reader.onloadend = () => {
-            const {result: previewUrl} = reader
-            previewImg.src = previewUrl;
-        }
-    }
-
+          percentWrapper = document.getElementById('percent')
+    
     form.onsubmit = async (e) => {
         e.preventDefault();
+        
 
-        let response = await fetch(url, {
-            method: 'POST',
-            body: new FormData(form)
-        });
+        // Шаг 1: начинаем загрузку fetch, получаем поток для чтения
+        const response = await fetch('http://localhost:5001/api/posts'),
+              reader = response.body.getReader();
+
+        // Шаг 2: получаем длину содержимого ответа
+        const contentLength = +response.headers.get('Content-Length');
+
+        // Шаг 3: считываем данные:
+        let receivedLength = 0; // количество байт, полученных на данный момент
+        let chunks = []; // массив полученных двоичных фрагментов (составляющих тело ответа)
+        
+        while(true) {
+            const {done, value} = await reader.read();
+            
+            if (done) break;
+
+            chunks.push(value);
+            receivedLength += value.length;
+
+            const progressPercent = (receivedLength * 100 / contentLength).toFixed(2)
+
+            console.log(`Получено ${receivedLength} из ${contentLength}`)
+
+            percentWrapper.innerHTML = progressPercent
+        }
+
+        // Шаг 4: соединим фрагменты в общий типизированный массив Uint8Array
+        let chunksAll = new Uint8Array(receivedLength); // (4.1)
+        let position = 0;
+        for(let chunk of chunks) {
+            chunksAll.set(chunk, position); // (4.2)
+            position += chunk.length;
+        }
+
+        // Шаг 5: декодируем Uint8Array обратно в строку
+        let result = new TextDecoder("utf-8").decode(chunksAll);
     };
 </script>
 
