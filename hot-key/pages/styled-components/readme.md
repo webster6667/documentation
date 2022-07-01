@@ -9,10 +9,18 @@ export const $name$ = styled.div`
 
 <br><br>
 
+🔹 stc:prop - styled component prop
+
+```typescript
+${({ $data$ }) => $code$}
+```
+
+<br><br>
+
 🔹 stc:if - styled component if
 
 ```typescript
-${({ $data$ }) => $if$}
+${({ $data$ }) => $if$ ? $true$ : $false$}
 ```
 
 <br><br>

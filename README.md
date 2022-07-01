@@ -12,3 +12,6 @@
 * **<a href="/testing/readme.md">Testing</a>**
 * **<a href="/graphql/readme.md">Graphql</a>**
 * **<a href="/graphql/readme.md">Effector</a>**
+* **<a href="/SSR/readme.md">SSR</a>**
+* **<a href="/socket/readme.md">Socket</a>**
+* **<a href="/docker/readme.md">Docker</a>**

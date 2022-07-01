@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+</head>
+
+<body>
+
+<style>
+  .progress-wrapper {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    border: 1px solid black;
+    overflow: hidden;
+  }
+
+  .progress-line {
+    position: absolute;
+    right: 100%;
+
+    width: 100%;
+    height: 100%;
+    background: greenyellow;
+  }
+
+  .percent {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+  }
+
+</style>
+
+<form id="my-form">
+
+  <div class="progress-wrapper">
+    <div class="progress-line"></div>
+    <div class="percent">0%</div>
+  </div>
+
+  <br>
+
+  <input type="file" id="input-file" >
+
+  <button type="submit" >
+    Отправить
+  </button>
+  <button type="button" id="pause-btn" >
+    Пауза
+  </button>
+</form>
+
+<script>
+  const str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi eos fugiat in ipsa iste modi nostrum qui repellendus tempore! A aliquid consequuntur laudantium maxime obcaecati reiciendis sit unde, ut?',
+        inputFile = document.querySelector('#input-file'),
+        sliceFile = (file, chunksSize) => {
+          let chunks = [],
+              order = 0
+
+          for (let byteIndex = 0; byteIndex <= file.size;) {
+            let byteEnd = byteIndex + chunksSize
+
+            chunks.push({data: file.slice(byteIndex, byteEnd), order});
+            byteIndex += chunksSize
+            ++order
+          }
+
+          return chunks;
+        }
+
+  let file
+  inputFile.onchange = ({target: uploadInput}) => {
+    file = uploadInput.files[0]
+  }
+
+  const form = document.getElementById('my-form'),
+        url = 'http://localhost:5001/api/upload-chunk',
+        progressLine = document.querySelector('.progress-line'),
+        percent = document.querySelector('.percent'),
+        pauseBtn = document.getElementById('pause-btn')
+
+  let chunkList = [],
+      abortController
+
+  form.onsubmit = async (e) => {
+    e.preventDefault();
+    abortController = new AbortController();
+
+    if (!chunkList.length) {
+      chunkList = sliceFile(file, 1000)
+    }
+
+    let uploadedChunksCount = chunkList.filter(({isUploaded}) => isUploaded).length
+
+    chunkList.forEach((chunk, index) => {
+      const {isUploaded = false, data: chunkData, order} = chunk,
+            formData = new FormData()
+
+      formData.set('chunk', chunkData)
+      formData.set('order', order)
+      formData.set('count', chunkList.length)
+
+      if (!isUploaded) {
+        fetch(url, {
+          method: 'POST',
+          signal: abortController.signal,
+          body: formData
+        }).then((res) => res.json()).then((res) => {
+          ++uploadedChunksCount
+          chunkList[index].isUploaded = true;
+
+          const uploadedPercent = (uploadedChunksCount*100)/chunkList.length
+          progressLine.style.transform = `translateX(${uploadedPercent}%)`
+          percent.innerText = `${uploadedPercent}%`
+        }).catch((e) => {
+          console.log(e);
+        })
+      }
+
+    })
+
+  };
+
+  pauseBtn.onclick = () => {
+    abortController.abort()
+  }
+</script>
+
+</body>
+</html>
