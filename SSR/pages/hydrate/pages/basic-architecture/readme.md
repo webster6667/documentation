@@ -30,7 +30,7 @@ export const App = () => {
 
 <br>
 
-💠 Client - `src/client/index.tsx`
+💠 Client - `src/client/index.tsx`  
 👆🏽 Папка в которой находиться все приложение, обернутое в **<a href="#hydrate">hydrate</a>** и клиентские провайдеры  
 
 &emsp;&emsp; 🔹 Hydrate  
@@ -84,6 +84,7 @@ app.get("*", (req, res, next) => {
         <html>
           <head>
             <title>SSR</title>          
+            <link rel="shortcut icon" href="/favicon.ico">
             <script src="/${assets.vendors.js}" defer></script>
             <script src="/${assets.main.js}" defer></script>        
           </head>
@@ -102,7 +103,7 @@ app.listen(SERVER_PORT, () => {
 });
 ```
 
-❗ Обязательно должна быть подключена favicon, если ее нет через ssr проходит лишний запрос
+❗ Обязательно должна быть подключена `favicon`, если ее нет через ssr проходит лишний запрос
 
 <br>
 
