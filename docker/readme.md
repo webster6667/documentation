@@ -24,10 +24,10 @@
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `-t imageName:tagname` Даст имя новому образу, и укажет версию(тег)
 
-&emsp;&emsp; 🔹 `docker rmi imageId`
+&emsp;&emsp; 🔹 `docker rmi imageId`  
 &emsp;&emsp;&emsp;&emsp; 👆 Удалить образ
 
-&emsp;&emsp; 🔹 `docker image prune`
+&emsp;&emsp; 🔹 `docker image prune`  
 &emsp;&emsp;&emsp;&emsp; 👆 Удалит все имеджи, которые не используються внутри контейнера
 
 
@@ -45,7 +45,7 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `-p` шарит порты из докера на локалку  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 `-p 3000(wantSeeOnLocal):3000(containerPortOnDocker)`
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `-d` detached запуск контейнера, без погружения внутрь
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `-d` detached запуск контейнера, без погружения внутрь  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 `docker start` тоже самое что и `docker run -d`
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `-name` Задать нормальное имя контейнеру
