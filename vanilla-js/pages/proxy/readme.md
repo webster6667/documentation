@@ -1,5 +1,5 @@
 # Proxy
 
-* **<a href="./pages/types/readme.md">Прокси</a>**
-* **<a href="./pages/transformation/readme.md">Reflect</a>**
+* **<a href="./pages/proxy/readme.md">Прокси</a>**
+* **<a href="./pages/reflect/readme.md">Reflect</a>**
 

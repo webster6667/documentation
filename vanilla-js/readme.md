@@ -25,7 +25,7 @@
 * **<a href="./pages/async-await/readme.md">Async/await</a>**
 * **<a href="./pages/iterators/readme.md">Итераторы</a>**
 * **<a href="./pages/generators/readme.md">Генераторы</a>**
-* **<a href="./pages/async-await/readme.md">Proxy</a>**
+* **<a href="./pages/proxy/readme.md">Proxy</a>**
 
 <br>
 
