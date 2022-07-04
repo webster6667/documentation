@@ -5,4 +5,6 @@
 **<a href="./pages/linear-search/readme.md">Линейный поиск</a>**  
 **<a href="./pages/binary-search/readme.md">Бинарный поиск</a>**  
 **<a href="./pages/selection-sort/readme.md">Сортировка выбором</a>**  
-**<a href="./pages/bubble-sort/readme.md">Сортировка пузырьком</a>** 
+**<a href="./pages/bubble-sort/readme.md">Сортировка пузырьком</a>**  
+**<a href="./pages/quick-sort/readme.md">Быстрая сортировка</a>**  
+**<a href="./pages/graph/readme.md">Графы</a>**
