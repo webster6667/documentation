@@ -116,6 +116,9 @@
 &emsp;&emsp; 🔹 `config`   
 &emsp;&emsp;&emsp;&emsp; 👆 модуль конфигурации приложения и его окружения
 
+&emsp;&emsp; 🔹 `model`   
+&emsp;&emsp;&emsp;&emsp; 👆 Работа с бизнес логикой (`reducers, actions, hooks`)
+
 📗  **<a href="https://feature-sliced.design/docs/reference">Оффициальная документация</a>**
 
 
