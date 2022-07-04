@@ -52,23 +52,6 @@
 💠 `entities`   
 👆🏽 Бизнес сущности, собранные из `shared` кусков, например карточка товара 
 
-&emsp;&emsp; 🔹         
-&emsp;&emsp; 🔹 `helpers/widgets`  
-&emsp;&emsp; 🔹 `api`  
-&emsp;&emsp; 🔹 `constants`  
-&emsp;&emsp; 🔹 `config`
-
-<br>
-
-💠 `entities`   
-👆🏽 Бизнес сущности, собранные из `shared` кусков, например карточка товара
-
-&emsp;&emsp; 🔹         
-&emsp;&emsp; 🔹 `helpers/widgets`  
-&emsp;&emsp; 🔹 `api`  
-&emsp;&emsp; 🔹 `constants`  
-&emsp;&emsp; 🔹 `config`
-
 <br>
 
 💠 `features`   
