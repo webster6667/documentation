@@ -18,3 +18,7 @@
 * **<a href="/patterns/readme.md">Patterns</a>**  
 * **<a href="/algorithms/readme.md">Algorithms</a>**
 * **<a href="/project-architectures/readme.md">Project Architectures</a>**
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
