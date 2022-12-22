@@ -5,7 +5,7 @@
 * **<a href="./pages/quantifiers/readme.md">Квантификаторы</a>**
 * **<a href="./pages/bracket-groups/readme.md">Скобочные группы</a>**
 * **<a href="./pages/quantifiers/readme.md">Обратные ссылки</a>**
-* **<a href="./pages/quantifiers/readme.md">Опережающие и ретроспективные проверки</a>**
+* **<a href="./pages/regexp-lookahead-lookbehind/readme.md">Опережающие и ретроспективные проверки</a>**
 
 <br>
 

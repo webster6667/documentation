@@ -16,6 +16,14 @@ import { Link } from 'react-router-dom'
 <br>
 <br>
 
+🔹 `imp:ax` - импорт реакт роутер дом
+```javascript
+import axios from 'axios'
+```
+
+<br>
+<br>
+
 🔹 `imp:ppt` - импорт проптайпсов
 ```javascript
 import PropTypes from 'prop-types';
@@ -52,6 +60,13 @@ import { $componentName$ } from './styles'
 🔹 `imp:stc:th` - импорт главной темы стилизированных компонентов
 ```javascript
 import { theme } from '@app-theme'
+```
+
+<br><br>
+
+🔹 `imp:cn` - импорт коннектор классов
+```javascript
+import cn from 'classnames'
 ```
 
 <br>
@@ -127,6 +142,13 @@ import {$name$} from '@const/$path$'
 
 <br><br>
 
+🔹 `imp:@hook` - Импорт глобальных констант
+```javascript
+import {$hook$} from '@hook$path$'
+```
+
+<br><br>
+
 🔹 `imp:ts:f` - Импорт файла с типами
 ```javascript
 import {$name$} from './types'
@@ -137,6 +159,11 @@ import {$name$} from './types'
 🔹 `imp:@stc:mix` - импорт миксин
 ```javascript
 import {$name$} from '@styled-mixins/$path$'
+```
+
+🔹 `imp:st:md` - импорт scss
+```javascript
+import style from './$name$'
 ```
 
 <br><br>
@@ -151,4 +178,36 @@ export {$component$} from './$path$'
 🔹 `exp:*` - экспорт всех дочерних компонентов
 ```typescript
 export * from './$path$'
+```
+
+<br><br>
+
+🔹 `imp:@svg:cmp` - импорт общего svg компонента
+```typescript
+import { ReactComponent as $Name$Icon } from './@icons/$path$.svg'
+$END$
+```
+
+<br><br>
+
+🔹 `imp:@svg` - импорт пути общей svg картинки
+```typescript
+import $Name$IconPath from './@icons/$path$.svg'
+$END$
+```
+
+<br><br>
+
+🔹 `imp:svg:cmp` - импорт локального svg компонента
+```typescript
+import { ReactComponent as $Name$Icon } from './img/$path$.svg'
+$END$
+```
+
+<br><br>
+
+🔹 `imp:svg` - импорт пути локального svg картинки
+```typescript
+import $Name$IconPath from './img/$path$.svg'
+$END$
 ```

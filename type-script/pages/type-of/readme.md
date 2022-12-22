@@ -6,7 +6,7 @@
 const userAge = 22
 
 type User = {
-  age: typeof userAge // => age: number
+  age: typeof userAge // 👉🏼 age: number
 }
 ```   
 &emsp;&emsp; 👆 `typeof any` возвращает типы, которые могут быть ключами объекта `(string | number | symbol)`    
@@ -18,17 +18,15 @@ const user = {
   name: 'myUser'
 }
 
-type User = typeof user // => type User = {name: string}
+type User = typeof user // 👉🏼 type User = {name: string}
 ```
 
 🔹 Массив      
 ```typescript
 const arrayData = [1, 2, '3', true]
 
-type TypedArray= typeof arrayData // type TypedArray = (string | number | boolean)[]
+type TypedArray= typeof arrayData // 👉🏼 type TypedArray = (string | number | boolean)[]
 ```
-
-🔹 Классы ?       
 
 <br>
 

@@ -1,7 +1,7 @@
 # Преобразование типов данных
 
 💠 **Приведение данных к типу**   
-👆🏽 Приведет не типизированные данные(`ant, unknoqn`), к указанному типу
+👆🏽 Приведет не типизированные данные(`any, unknown`), к указанному типу
 
 <br>
 
@@ -9,8 +9,8 @@
 ```typescript
 function myFn(a: any, b: any):void {
 
-    const typedA: string = <string>a,  // => 🎯 Укажет тип 'string'
-          typedB: number = b as number // => 🎯 Укажет тип 'number'
+    const typedA: string = <string>a,  // 👉🏼 Укажет тип 'string'
+          typedB: number = b as number // 👉🏼 Укажет тип 'number'
 
 }
 ```
@@ -24,8 +24,8 @@ type UserData = {age: string}
 
 function myFn(user: any, userData: any):void {
 
-    const typedUser: User = <User>user,                  // => 🎯 Укажет тип 'User'
-          typedUserData: UserData = userData as UserData // => 🎯 Укажет тип 'UserData'
+    const typedUser: User = <User>user,                  // 👉🏼 Укажет тип 'User'
+          typedUserData: UserData = userData as UserData // 👉🏼 Укажет тип 'UserData'
 
 }
 ```
@@ -36,8 +36,8 @@ function myFn(user: any, userData: any):void {
 ```typescript
 function myFn(a: any, b: any):void {
 
-  (<string>a).toUpperCase(); // => 🎯 Укажет тип 'string', подскажет методы
-  (b as number).toFixed();   // => 🎯 Укажет тип 'number', подскажет методы
+  (<string>a).toUpperCase(); // 👉🏼 Укажет тип 'string', подскажет методы
+  (b as number).toFixed();   // 👉🏼 Укажет тип 'number', подскажет методы
   
 }
 ```
@@ -46,7 +46,9 @@ function myFn(a: any, b: any):void {
 
 <br>
 
-&emsp;&emsp; 🔹 Ключевое слово `const`, блокирует объект от изменения
+&emsp;&emsp; 🔹 Конструкция `as const`  
+&emsp;&emsp;&emsp;&emsp; 👆 Приводит переменную к типу с конкретными значениями   
+
 ```typescript
 const myObject1 = {name: 'Ben', age: 22}          // => {name: string, age: number}
 const myObject2 = {name: 'Ben', age: 22} as const // => {readonly name: "Ben", readonly age: 22}
@@ -81,3 +83,7 @@ type User = {name: string} & {age: number}
 const user:User = {name: 'Ben'}
 ```
 👆 Ts, выдает ошибку, свойство `age` обязательно, и должно быть числом
+
+<br><br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**

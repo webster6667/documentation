@@ -17,8 +17,8 @@ interface Developer {
 }
 
 interface Student extends User, Developer {
-  // => name: string будет унаследованно  
-  // => direction: string будет унаследованно  
+  // 👉🏼 name: string будет унаследованно  
+  // 👉🏼 direction: string будет унаследованно  
   age: number
 }
 ```
@@ -49,20 +49,20 @@ interface GetData {
   (name: string, age: number): string;
 }
 
-// 🎯 => arrow expression
-let getData: GetData = (name, age) => {
+// 🎯 Arrow expression
+let getData1: GetData = (name, age) => {
   return `${name} ${age}`
 }
 
-// 🎯 => function expression
-let getData: GetData = function(name, age) {
+// 🎯 Function expression
+let getData2: GetData = function(name, age) {
   return `${name} ${age}`
 }
 
-// 🎯 => expression after typing 
-let getData: GetData
+// 🎯 Expression after typing 
+let getData3: GetData
 
-getData = function(name, age) {
+getData3 = function(name, age) {
             return `${name} ${age}`
 }
 ``` 
@@ -101,14 +101,46 @@ type Developer = {
   direction: string
 }
 
-type Student = User & Developer & {age: number} // => {name: string, direction: string, age:number}
+type Student = User & Developer & {age: number} // 👉🏼 {name: string, direction: string, age:number}
 ```
 
 <br>
 
+<br>
+
+&emsp;&emsp; 🔹 Могут указать группу типов возможных для наследования
+```typescript
+type User = {
+    name: string
+}
+
+type Developer = {
+    direction: string
+}
+
+type Student = User | Developer
+
+const student1:Student = { // 👉🏼 Valid
+    name: 'Alex',
+    direction: 'Frontend'
+}
+
+const student2:Student = { // 👉🏼 Valid
+    name: 'Alex'
+}
+
+const student3:Student = { // 👉🏼 Valid
+    direction: 'Frontend'
+}
+
+const student4:Student = { // 👉🏼 Invalid
+    
+}
+```
+
 &emsp;&emsp; 🔹 Одинаковые название вызывают ошибку      
 
-&emsp;&emsp; 🔹 синтаксис типизации `function Expression`
+&emsp;&emsp; 🔹 Синтаксис типизации `function Expression`
 ```typescript
 type GetDataLikeInterface = {
   (name: string, age: number): string;
@@ -135,6 +167,13 @@ function getData(props:Data, count: number) {
 
   return `${name} ${age}`;
 }
+```
+
+<br>
+
+&emsp;&emsp; 🔹 Типизировать конкретные значения
+```typescript
+type sizes = 'sm' | 'md' | 'lg'
 ```
 
 <br>

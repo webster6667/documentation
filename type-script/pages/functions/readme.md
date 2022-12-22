@@ -35,17 +35,22 @@ function myFunctionDeclaration(name: string, age: number):string {
 💠 **Перегрузка функции**   
 👆🏽 Описание нескольких сигнатур функции, которые применяться в зависимости от входных параметров
 
+&emsp;&emsp; 🔹 Самая нижняя сигнатура должна содержать все возможные варианты  
+&emsp;&emsp;&emsp;&emsp; 👆 Сигнатуры выше уже описывают более конкретную типизацию    
+
 ```typescript
-function myFunctionDeclaration(age: number):number
-function myFunctionDeclaration(age: any, name?: any):any {
-  
-  if (name) {
-    return `${name} ${age}`;
-  } else {
-    return age
-  }
-  
-};
+function myFunctionDeclaration(age: number): number;
+function myFunctionDeclaration(age: number, name: string): string;
+function myFunctionDeclaration(age: number, name?: string): number | string {
+    if (name) {
+        return `${name} ${age}`;
+    } else {
+        return age;
+    }
+}
+
+myFunctionDeclaration(25);
+myFunctionDeclaration(25, 'alex');
 ```
 
 <br>
