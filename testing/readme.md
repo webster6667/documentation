@@ -4,3 +4,4 @@
 
 * **<a href="./pages/types/readme.md">Jest</a>** ✍🏼
 * **<a href="./pages/react-testing-library/readme.md">React Testing Library</a>**
+* * **<a href="./pages/playwright/readme.md">Playwright</a>**
