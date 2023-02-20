@@ -27,11 +27,26 @@ $componentName$.propTypes = {
 }
 ```
 
-💠 Create component
+<br><br>
 
-🔹 c:pcmp - create pure components
+💠 Handlers  
+
+🔹 `hnd` 👉🏼 Функция хендлер  
 ```typescript
-import React from 'react'
-
-export const $componentName$ = ({children, props}) => ($cmp$)
+$name$Handler = (e) => {
+    $code$
+}
 ```
+
+<br>
+<br>
+
+💠 Render Conditions  
+
+🔹 `&&` 👉🏼 Рендер последнего значение если все что перед ним true  
+```typescript
+
+```
+
+<br>
+<br>
