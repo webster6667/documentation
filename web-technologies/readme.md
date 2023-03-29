@@ -1,10 +1,11 @@
 # Web-technologies
 
 * **<a href="./pages/event-loop">Event Loop</a>**
+* **<a href="./pages/rendering">Rendering</a>**
 * **<a href="./pages/rest-full-api">Rest Full Api</a>**
 * **<a href="./pages/web-socket">Web Socket</a>**
 * **<a href="./pages/cors">CORS</a>**
-* **<a href="./pages/cors">Определение браузерных возможностей пользователя</a>**
+* **<a href="./pages/featute-detection">Определение браузерных возможностей пользователя</a>**
 * **<a href="./pages/babel">Babel</a>**
 * **<a href="./pages/solid">SOLID</a>**
 * **<a href="./pages/oop">OOP</a>**
@@ -16,6 +17,7 @@
 * **<a href="./pages/adaptive-responsive-page-proofs">Адаптивная и отзывчивая верстка</a>**
 * **<a href="./pages/progressive-rendering">Прогрессивный рендеринг</a>**
 * **<a href="./pages/semantics-page-proofs">Семантическая верстка</a>**
+* **<a href="./pages/web-components">Web Components ✍🏼</a>**
 
 <br>
 

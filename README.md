@@ -20,6 +20,14 @@
 * **<a href="/patterns/readme.md">Patterns</a>**  
 * **<a href="/algorithms/readme.md">Algorithms</a>**
 * **<a href="/project-architectures/readme.md">Project Architectures</a>**
+* **<a href="/micro-frontend/readme.md">MicroFrontend ✍🏼</a>**
+* **<a href="/kubernetes/readme.md">Kubernetes ✍🏼</a>**
+* **<a href="/ci-cd/readme.md">CI/CD ✍🏼</a>**
+* **<a href="/node-js/readme.md">Node js ✍🏼</a>**
+* **<a href="/web-RTC/readme.md">webRTC ✍🏼</a>**
+* **<a href="/backend/readme.md">Backand ✍🏼</a>**
+* **<a href="/micro-frontend/readme.md">Builders ✍🏼</a>**
+
 
 <br>
 

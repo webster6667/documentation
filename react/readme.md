@@ -4,9 +4,10 @@
 * **<a href="./pages/jsx/readme.md">JSX</a>**
 * **<a href="./pages/components/readme.md">Компоненты</a>**
 * **<a href="./pages/components/readme.md">Обработчики событий</a>**
-* **<a href="./pages/components/readme.md">Хуки</a>**
-* **<a href="./pages/components/readme.md">Роутер</a>**
+* **<a href="./pages/hooks/readme.md">Хуки ✍🏼</a>**
+* **<a href="./pages/router/readme.md">Роутер ✍🏼</a>**
+* **<a href="./pages/router/readme.md">Error Boundary ✍🏼</a>**
 * **<a href="./pages/memo/readme.md">Меморизация</a>**
 
 
-* **<a href="./pages/typed-react/readme.md">Type script</a>**
+* **<a href="./pages/typed-react/readme.md">Type script ✍🏼</a>**
