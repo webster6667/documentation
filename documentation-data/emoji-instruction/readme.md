@@ -41,6 +41,8 @@ https://fsymbols.com/signs/arrow/
 ❓ - Спросить у лидов
 &emsp;&emsp; - табуляция  
 
+<img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" >
+
 📜 - файл
 
 --> -- преобразование (старый вариант)
