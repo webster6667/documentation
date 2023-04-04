@@ -1,5 +1,37 @@
 # Циклы
 
+<details>
+<summary> 🔥 <code>Shortcut</code></summary>
+
+___
+
+🔹 for in  
+&emsp;&emsp; 👆 Для обектов и тянет прототипы   
+```javascript
+for (let key in user) {
+  let value = user[key]
+    
+  if(user.hasOwnProperty(key)) {}
+ 
+}
+```
+
+🔹 for of  
+&emsp;&emsp; 👆 Для массивов  
+&emsp;&emsp;&emsp;&emsp; ⚡️ Перебирает объекты без прототипов 
+```javascript
+for (let key of Object.keys(user)) {
+  let value = user[key] 
+
+  console.log(key) // => name
+  console.log(value)// => 'Alex'
+}
+```
+
+___
+
+</details>
+
 💠 **whine**   
 👆🏽 Тело цикла выполняется, пока `condition === true`
 ```javascript
