@@ -17,6 +17,7 @@
 * **<a href="./pages/adaptive-responsive-page-proofs">Адаптивная и отзывчивая верстка</a>**
 * **<a href="./pages/progressive-rendering">Прогрессивный рендеринг</a>**
 * **<a href="./pages/semantics-page-proofs">Семантическая верстка</a>**
+* **<a href="./pages/jwt">JWT token</a>**
 * **<a href="./pages/web-components">Web Components ✍🏼</a>**
 
 <br>
