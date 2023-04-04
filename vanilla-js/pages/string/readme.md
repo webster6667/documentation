@@ -1,5 +1,35 @@
 # Работа с строками
 
+<details>
+<summary> 🔥 <code>Shortcut</code></summary>
+
+___
+
+🔹 Разбить строку, на массив, по разделителю  
+```javascript
+'Ben, Jon, Den'.split(', ') // 👉🏼 ['Ben', 'Jon', 'Den']
+```
+
+🔹 Склеить строку из элементов массива, используя разделитель
+```javascript
+["Ben", "Jon", "Den"].join(', ') // 👉🏼 'Ben, Jon, Den'
+```
+
+🔹 🚩 Получение подстроки  
+`myString.slice(startIndex, indexBeforeFinish = myString.length)`
+```javascript
+'abcd'.slice(1, 3) // 👉🏼 'bc'
+```
+
+🔹 🚩 Поиск с заменой
+```javascript
+"string for replace".replace(/for/ig, "finded") // 👉🏼 'string finded replace'
+```
+
+___
+
+</details>
+
 * **<a href="#special-characters">Спец символы</a>**
 * **<a href="#singl-symbol">Отдельный символ</a>**
 * **<a href="#case">Изменение регистра</a>**
