@@ -132,9 +132,8 @@ ___
 ```javascript
 const data = {}
 
-const isObjectNotEmpty = (object) => {
-    return Object.keys({}).length
-}
+const isObjectNotEmpty = (object) => Object.keys({}).length
+
 
 if (isObjectNotEmpty(data)) {
     // ...
