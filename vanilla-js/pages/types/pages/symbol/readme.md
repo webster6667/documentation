@@ -1,4 +1,21 @@
 # Symbol 
+Новый примитивный тип в ES6
+
+&emsp;&emsp; 🔹 Создается без `new`     
+&emsp;&emsp;&emsp;&emsp; 👆`Symbol('mySymbol')`
+
+&emsp;&emsp; 🔹 Всегда вернет уникальное значение  
+&emsp;&emsp;&emsp;&emsp; 👆 Если вызывается без метода `for`
+
+&emsp;&emsp; 🔹 Не виден циклами
+
+&emsp;&emsp; 🔹 `Symbol('mySymbol')` не равен `Symbol('mySymbol')`
+
+&emsp;&emsp; 🔹 `Symbol('mySymbol')` не преобразуется автоматически к строке  
+&emsp;&emsp;&emsp;&emsp; 👆 Для этого есть методы:
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `String(Symbol('mySymbol'))` 👉🏼 `"Symbol('mySymbol')"`     
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🎯 `Symbol('mySymbol').toString()` 👉🏼 `"Symbol('mySymbol')"`
 
 <br>
 
@@ -23,7 +40,7 @@ value2.description // => undefined
 
 <br>
 
-🎯 Метод for, создает `Symbol` с именем, и заносит его в глобальный реестр  
+🎯 Метод `for`, создает `Symbol` с именем, и заносит его в глобальный реестр  
 
 🎯 Если в реестре уже есть `Symbol` с таким именем, то `for` возвращает ссылку на него
 
@@ -32,13 +49,12 @@ value2.description // => undefined
 const symbol1 = Symbol('mySymbol'),
       symbol2 = Symbol('mySymbol')
       
-console.log(symbol1 == symbol2) //false
+console.log(1, symbol1 == symbol2) // 👉🏼 1. false
       
 const symbol3 = Symbol.for('mySymbol2'),
       symbol4 = Symbol.for('mySymbol2')
 
-console.log(symbol3 == symbol4) //true
+console.log(2, symbol3 == symbol4) // 👉🏼 2. true
 ```
-
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
