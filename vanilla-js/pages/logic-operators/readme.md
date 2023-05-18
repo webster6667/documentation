@@ -46,8 +46,13 @@ let valueFromOptions = true, //Прийдет из опций функции
 
 💠 `??`   
 👆🏽 Возвращает первое значение `не равное null или undefined`, либо последнее значение из списка
+
+&emsp;&emsp; 🔹 Обычно используют для получения даже отрицательных значений, отфильтрвав пустые переменные  
+
 ```javascript
 const notNullOrUndefined = null ?? undefined ?? 2 ?? 3 ?? null // 👉🏼 2
+const notNullOrUndefined = null ?? undefined ?? 0 ?? 2 ?? 3 ?? null // 👉🏼 0
+const notNullOrUndefined = null ?? undefined ?? false ?? 2 ?? 3 ?? null // 👉🏼 false
 const notNullOrUndefinedLast = null ?? undefined ?? null // 👉🏼 null
 ```
 
