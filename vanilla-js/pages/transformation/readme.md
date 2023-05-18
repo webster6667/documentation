@@ -124,7 +124,30 @@
 
 &emsp;&emsp; 🛑 Не проверять объект на пустоту через `boolean`, пустой объект вернет `true`
 
-&emsp;&emsp;&emsp;&emsp; ⚡ `Object.keys({}).length` - Привести объект к массиву и проверить длинну
+<details>
+<summary>&emsp;&emsp;&emsp;&emsp; ⚡ Привести объект к массиву и проверить длинну</summary>
+
+___
+
+```javascript
+const data = {}
+
+const isObjectNotEmpty = (object) => {
+    return Object.keys({}).length
+}
+
+if (isObjectNotEmpty(data)) {
+    // ...
+} else {
+    console.error('object is empty')
+}
+```
+
+___
+
+</details>
+
+
 
 <br>
 
@@ -132,7 +155,26 @@
 
 &emsp;&emsp; 🛑 Не проверять массив на пустоту через `boolean`, пустой массив вернет `true`
 
-&emsp;&emsp;&emsp;&emsp; ⚡ `Array.isArray(myVar) && myVar.length` - Убедиться что что это массив и проверить его длинну
+<details>
+<summary>&emsp;&emsp;&emsp;&emsp; ⚡ Убедиться что что это массив и проверить его длинну</summary>
+
+___
+
+```javascript
+const data = []
+
+const isArrayNotEmpty = (arr) => Array.isArray(arr) && arr.length
+
+if (isArrayNotEmpty(data)) {
+    // ...
+} else {
+    console.error('array is empty')
+}
+```
+
+___
+
+</details>
 
 <br>
 
@@ -142,11 +184,6 @@
 
 &emsp;&emsp; 🔹 `Boolean(NaN)` 👉🏼 `false`
 
-
-
-
-  
-    
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
