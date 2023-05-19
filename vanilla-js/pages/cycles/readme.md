@@ -5,18 +5,20 @@
 
 ___
 
-🔹 for in  
-&emsp;&emsp; 👆 Для обектов и тянет прототипы   
+🔹 `for in`  
+&emsp;&emsp; 👆 Для обьектов, тянет прототипы   
 ```javascript
 for (let key in user) {
   let value = user[key]
     
-  if(user.hasOwnProperty(key)) {}
+  if(user.hasOwnProperty(key)) {
+      // ...
+  }
  
 }
 ```
 
-🔹 for of  
+🔹 `for of`  
 &emsp;&emsp; 👆 Для массивов  
 &emsp;&emsp;&emsp;&emsp; ⚡️ Перебирает объекты без прототипов 
 ```javascript
@@ -33,31 +35,37 @@ ___
 </details>
 
 💠 **whine**   
-👆🏽 Тело цикла выполняется, пока `condition === true`
+👆🏽 Тело цикла выполняется, пока `i < 3`
 ```javascript
-let condition = true
+let i = 0,
+    users = ['Ben', 'Jon', 'Min']
 
-while (condition) {
+while (i < 3) {
   //тело цикла
+  console.log(users[i])
+  i++
 }
 ```
 
 <br>
 
 💠 **do while**   
-👆🏽 В любом случаи выполнит первую итерацию, если `condition === true`, выполняет следующую итерацию
+👆🏽 В любом случаи выполнит первую итерацию, если `i < 3`, выполняет следующую итерацию
 ```javascript
-let condition = true
+let i = 0,
+    users = ['Ben', 'Jon', 'Min']
 
 do {
- //тело цикла
-} while (condition)
+    //тело цикла
+    console.log(users[i])
+    i++
+} while (i < 3)
 ```
 
 <br>
 
 💠 **for**   
-👆🏽 Тело цикла  выполняется, пока `condition === true`   
+👆🏽 Тело цикла  выполняется, пока `i < 3`   
 
 &emsp;&emsp; 🔹 После каждой итерации выполнятся `i++`
 
@@ -65,10 +73,11 @@ do {
 
 
 ```javascript
-let condition = true
+let users = ['Ben', 'Jon', 'Min']
 
-for (let i = 0; condition; i++) {
-
+for (let i = 0; i < 3; i++) {
+    //тело цикла
+    console.log(users[i])
 }
 ```
 
@@ -104,7 +113,7 @@ for (let key in user) {
 <br>
 
 💠 **for of**   
-👆🏽 Цикл для массивом , перебирает значения массива 
+👆🏽 Цикл для массивом, перебирает значения массива 
 
 &emsp;&emsp; 🔹 Не принимает `объект` или `псевдомассив`      
 &emsp;&emsp;&emsp;&emsp; 👆 Не итерируемые типы данных
