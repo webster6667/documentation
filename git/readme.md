@@ -5,10 +5,7 @@
 * **<a href="./pages/index/readme.md">Индекс</a>**
 * **<a href="./pages/commit-style/readme.md">Правила коммита</a>**
 
-
-
-
-* **<a href="./pages/types/readme.md">Rebase</a>**
+* **<a href="./pages/rebase/readme.md">Rebase</a>**
 * **<a href="./pages/types/readme.md">Interactive rebase</a>**
 * **<a href="./pages/types/readme.md">Cheri pick</a>**
 

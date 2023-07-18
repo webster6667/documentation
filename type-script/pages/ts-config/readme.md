@@ -1,6 +1,7 @@
 # Ts config
 > Главный файл настройки ts проекта
-> 
+
+* <a href="https://www.npmjs.com/package/typescript-plugin-css-modules">scss-modules-ts</a>  
 
 ```json
 {

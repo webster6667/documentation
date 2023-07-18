@@ -134,6 +134,79 @@
     pauseBtn.onclick = () => {
         abortController.abort()
     }
+
+    deepClone = function(obj) {
+        let clonedObj = []
+
+        if (obj == null || typeof obj !== 'object') {
+            return obj;
+        }
+
+        if (obj instanceof Symbol) {
+            clonedObj.push(obj)
+            return clonedObj[0]
+        }
+        if (obj instanceof String) { return new String(obj); }
+        if (obj instanceof Number) { return new Number(obj); }
+        if (obj instanceof Boolean) { return new Boolean(obj); }
+        if (obj instanceof RegExp) { return new RegExp(obj); }
+        if (obj instanceof Blob) { return new Blob(obj); }
+        if (obj instanceof Map) { return new Map(obj); }
+        if (obj instanceof Set) { return new Set(obj); }
+        if (obj instanceof Error) { return new Error(obj); }
+
+        // обрабатывать другие объекты, если требуется
+
+        var clone = {};
+        if (obj instanceof Array) {
+            clone = new Array(obj.length);
+        }
+
+        for (var key in obj) {
+            clone[key] = deepClone(obj[key]);
+        }
+
+        return clone;
+    };
+
+    const obj1 = {hello: 'world'};
+    let blob = new Blob(['Hello, world!'], {type: 'text/plain'});
+
+
+    const obj =
+        {
+            string: 'primitive string',
+            stringObj: new String('string object'),
+            number: 100,
+            numberObj: new Number(100),
+            bigInt: BigInt("9007199254740991"),
+            nan: NaN,
+            array: [1, 2, 3],
+            arrayObj: new Array(2),
+            bool: false,
+            boolobj: new Boolean(false),
+            nul: null,
+            date: new Date(),
+            undef: undefined,
+            inf: Infinity,
+            regExp: /(\w+)\s(\w+)/,
+            a: {
+                b: 'str'
+            },
+            b: [
+                {a: 'a'},
+                {b: 'b'},
+            ],
+            function() { console.log('aaa') },
+            [Symbol("foo")]: "foo",
+            smb: Symbol('123'),
+            set: new Set([1, 3, 3]),
+            map: new Map([[1, 2]])
+        }
+
+    console.log(obj)
+    console.log(deepClone(obj));
+
 </script>
 
 
