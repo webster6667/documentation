@@ -155,7 +155,13 @@ Promise.resolve().then(() => {
     console.log('second')
 })
 
-console.log('third')
+const a = new Promise((resolve, reject) => resolve(console.log('third')))
+
+a.then(() => {
+    console.log('fifth')
+})
+
+console.log('fourth')
 ```
 
 <details>
@@ -165,14 +171,18 @@ ___
 
 1. first
 2. third
-3. second
-4. inside timeout
+3. fourth
+4. second
+5. fifth
+6. inside timeout
 
 Хоть **inside timeout** написан первым и таймаут стоит 0,   
 Он все равно попадает в webApi, потом в очередь в макротаски, и отработает только после того  
 Как синхронный код будет выполнен
 
 Промис и таймаут попадают в одну и ту же очередь, но несмотря на то что таймаут написан раньше, промис отработает первым, так как промис это микро таска
+
+Не смотря на то что `console.log('third')` лежит в промисе, лог резолвиться сразу, без then или await, и такой код будет считаться синхронным
 
 ___
 
