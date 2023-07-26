@@ -213,8 +213,6 @@ setTimeout(() => {console.log('2')}, 0)
 </details>
 
 
-![](img/task-queve.gif)
-
 #### Задачка на понимание event Loop
 
 Какой будет порядок вывода?
