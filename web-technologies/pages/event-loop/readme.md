@@ -7,29 +7,44 @@
 <details>
 <summary> 🔥 <code>Shortcut</code></summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+💠 Event-loop  
+👆🏽 Отдельный от `JS` механизм позволящий не блокировать поток при вызове ассинхронных задач
+
+
+&emsp;&emsp; 🔹 Микро таски  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Маленькие
+
+&emsp;&emsp;&emsp;&emsp; 🎯 Promise  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask](## "Искуственная созданная микротаска")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 <a href="https://learn.javascript.ru/mutation-observer">mutationObserver</a>
+
+
+<br>
 
 &emsp;&emsp; 🔹 Макро таски  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Очень маленькие
+
 &emsp;&emsp;&emsp;&emsp; 🎯 Таймеры  
 &emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События](## "Клик, input/output")</ins>  
 &emsp;&emsp;&emsp;&emsp; 🎯 Загрузка изображений
 
 <br>
 
-&emsp;&emsp; 🔹 Микро таски  
-&emsp;&emsp;&emsp;&emsp; 🎯 Promise  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask](## "Искуственная созданная микротаска")</ins>  
-&emsp;&emsp;&emsp;&emsp; 🎯 <a href="https://learn.javascript.ru/mutation-observer">mutationObserver</a>
-
-<br>
-
 &emsp;&emsp; ❗ Порядок выполнения  
 &emsp;&emsp;&emsp;&emsp; 🎯 1.Стек  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🥏 Простые функции не берут следующую функцию в очередь стека, пока не выполняться  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🥏 Вложенные функции сначала по очереди добавляються в стек, пока не дойдут до самой глубокой  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 🥏 После выполняються в обратном порядке   
+  
+
+
 &emsp;&emsp;&emsp;&emsp; 🎯 2.Все микротаски     
 &emsp;&emsp;&emsp;&emsp; 🎯 3.Макро таска  
 &emsp;&emsp;&emsp;&emsp; 🛑 4.Если Макро таска порождает <ins>[микро таску](## "Например промис")</ins>, `eventLoop` сначала выполненнит новую микро таску, а только после приступит к следующей макро таске
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
@@ -39,7 +54,7 @@ ___
 <details>
 <summary>📗 Потоки в JS</summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 &emsp;&emsp; 🎯  JavaScript - однопоточный язык программирования  
 &emsp;&emsp;&emsp;&emsp; 👆 Выполняет задачи одну за другой в порядке очереди 
@@ -48,7 +63,7 @@ ___
 
 &emsp;&emsp; 🎯 Зная логику работы событийныного цикла, можно построить код так, что бы ресурсоемкие операции, не блокировали поток, и интерфейс пользователя    
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
@@ -62,19 +77,29 @@ ___
 <details>
 <summary>📗 Порядок выполнения</summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 &emsp;&emsp; 🎯 Функция попадает в стек  
 &emsp;&emsp;&emsp;&emsp; 👆 Пока функция не отработает, следующие функции не читаються  
 
-&emsp;&emsp; 🎯 Все функции внутри той что в стеке, добавляються поочередно наверх в стек       
+&emsp;&emsp; 🎯 Вложенные функции сначала добавляються поочередно наверх в стек
+&emsp;&emsp;&emsp;&emsp; 👆 Пока не дойдут до самой глубины   
+
+![](./video/include-functions.mp4)
+  
+
 &emsp;&emsp; 🎯 После этого функции в стеке начинают выполняться с конца   
 &emsp;&emsp; 🛑 Ассинхронные функции, не блокируют поток выполнения остальных функций  
 &emsp;&emsp;&emsp;&emsp; 👆 Они просто регистрируються, и перемещаються в `web api`
 
-![](img/call-stack.gif)
+![](./video/simple-callstack.mp4)
 
-___
+&emsp;&emsp; 🛑 Рекурсивные функции, будут также сначала по очередно закинуты в `call stack`
+
+![](./video/recursive.mp4)
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
@@ -89,12 +114,12 @@ ___
 💠 <a name="web-api">**WebApi**</a>  
 👆🏽 Хранилище, куда помещаються ассинхронные задачи относящиеся к `WebApi`, которые будут выполнены только после выполнения всех задач из `CallStack` 
 
-&emsp;&emsp; 🔹 Порядок выполнения первый вышел, первый вышел
+&emsp;&emsp; 🔹 Порядок выполнения первый вошел, первый вышел
 
 <details>
 <summary>📗 Порядок выполнения</summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 &emsp;&emsp; 🎯 Ассинхронная функция попадает в стек  
 &emsp;&emsp; 🎯 Поток не блокируеться   
@@ -106,9 +131,9 @@ ___
 
 &emsp;&emsp; 🎯 После того как все функции из `call stack` выполнены, `event-loop` начинает выполнять по одной задаче в порядке их объявления, отправляя их в `call stack`
 
-![](img/call-stack.gif)
+![](./video/web-api.mp4)
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
@@ -119,24 +144,56 @@ ___
 💠 **<a name="task-queve">Очередь задач</a>**  
 👆🏽 Очередь ассинхронных функций, которые деляться на два вида
 
-&emsp;&emsp; 🔹 Макро таски  
-&emsp;&emsp;&emsp;&emsp; 🎯 Таймеры  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События](## "Клик, input/output")</ins>  
-&emsp;&emsp;&emsp;&emsp; 🎯 Загрузка изображений
-
-<br>
-
 &emsp;&emsp; 🔹 Микро таски  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Маленькие
+
 &emsp;&emsp;&emsp;&emsp; 🎯 Promise  
 &emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask](## "Искуственная созданная микротаска")</ins>  
 &emsp;&emsp;&emsp;&emsp; 🎯 <a href="https://learn.javascript.ru/mutation-observer">mutationObserver</a>
 
 <br>
 
+&emsp;&emsp; 🔹 Макро таски  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Очень маленькие
+
+&emsp;&emsp;&emsp;&emsp; 🎯 Таймеры  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События](## "Клик, input/output")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 Загрузка изображений
+
+<br>
+
 &emsp;&emsp; ❗ Порядок выполнения  
 &emsp;&emsp;&emsp;&emsp; 🎯 1.Все микротаски     
-&emsp;&emsp;&emsp;&emsp; 🎯 2.Макро таска  
-&emsp;&emsp;&emsp;&emsp; 🛑 3.Если Макро таска порождает <ins>[микро таску](## "Например промис")</ins>, `eventLoop` сначала выполненнит новую микро таску, а только после приступит к следующей макро таске
+&emsp;&emsp;&emsp;&emsp; 🎯 2.Макро таска
+
+&emsp;&emsp;&emsp;&emsp; 🛑 Если Макро таска порождает <ins>[микро таску](## "Например промис")</ins>, `eventLoop` сначала выполненнит новую микро таску, а только после приступит к следующей макро таске  
+
+![](./video/macro-micro-tasks.mp4)
+
+&emsp;&emsp;&emsp;&emsp; 🛑 Если микротаска бесконечно зацикленна, то идущая за ней макро таска, никогда не выполниться
+
+<details>
+<summary><img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" >&emsp; Typescript</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```typescript
+function recursivePromise(promise) {
+    return promise.then(() => {
+        console.log('1')
+        recursivePromise(Promise.resolve())
+    })
+}
+
+recursivePromise(Promise.resolve())
+
+setTimeout(() => {console.log('2')}, 0)
+```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 
 ![](img/task-queve.gif)
 
@@ -148,7 +205,7 @@ ___
 console.log('first');
 
 setTimeout(() => {
-   console.log('inside timeout')
+   console.log('inside timeout 1')
 }, 0)
 
 Promise.resolve().then(() => {
@@ -162,33 +219,76 @@ a.then(() => {
 })
 
 console.log('fourth')
+
+setTimeout(() => {
+    console.log('inside timeout 2')
+    
+    for(let i = 0; i < Infinity; i++) {
+        Promise.resolve().then(() => console.log(`promise item ${i}`))    
+    }
+    
+    setTimeout(() => {
+        console.log('last timeout')
+    }, 0)
+    
+}, 0)
+
 ```
 
 <details>
 <summary> ✅ Ответ</summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 1. first
 2. third
+> Не смотря на то что `console.log('third')` лежит в промисе, лог резолвиться сразу, без then или await, и такой код будет считаться синхронным
+
+
 3. fourth
 4. second
+> Промис и таймаут попадают в одну и ту же очередь, но несмотря на то что таймаут написан раньше, промис отработает первым, так как промис это микро таска
+
+
 5. fifth
-6. inside timeout
+6. inside timeout 1
+> Хоть **inside timeout 1** написан первым и таймаут стоит 0,   
+Он все равно попадает в webApi, потом в очередь в макротаски, и отработает только после того как будет выпонен весь синхронный код и микро таски
 
-Хоть **inside timeout** написан первым и таймаут стоит 0,   
-Он все равно попадает в webApi, потом в очередь в макротаски, и отработает только после того  
-Как синхронный код будет выполнен
+7. inside timeout 2
+8. promise item i
+9. `last timeout` Никогда не будет вызван
+> Последний таймаут никогда не будет вызван, так как выше обьявлен бесконечный вызов микро тасок
 
-Промис и таймаут попадают в одну и ту же очередь, но несмотря на то что таймаут написан раньше, промис отработает первым, так как промис это микро таска
 
-Не смотря на то что `console.log('third')` лежит в промисе, лог резолвиться сразу, без then или await, и такой код будет считаться синхронным
-
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
 <br>
 
-### ⟵ **<a href="../../readme.md">Назад</a>**
+<details>
+<summary>📗 Доп детали</summary>
 
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🔹 Движок js работает с колстеком, и компилит js в машинный код, не предоставляет Event loop  
+🔹 Event loop не является частью движка, это механизм который предоставляеться средой выполнения, браузером или нодой  
+
+Для понимания:  
+&emsp;&emsp; 🎯 Браузер v8   
+&emsp;&emsp; 🎯 Нода v8  
+Работа с event loop немного разняться, из за того что каждай среда разработки вносит свои детали
+    
+
+
+🔹 Как движок(колстек) общаеться со средой(браузером)?   
+&emsp;&emsp; 👆 Через веб апи
+
+🔹 Веб апи не спецификация js, это браузерные фишки
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
