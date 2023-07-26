@@ -17,7 +17,7 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Маленькие
 
 &emsp;&emsp;&emsp;&emsp; 🎯 Promise  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask](## "Искуственная созданная микротаска")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask 💬](## "Искуственная созданная микротаска")</ins>  
 &emsp;&emsp;&emsp;&emsp; 🎯 <a href="https://learn.javascript.ru/mutation-observer">mutationObserver</a>
 
 
@@ -27,7 +27,7 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Очень маленькие
 
 &emsp;&emsp;&emsp;&emsp; 🎯 Таймеры  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События](## "Клик, input/output")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События 💬](## "Клик, input/output")</ins>    
 &emsp;&emsp;&emsp;&emsp; 🎯 Загрузка изображений
 
 <br>
@@ -147,8 +147,10 @@
 &emsp;&emsp; 🔹 Микро таски  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Маленькие
 
+
+
 &emsp;&emsp;&emsp;&emsp; 🎯 Promise  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask](## "Искуственная созданная микротаска")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[queueMicrotask 💬](## "Искуственная созданная микротаска")</ins>  
 &emsp;&emsp;&emsp;&emsp; 🎯 <a href="https://learn.javascript.ru/mutation-observer">mutationObserver</a>
 
 <br>
@@ -157,7 +159,7 @@
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Очень маленькие
 
 &emsp;&emsp;&emsp;&emsp; 🎯 Таймеры  
-&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События](## "Клик, input/output")</ins>  
+&emsp;&emsp;&emsp;&emsp; 🎯 <ins>[События 💬](## "Клик, input/output")</ins>  
 &emsp;&emsp;&emsp;&emsp; 🎯 Загрузка изображений
 
 <br>
@@ -166,7 +168,7 @@
 &emsp;&emsp;&emsp;&emsp; 🎯 1.Все микротаски     
 &emsp;&emsp;&emsp;&emsp; 🎯 2.Макро таска
 
-&emsp;&emsp;&emsp;&emsp; 🛑 Если Макро таска порождает <ins>[микро таску](## "Например промис")</ins>, `eventLoop` сначала выполненнит новую микро таску, а только после приступит к следующей макро таске  
+&emsp;&emsp;&emsp;&emsp; 🛑 Если Макро таска порождает <ins>[микро таску 💬](## "Например промис")</ins>, `eventLoop` сначала выполненнит новую микро таску, а только после приступит к следующей макро таске  
 
 ![](./video/macro-micro-tasks.mp4)
 
