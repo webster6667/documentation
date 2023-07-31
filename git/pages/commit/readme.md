@@ -25,7 +25,7 @@ git commit -amend "commit message"
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-![illustration](video/git-ammend.mp4)
+https://github.com/webster6667/documentation/assets/83826752/4946844a-c27e-48b0-ab42-d11720b75ac1
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
