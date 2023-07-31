@@ -9,6 +9,8 @@
 
 🎯 Алиасы
 
+🎯 Редактор в гите
+
 <br>
 
 <p align="center" style="text-align:center">
@@ -59,6 +61,7 @@
 [core]
 	autocrlf = input
 	excludesFile = /Users/www1/.gitignore
+	editor = nano
 [alias]
     co = checkout
     ci = commit
