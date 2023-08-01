@@ -38,7 +38,8 @@ https://fsymbols.com/signs/arrow/
 ⚡️ - хак или фича  
 ✍🏼 - дописать  
 👉🏼 - Результат кода или преобразования данных  
-❓ - Спросить у лидов
+❓ - Спросить у лидов  
+💊 - Как лечить
 &emsp;&emsp; - табуляция  
 
 <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" >
