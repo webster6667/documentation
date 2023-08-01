@@ -138,7 +138,8 @@ git checkout 'commitHash'
 
 💊 Если в состоянии отделенный `HEAD` были сделаны коммиты, нужно создать новую ветку, и перетащить туда сделанные коммиты при помощи `cherry-pick` 
 
-<a href="https://www.youtube.com/watch?v=g0GgtqlhHaw&list=PLDyvV36pndZFHXjXuwA_NywNrVQO0aQqb&index=16">Видео</a>  
+https://github.com/webster6667/documentation/assets/83826752/1533801a-0a71-4395-b4b9-e3646e319a7a
+
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
