@@ -9,7 +9,7 @@
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-![illustration](img/illustration.png)
+![illustration](img/illustration.png)   
 👆 Смена вершины ветки `master`, на коммит вершины ветки `fix`  
 &emsp;&emsp; ❗ Произойдет только в том случаи, если вершиной ветки `master` будет тот коммит, от которого был создан `fix`
 
