@@ -20,6 +20,7 @@
 * **<a href="./pages/jwt">JWT token</a>**  
 * **<a href="./pages/script-loading">Порядок загрузки скриптов</a>**   
 * **<a href="./pages/web-components">Web Components ✍🏼</a>**
+* **<a href="./pages/web-components">Agile ✍🏼</a>**
 
 <br>
 
