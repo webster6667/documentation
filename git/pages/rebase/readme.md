@@ -25,7 +25,9 @@
 
 </details>
 
-![video](video/rebase.mp4)
+
+https://github.com/webster6667/documentation/assets/83826752/94a0f75c-f7af-4c4a-bbf7-be359efa0293
+
 
 &emsp;&emsp; 🎯 Комит который делает идентичные изменения в `feauter` и `master`, будет пропущен при накидывание поверх `master`
 
