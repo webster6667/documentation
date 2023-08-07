@@ -39,8 +39,11 @@ git stash list
 ```shell
 git stash <apply|pop> <name|number>
 ```
-🎯 Скопировать данные из `stash` в проект    
-🎯 Вырезать данные из `stash` в проект
+🎯 `apply`  
+&emsp;&emsp; 👆 Скопировать данные из `stash` в проект
+
+🎯 `pop`  
+&emsp;&emsp; 👆 Вырезать данные из `stash` в проект
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
@@ -52,7 +55,7 @@ git stash <apply|pop> <name|number>
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 ```shell
-git checkout stash@{id} fileName
+git checkout stash@{id|name} fileName
 ```
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
