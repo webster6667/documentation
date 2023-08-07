@@ -5,7 +5,7 @@
 * **<a href="./pages/index/readme.md">Индекс</a>**
 * **<a href="./pages/commit/readme.md">commit</a>**
 * **<a href="./pages/branches/readme.md">Ветки</a>**
-* **<a href="./pages/shorts/readme.md">Сокращения в навигации между коммитов</a>**
+* **<a href="./pages/shorts/readme.md">Сокращения навигации между коммитов</a>**
 * **<a href="./pages/log/readme.md">Git log/reflog</a>**
 * **<a href="./pages/checkout/readme.md">Checkout</a>**
 * **<a href="./pages/stash/readme.md">Stash</a>**
