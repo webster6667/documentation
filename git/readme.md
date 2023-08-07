@@ -9,7 +9,7 @@
 * **<a href="./pages/log/readme.md">Git log/reflog</a>**
 * **<a href="./pages/checkout/readme.md">Checkout</a>**
 * **<a href="./pages/stash/readme.md">Stash</a>**
-* **<a href="./pages/commit-style/readme.md">Reset</a>**
+* **<a href="./pages/reset/readme.md">Reset</a>**
 * **<a href="./pages/merge/readme.md">Merge</a>**
 * **<a href="./pages/rebase/readme.md">Rebase</a>**
 * **<a href="./pages/interactive-rebase/readme.md">Interactive rebase</a>**
