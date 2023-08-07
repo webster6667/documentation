@@ -75,9 +75,11 @@
 
 &emsp;&emsp; 🔹 Просмотреть конфиг
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `git config --list` - Все уровни конфигов
+&emsp;&emsp;&emsp;&emsp; 🎯 `git config --list`   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Все уровни конфигов
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `git config --list --global` - Только глобальный конфиг
+&emsp;&emsp;&emsp;&emsp; 🎯 `git config --list --global`   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Только глобальный конфиг
 
 <br>
 
