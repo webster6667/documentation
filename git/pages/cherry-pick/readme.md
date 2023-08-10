@@ -14,6 +14,9 @@ git cherry-pick 'commitHash'
 ```
 👆 Добавить коммит `commitHash` над `HEAD` веткой  
   
+&emsp;&emsp; 🔹 `-n` флаг     
+&emsp;&emsp;&emsp;&emsp; 👆 Подтянет изменения в `workDirectory`, но без комита   
+  
 
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
@@ -30,6 +33,9 @@ git cherry-pick 'commitHash'
 git cherry-pick master..feature
 ```
 👆 Скопировать все комиты из `feature`, которых нет в `master`  
+
+&emsp;&emsp; 🔹 `-n` флаг     
+&emsp;&emsp;&emsp;&emsp; 👆 Подтянет изменения в `workDirectory`, но без комита
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

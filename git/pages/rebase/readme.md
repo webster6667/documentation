@@ -33,7 +33,7 @@ https://github.com/webster6667/documentation/assets/83826752/94a0f75c-f7af-4c4a-
 
 &emsp;&emsp; 🎯 `rebase` накидывая комиты на `master` меняет хеши всех комитов из `feature`  
 
-&emsp;&emsp; 🎯 С `reabse` без `reflog` невозможно отследить когда были подтянуты изменения из `master`
+&emsp;&emsp; 🎯 С `rebase` без `reflog` невозможно отследить когда были подтянуты изменения из `master`
 
 &emsp;&emsp; 🎯 `rebase` лучше всего использовать только когда работаешь один над `feature` веткой 
 
@@ -52,6 +52,9 @@ https://github.com/webster6667/documentation/assets/83826752/94a0f75c-f7af-4c4a-
 git add .
 git rebase --continue
 ```
+🎯 Добавить новые изменения после решения конфликта в `stage area`      
+🎯 Продолжить перебазирования с новыми изменениями    
+
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
@@ -85,21 +88,20 @@ git rebase --abort
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
+🔹 Взять хеш комита из константы, куда сохряняеться хеш комита перед `merge|reset|chechout|rebase`  
 ```shell
 git reset --hard ORIG_HEAD
 ```
-👆 Самый надежный способ это найти в `reflog` комит с ремаркой `rebase`, и взять хеш комита лежащий перед ним   
-  
-<details>
-<summary> ❓ </summary>
 
-----
+<br>
 
-&emsp;&emsp;  Так как впроцессе ребейза `ORIG_HEAD` может быть переписан неправильным значением
+🔹 Самый надежный способ это найти в `reflog` комит с ремаркой `rebase(start)`, и взять хеш комита лежащий перед ним
+![illustration](img/illustration.png)
+```shell
+git reset --hard c00ea36
+```
+&emsp;&emsp; 👆 Так как впроцессе ребейза `ORIG_HEAD` может быть переписан неправильным значением командами `merge|reset|chechout|rebase`  
 
-----
-
-</details>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

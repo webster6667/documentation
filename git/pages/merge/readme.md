@@ -61,31 +61,38 @@ git merge feature
 <br>
 
 <details>
-<summary> 🔹 Откат от мерджа</summary>
+<summary> 🔹 Отмена мерджа | Выход из состояния прерванного слияния</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🎯 `git reset --hard`   
-&emsp;&emsp; 👆 Откинет на состояние ветки, до попытки слияни, но сотрет все незакомиченные изменения  
+&emsp;&emsp; 👆 Откинет на состояние ветки, до попытки слияни, но сотрет все незакомиченные изменения в `workDirectory`  
 
 🎯 `git reset --merge`   
 &emsp;&emsp; 👆 Откинет на состояние ветки, до попытки слияни, но сохранит все незакомиченные изменения, которые не учавствовали в слиянии
 
-🛑 Лучше сделать комит перед мерджем, так как при откате можно запустаться, а лишний коммит потом засквошить
+🛑 Лучше сделать комит перед мерджем, так как при откате можно запутаться, а лишний коммит потом засквошить
 
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
 
+<br>
 
+<details>
+<summary> 🔹 Откатить изменения merge request</summary>
 
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
+```shell
+git reset --hard 'comitHashBeforeMergeRequestOnBranch'
+```
+👆 Переключиться на комит до комита слияния  
 
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-
-  
-
+</details>
 
 <br>
 
