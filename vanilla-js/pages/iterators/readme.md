@@ -1,15 +1,24 @@
 # Итератор
-> Это объект, возвращающий метод next(), который позволяет возвращать свойства объекта последовательно
+![illustration](img/illustration.png)
+👆🏽 Это объект, содержащий в пропсах или в прототипе метод `next()`, который позволяет возвращать свойства объекта последовательно
 
-🔹 Будет работать если в объекте(`объявивший итератор`) есть свойства   
+<br>
+
+<details>
+<summary> 💠 Структура синхронного итератора</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🔹 Должен содержать внутри объекта свойства:   
 &emsp;&emsp; 🎯 `from`       
 &emsp;&emsp; 🎯 `to`
 
-🔹 Сама функция итератор, должна лежать в свойстве `[Symbol.iterator]`
+🔹 Сама функция итератор, должна лежать в свойстве `[Symbol.iterator]`     
+&emsp;&emsp; 👆 Так как <ins>[все конструкции языка 💬](## "for|map|...")</ins> будут искать итератор под этим ключем
 
-🔹 Итератор должен хранить в замыкании шаг перебора
-             
-🔹 Итератор должен возвращать объект с методом `next()`    
+🔹 Итератор должен хранить в замыкании текущий шаг перебора
+
+🔹 Итератор должен возвращать объект с методом `next()`      
 &emsp;&emsp; 👆 Который работает с шагом объекта
 
 🔹 Метод `next()`, должен возвращать объект с свойствами  
@@ -17,7 +26,12 @@
 &emsp;&emsp; 🎯 `value` - Итерируемое свойство           
 &emsp;&emsp;&emsp;&emsp; 👆 После того как все свойства перебранны, возвращает `{done: true, value: undefined}`
 
-🔹 `[Symbol.iterator]() => {}` - метод, позволяющий сделать из объекта итератор                  
+🔹 `[Symbol.iterator]() => {}` - метод, позволяющий сделать из объекта итератор
+
+<details>
+<summary> <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" > Структура итерируемого объекта</summary>
+
+----
 
 ```javascript
 let range = {
@@ -54,17 +68,84 @@ for (let num of range) {
 }
 ```
 
+----
+
+</details>
+
+<details>
+<summary> <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" > Структура итерируемого массива</summary>
+
+----
+
+```javascript
+let range = {
+  0: '1',
+  1: '2',
+  2: '3',
+  length: 3  
+}
+
+// сделаем объект range итерируемым
+range[Symbol.iterator] = function() {
+
+  let current = 0;
+  let last = this.length;
+
+  // метод должен вернуть объект с методом next()
+  return {
+    next() {
+      if (current <= last) {
+          
+        const result = {
+            done: false,
+            value: range[current]
+        }; 
+        current++
+        return result
+      } else {
+        return {
+          done: true
+        };
+      }
+    }
+
+  }
+};
+
+for (let num of range) {
+  console.log(num); // 1, затем 2, 3
+}
+```
+
+----
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+
+
 <br>
 
-## 🚩 Ассинхронный итератор 
+<details>
+<summary> 💠 Структура ассинхронного итератора</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🔹 Функция итератор должна лежать в `[Symbol.asyncIterator]` свойстве объекта
 
 🔹 Метод `next()` должен возвращать промис
 
 🔹 Ассинхронный итератор можно перебирать с помощью `for await(item of iterator)`
-     
-🛑 С ассинхронным итератором, не работают синхронный операции итератора
+
+🛑 С ассинхронным итератором, не работают <ins>[синхронный операции итератора 💬](## "for of без await")</ins>  
+  
+<details>
+<summary> <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" > Ассинхронный итератор </summary>
+
+----
 
 ```javascript
 let range = {
@@ -106,6 +187,15 @@ let range = {
 
 console.log( [...range] ); // Ошибка, нет Symbol.iterator
 ```             
+
+----
+
+</details>
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
 
 <br>
 
