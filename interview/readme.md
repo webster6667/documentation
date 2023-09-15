@@ -13,7 +13,7 @@
 * **<a href="./pages/architecture/readme.md">Архитектура</a>**
 * **<a href="./pages/computer-science/readme.md">Computer science</a>**
 * **<a href="./pages/page-proof/readme.md">Верстка</a>**
-* **<a href="./pages/vanilla-js/readme.md">Vanilla JS</a>**
+* **<a href="./pages/clear-js/readme.md">Чистый JS</a>**
 * **<a href="./pages/browser-js/readme.md">Браузерный JS</a>**
 * **<a href="./pages/ts/readme.md">TS</a>**
 * **<a href="./pages/react/readme.md">React</a>**
