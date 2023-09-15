@@ -6,14 +6,16 @@
 
 🛑 Не работает с стрелочными функциями  
 
+<br>
+
 <details>
 <summary> 💠 Синтаксис генератора</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 
-Символ `*` перед `()`, говорит движку от том что это генератор  
-&emsp;&emsp; 👆 Работают оба синтаксиса `function* f(…) | function *f(…)`
+👆 Символ `*` перед `()`, говорит движку от том что это генератор  
+&emsp;&emsp; ↳ Работают оба синтаксиса `function* f(…) | function *f(…)`
 
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)

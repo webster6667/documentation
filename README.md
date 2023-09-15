@@ -1,5 +1,6 @@
 # Заметки
 
+* **<a href="/browser-server/readme.md">Browser-Server</a>**
 * **<a href="/web-technologies/readme.md">Web Technologies</a>**
 * **<a href="/vanilla-js/readme.md">Vanilla Js</a>**
 * **<a href="/browser-js/readme.md">Browser Js</a>**
