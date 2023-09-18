@@ -39,8 +39,8 @@ https://fsymbols.com/signs/arrow/
 ⚡️ - хак или фича  
 ✍🏼 - дописать  
 👉🏼 - Результат кода или преобразования данных  
-❓ - Почему так  
-💊 - Как лечить
+<sup>⭐</sup>❓ - Вопрос со звездочкой   
+💊 - Как лечить   
 &emsp;&emsp; - табуляция  
 
 <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" >

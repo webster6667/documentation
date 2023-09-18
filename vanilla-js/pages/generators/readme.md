@@ -35,14 +35,16 @@
 function* myGeneratorFn() {
   yield 1;
   yield 2;
-  return 3;
+  yield 3;
 }
 
 let myGenerator = myGeneratorFn(),    // 👉🏼 Экземпляр генератора
     firstResult = myGenerator.next(); // 👉🏼 Вызов первой порции генератора
 
-console.log(firstResult)              // 👉🏼 {value: 1, done: false} Первая порция итератора
-console.log(myGenerator.next())       // 👉🏼 {value: 2, done: false} Вторая порция итератора
+console.log(firstResult)              // 👉🏼 {value: 1, done: false} Первая порция генератора
+console.log(myGenerator.next())       // 👉🏼 {value: 2, done: false} Вторая порция генератора
+console.log(myGenerator.next())       // 👉🏼 {value: 3, done: false} Третяя порция генератора
+console.log(myGenerator.next())       // 👉🏼 {value: undefined, done: true} Последний вызов генератора
 ```
 👆 Под капотом работает логика итераторов
 
@@ -218,6 +220,22 @@ console.log([0, ...generateSequence()]) // 👉🏼 1, 2
 <br>
 
 <details>
+<summary> 💠 Отличия вызова последнего yield от вызова порции с return</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🔹 Последний `yield` возвращает значение и `done: false`      
+🔹 Порция с `return` возвращает значение и `done: true`   
+🔹 Порция с `return` не возвращается при переборе итерируемым функционалом
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+<details>
 <summary> 💠 Конструкция yield* </summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
@@ -316,7 +334,7 @@ generator.next(4)
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 👆 Останавливает генератор   
-&emsp;&emsp; 🎯 Сам метод ничего не вернет   
+&emsp;&emsp; 🎯 Сам метод вернет `{value: undefined, done: true}`
 &emsp;&emsp; 🎯 Все следующие вызовы экземпляра генератора будут возвращать `{value: undefined, done: true}`
 
 ```javascript
@@ -327,9 +345,9 @@ function* generate() {
 }
 
 let gen = generate();
-gen.next();              // 👉🏼 { value: 1, done: false }
-gen.return()             // 👉🏼 undefined
-console.log(gen.next())  // 👉🏼 {value: undefined, done: true}
+console.log(gen.next(), '1')             // 👉🏼 { value: 1, done: false }
+console.log(gen.return(), '2')           // 👉🏼 {value: undefined, done: true}
+console.log(gen.next(), '3')             // 👉🏼 {value: undefined, done: true}
 ```
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
@@ -344,7 +362,7 @@ console.log(gen.next())  // 👉🏼 {value: undefined, done: true}
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 👆 Остановит генератор выбросив ошибку    
-&emsp;&emsp; 🎯 Сам метод ничего не вернет, но отработает блок `catch` внутри генератора   
+&emsp;&emsp; 🎯 Сам метод вернет `{value: undefined, done: true}`, и отработает блок `catch` внутри генератора   
 &emsp;&emsp;&emsp;&emsp; ↳ Если не повешать `try/catch`, ошибка вывалиться наружу      
 
 ```javascript
@@ -359,10 +377,42 @@ function* generate() {
 }
 
 let gen = generate();
-console.log(gen.next());                        // 👉🏼 { value: 1, done: false }
-console.log(gen.throw(new Error('my error')));  // 👉🏼 undefined, ❗ отработает блок catch внутри generate
-console.log(gen.next());                        // 👉🏼 {value: undefined, done: true}
+console.log(gen.next(), '1');                        // 👉🏼 { value: 1, done: false }
+console.log(gen.throw(new Error('my error')), '2');  // 👉🏼 {value: undefined, done: true}, ❗ отработает блок catch внутри generate и выведет лог ошибки
+console.log(gen.next(), '3');                        // 👉🏼 {value: undefined, done: true}
 ```
+
+<details>
+<summary> 🛑 Если внутри catch блока есть yield, генератор не остановиться, а начнет перебирать свойства в нем </summary>
+
+----
+
+```javascript
+function* generate() {
+  try {
+    yield 1;
+    yield 2;
+    yield 3;
+  } catch (e) {
+    console.log(e, 'log inside generator');
+    yield 4;
+    yield 5;
+    yield 6;
+  }
+}
+
+let gen = generate();
+console.log(gen.next(), '1');                        // 👉🏼 { value: 1, done: false }
+console.log(gen.throw(new Error('my error'), '2'), 'throw method');  // 👉🏼 {value: 4, done: false}, ❗ отработает блок catch внутри generate, и выведет лог ошибки
+console.log(gen.next(), '3');                        // 👉🏼 {value: 5, done: false}
+console.log(gen.next(), '4');                        // 👉🏼 {value: 6, done: false}
+console.log(gen.next(), '5');                        // 👉🏼 {value: undefined, done: true}
+```
+
+----
+
+</details>
+
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
