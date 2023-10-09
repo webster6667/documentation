@@ -17,7 +17,9 @@
 * **<a href="./pages/browser-js/readme.md">Браузерный JS</a>**
 * **<a href="./pages/ts/readme.md">TS</a>**
 * **<a href="./pages/react/readme.md">React</a>**
-
+* **<a href="./pages/react/readme.md">State manager</a>**
+* **<a href="./pages/optimization/readme.md">Оптимизация</a>**  
+* **<a href="./pages/security/readme.md">Безопастность</a>**
 
 <br>
 
