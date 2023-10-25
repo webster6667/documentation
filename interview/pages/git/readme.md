@@ -328,6 +328,19 @@ git reset --keep @{1}
 
 </details>
 
+<details>
+<summary> 15.5. Как быстро откатиться на прошлый коммит? </summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```
+git reset --hard ORIG_HEAD
+```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 <br>
 
 ---
