@@ -679,32 +679,43 @@ const filtredUserListSelector = createSelector([userListSelector, userListFilter
 
 </details>
 
-<details>
-<summary> Что такое middleware?</summary>
+[comment]: <> (<details>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+[comment]: <> (<summary> Что такое middleware?</summary>)
+
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
 
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
-</details>
+[comment]: <> (</details>)
 
-* Что такое санки
-* Как работает
-* Что такое мидлвейр  
-* Что такое immer
+[comment]: <> (* Что такое санки)
 
-https://www.youtube.com/watch?v=du6oECKM3MY  
+[comment]: <> (* Как работает)
 
-* Давай напишем получить тудушки с сервака, отправить на сервак, провалидировать с бека ( тостер/модалка )
-* Что умеет redux-toolkit, какие проблемы решает  
-* Что такое RTK-query
-* Зачем rtk, какие решает проблемы  
-* query/mutation
-* Что такое слайсы, как работаеют? 
-* Шаблон на слайсах  
-* persistRedux  
+[comment]: <> (* Что такое мидлвейр  )
+
+[comment]: <> (* Что такое immer)
+
+[comment]: <> (https://www.youtube.com/watch?v=du6oECKM3MY  )
+
+[comment]: <> (* Давай напишем получить тудушки с сервака, отправить на сервак, провалидировать с бека &#40; тостер/модалка &#41;)
+
+[comment]: <> (* Что умеет redux-toolkit, какие проблемы решает  )
+
+[comment]: <> (* Что такое RTK-query)
+
+[comment]: <> (* Зачем rtk, какие решает проблемы  )
+
+[comment]: <> (* query/mutation)
+
+[comment]: <> (* Что такое слайсы, как работаеют? )
+
+[comment]: <> (* Шаблон на слайсах  )
+
+[comment]: <> (* persistRedux  )
 
 
 <br>
