@@ -1,35 +1,315 @@
 # Hooks
 
 <details>
-<summary> Какие хуки знаешь</summary>
+<summary> Какие хуки знаешь? </summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-🎯 useState      
-🎯 useReduce  
-🎯 useEffect  
-🎯 useRef  
-🎯 useContext  
-🎯 useCallback  
-🎯 useMemo  
-🎯 useLayoutEffect    
+<details>
+<summary> 🔹 <code>useState</code></summary>
 
-🎯 useSyncExternalStore    
-Подписывается на другие сторы
+----
 
-🎯 useInsertionEffect        
-Вызывает useInsertionEffect для вставки стилей перед любыми мутациями DOM
+👆 Хук хранящий в себе состояние, которое можно изменить только при помощи `set` функции     
+&emsp;&emsp; 👆🏽 Изменения состояния вызывает ререндер компонента
 
-🎯 useDeferredValue    
-useDeferredValue - это хук React, который позволяет отложить обновление части пользовательского интерфейса.
+```typescript jsx
+const [value, setvalue] = useState()
+```
 
-🎯 useTransition  
-useTransition - это хук React, который позволяет обновлять состояние без блокировки пользовательского интерфейса.
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useReduce</code></summary>
+
+----
+
+👆 Хук реализующий патерн работы редюсера    
+
+```typescript jsx
+function reducer(state, action) {
+    if (action.type === 'incremented_age') {
+        return {
+            age: state.age + 1,
+        };
+    }
+    throw Error('Unknown action.');
+}
+
+export default function Counter() {
+    const [state, dispatch] = useReducer(reducer, {
+        age: 42,
+    });
+
+    return (
+        <>
+            <button
+                onClick={() => {
+                    dispatch({ type: 'incremented_age' });
+                }}
+            >
+                Increment age
+            </button>
+            <p>Hello! You are {state.age}.</p>
+        </>
+    );
+}
+```
+
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useEffect</code></summary>
+
+----
+
+🎯 Хук срабатывает при `mount` компонента, и при каждом изменении указанных пропсов      
+🎯 Хук возвращает функцию, которая сработает при `unmount` либо при изменении указаных пропсов  
+
+```typescript jsx
+useEffect(() => {
+    console.log('was mount')
+    
+    return () => {
+        console.log('was unmount')
+    }
+}, []) 
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useRef</code></summary>
+
+----
+
+👆 Хук хранящий стейт или `DOM` элемент в замыкании      
+&emsp;&emsp; 🎯 При изменении значений внутри `ref.current`, не происходит ререндера      
+  
+```typescript jsx
+const MyInput = () => {
+    const inputRef = useRef();;
+    return <input ref={inputRef} />;
+}
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useContext</code></summary>
+
+----
+
+👆 Хук который пробрасывает переданные данные всем дочерним компонентам, без `propsDrilling`  
+  
+```typescript jsx
+const AlertContext = React.createContext()
+
+export const useAlert = () => {
+  return useContext(AlertContext)
+}
+
+export const AlertProvider = ({ children }) => {
+    const [isVisible, setIsVisible] = useState(false)
+    const toggle = () => setIsVisible(prev => !prev)
+    
+    return (
+        <AlertContext.Provider value={{
+            visible: isVisible,
+            toggle
+        }}>
+            { children }
+        </AlertContext.Provider>
+    )
+}
+
+const Alert = () => {
+    const {visible} = useAlert()
+
+    if (!visible) return null
+    
+    return (<div>
+        Alert
+    </div>)  
+}
+
+const Main = () => {
+    const {toggle} = useAlert()
+
+    return (<button onClick={() => toggle()} >
+        show alert
+    </button>)
+}
+
+
+export const App = () => {
+    
+    return (<div>
+        <AlertProvider>
+            <Aler />    
+            <Main />
+        </AlertProvider>
+    </div>)
+}
+
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useCallback</code></summary>
+
+----
+
+👆 Хук пересоздаст функцию при ререндере, только в том случаи если изменились зависимые свойства     
+  
+```typescript jsx
+// 👉🏼 Обновляю функцию только при изменении зависимых свойств
+    const logFn = useCallback(() => {
+        console.log(value);
+    }, [value]);
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useMemo</code></summary>
+
+----
+
+👆 Делает перерасчет запрашиваемых данных, только если изменились зависимые свойства  
+```typescript jsx
+const calculation = useMemo(() => expensiveCalculation(count), [count]);
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useLayoutEffect</code></summary>
+
+----
+
+👆 Работает аналогично `useEffect`, срабатывающий синхронно, до рендера компонента   
+
+----
+
+</details>
+
+
+<details>
+<summary> 🔹 <code>useSyncExternalStore</code></summary>
+
+----
+
+&emsp;&emsp; 👆 Подписывается на другие сторы
+
+----
+
+</details>
+
+
+<details>
+<summary> 🔹 <code>useInsertionEffect</code></summary>
+
+----
+
+👆 Используеться для вставки стилей перед любыми мутациями `DOM`
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useDeferredValue</code></summary>
+
+----
+
+👆 Хук позволяющий понизить приоритет выбранных данных для перерисовки, изменив переданные `values`, только после того как прошел основной рендер
+
+```typescript
+const [itemList, setItemList] = useState('');
+const deferredChangedItem = useDeferredValue(itemList);
+```
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useTransition</code></summary>
+
+----
+
+👆 Хук позволяющий обернуть изменения стейта в обертку `startTransition`, которая делает изменение мение приоритетным, и позволяет отловить рендера разбитого на чанки
+
+```typescript
+function TabContainer() {
+    const [isPending, startTransition] = useTransition()
+}
+```
+
+
+----
+
+</details>
+
+<details>
+<summary> 🔹 <code>useImperativeHandle</code></summary>
+
+----
+
+👆 Хук принимающий в себя `ref`, который можно наполнять хендлерами в дочерних компонентах, которые потом можно дергать из родительских
+
+```typescript jsx
+ const FancyInput = forwardRef(() => {
+    const inputRef = useRef();
+    useImperativeHandle(ref, () => ({
+        focus: () => {
+            inputRef.current.focus();
+        }
+    }));
+    return <input ref={inputRef} />;
+})
+
+export const MyForm = () => {
+    const methodsRef = useRef();
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        methodsRef.focus()
+    }
+    
+    return <form onSubmit={} >
+        <FancyInput ref={methodsRef} type="text" name='name' />
+        <input type="text" name='question' />
+        <button>send question</button>
+    </form>
+}
+```
+
+----
+
+</details>
 
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
 </details>
+
 
 <details>
 <summary>Что происходит при изменении стейта или пропса?</summary>
@@ -326,9 +606,9 @@ export default function App() {
 
 ---
 
-useEffect: 
+useEffect:    
 🎯 Асинхронен  
-🎯 Вызываеться после отрисовки
+🎯 Вызываеться после отрисовки  
 🎯 Не блокирует отрисовку экрана, даже если в нем есть перерисовки   
 
 ---
@@ -355,7 +635,7 @@ useEffect:
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-useLayoutEffect работает как `componentDidUpdate`: 
+useLayoutEffect работает как `componentDidUpdate`:   
 🎯 Вызываеться до рендера      
 🎯 Если внутри происходит какая-то перерсовка, он гарантирует что пользователь не увидит промежуточное значение  
 
@@ -502,179 +782,196 @@ export default function Counter() {
 
 </details>
 
-useRef
+[comment]: <> (useRef)
 
-<br>
-<br>
-<br>
+[comment]: <> (<br>)
 
+[comment]: <> (<br>)
 
-<details>
-<summary> Зачем нужен useLayoutEffect</summary>
+[comment]: <> (<br>)
 
-----
 
+[comment]: <> (<details>)
 
+[comment]: <> (<summary> Зачем нужен useLayoutEffect</summary>)
 
-----
+[comment]: <> (----)
 
-</details>
 
-<details>
-<summary> Как работает useReduce?</summary>
 
-----
+[comment]: <> (----)
 
+[comment]: <> (</details>)
 
+[comment]: <> (<details>)
 
-----
+[comment]: <> (<summary> Как работает useReduce?</summary>)
 
-</details>
+[comment]: <> (----)
 
-<details>
-<summary> Как работает useContext</summary>
 
-----
 
+[comment]: <> (----)
 
+[comment]: <> (</details>)
 
-----
+[comment]: <> (<details>)
 
-</details>
+[comment]: <> (<summary> Как работает useContext</summary>)
 
-<details>
-<summary> Что происходит при изменении контекста</summary>
+[comment]: <> (----)
 
-----
 
 
+[comment]: <> (----)
 
-----
+[comment]: <> (</details>)
 
-</details>
+[comment]: <> (<details>)
 
-<details>
-<summary> Зачем нужен useContext</summary>
+[comment]: <> (<summary> Что происходит при изменении контекста</summary>)
 
-----
+[comment]: <> (----)
 
 
 
-----
+[comment]: <> (----)
 
-</details>
+[comment]: <> (</details>)
 
-<details>
-<summary> зачем нужен useMemo</summary>
+[comment]: <> (<details>)
 
-----
+[comment]: <> (<summary> Зачем нужен useContext</summary>)
 
+[comment]: <> (----)
 
 
-----
 
-</details>
+[comment]: <> (----)
 
-<details>
-<summary> зачем нужен useCallback</summary>
+[comment]: <> (</details>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+[comment]: <> (<details>)
 
+[comment]: <> (<summary> зачем нужен useMemo</summary>)
 
+[comment]: <> (----)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-</details>
 
-<details>
-<summary> В каких случаях стоит юзать useCallback и useMemo</summary>
+[comment]: <> (----)
 
-----
+[comment]: <> (</details>)
 
+[comment]: <> (<details>)
 
+[comment]: <> (<summary> зачем нужен useCallback</summary>)
 
-----
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
-</details>
 
-<details>
-<summary> Как ищбежать лишней меморизации</summary>
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
+[comment]: <> (</details>)
 
+[comment]: <> (<details>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+[comment]: <> (<summary> В каких случаях стоит юзать useCallback и useMemo</summary>)
 
-</details>
+[comment]: <> (----)
 
-<details>
-<summary> Что такое useRef, как его юзать</summary>
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
+[comment]: <> (----)
 
+[comment]: <> (</details>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+[comment]: <> (<details>)
 
-</details>
+[comment]: <> (<summary> Как ищбежать лишней меморизации</summary>)
 
-<details>
-<summary> Что такое ref колбеки</summary>
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+[comment]: <> (</details>)
 
-</details>
+[comment]: <> (<details>)
 
-<details>
-<summary> Что такое forwardref</summary>
+[comment]: <> (<summary> Что такое useRef, как его юзать</summary>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
 
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
-</details>
+[comment]: <> (</details>)
 
-<details>
-<summary> Что происходит при изменении рефов?</summary>
+[comment]: <> (<details>)
 
-----
+[comment]: <> (<summary> Что такое ref колбеки</summary>)
 
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
 
-----
 
-</details>
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
-<details>
-<summary> бачинг</summary>
+[comment]: <> (</details>)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+[comment]: <> (<details>)
 
+[comment]: <> (<summary> Что такое forwardref</summary>)
 
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
 
-![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-</details>
 
-<details>
-<summary> Давай напишем кастомный хук</summary>
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
 
-----
+[comment]: <> (</details>)
 
+[comment]: <> (<details>)
 
+[comment]: <> (<summary> Что происходит при изменении рефов?</summary>)
 
-----
+[comment]: <> (----)
 
-</details>
 
-https://www.youtube.com/watch?v=qdCGwwSefX8
+
+[comment]: <> (----)
+
+[comment]: <> (</details>)
+
+[comment]: <> (<details>)
+
+[comment]: <> (<summary> бачинг</summary>)
+
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg&#41;)
+
+
+
+[comment]: <> (![illustration]&#40;https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg&#41;)
+
+[comment]: <> (</details>)
+
+[comment]: <> (<details>)
+
+[comment]: <> (<summary> Давай напишем кастомный хук</summary>)
+
+[comment]: <> (----)
+
+
+
+[comment]: <> (----)
+
+[comment]: <> (</details>)
+
+[comment]: <> (https://www.youtube.com/watch?v=qdCGwwSefX8)
 
 <br>
 
