@@ -1,30 +1,18 @@
 # Socket IO
-> Популярная библиотека для работы с сокетами
+👆🏽 Популярная библиотека для работы с сокетами
+
+<br>
 
 <details>
-<summary> 🔥 <code>Shortcut</code></summary>
+<summary> 💠 С обеих сторон (<code>`клиент/сервер`</code>) может слать и слушать события</summary>
 
-___
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-🎯 [`reconnect`, `room`, `id`, `broadcast`],  из под капота
+<details>
+<summary> 🔹 Клиент</summary>
 
-🎯 Почти одинаковый синтаксис и на клиенте и на сервере
+----
 
-🎯 Работает даже если нет поддержки `ws`  
-&emsp;&emsp; 👆 `Long-polling`
-
-🎯 Под капотом производиться распределение нагрузки
-
-🎯 Весит больше чем `react` и `redux` вместе взятые  
-&emsp;&emsp; 👆 Годиться для `mvp`, или сильно завязанного на `ws` приложения
-
-___
-
-</details>
-
-💠 С обеих сторон (`клиент/сервер`) может слать и слушать события
-
-&emsp;&emsp; 🔹 Клиент
 ```typescript jsx
 socket.emit('writeMessage', {username})
 
@@ -33,35 +21,68 @@ socket.on('messageWritten', ({messagesList}) => {
 })
 ```
 
-&emsp;&emsp; 🔹 Сервер
+----
+
+</details>
+
+<details>
+<summary> 🔹 Сервер </summary>
+
+----
+
 ```typescript jsx
 socket.on('writeMessage', function ({message, username}) {
     socket.emit('messageWritten', {messagesList})
 });
 ```
 
-<br>
+----
 
-💠 Дефолтные события  
+</details>
 
-&emsp;&emsp; 🔹 Клиент
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `connect`  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Работа с сервером по  `socket.io` возможна     
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-&emsp;&emsp; 🔹 Сервер
-
-&emsp;&emsp;&emsp;&emsp; 🎯 `connection`  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Клиент успешно присоединен, можно работать
-
-&emsp;&emsp;&emsp;&emsp; 🎯 `disconnect`  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Клиент был отключен
+</details>
 
 <br>
 
-💠 Инициализация
+<details>
+<summary> 💠 Дефолтные события </summary>
 
-&emsp;&emsp; 🔹 Клиент
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🔹 Клиент
+
+&emsp;&emsp; 🎯 `connect`  
+&emsp;&emsp;&emsp;&emsp; 👆 Работа с сервером по  `socket.io` возможна
+
+---
+
+🔹 Сервер
+
+&emsp;&emsp; 🎯 `connection`  
+&emsp;&emsp;&emsp;&emsp; 👆 Клиент успешно присоединен, можно работать
+
+&emsp;&emsp; 🎯 `disconnect`  
+&emsp;&emsp;&emsp;&emsp; 👆 Клиент был отключен
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+<details>
+<summary> 💠 Инициализация </summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+<details>
+<summary> 🔹 Клиент </summary>
+
+----
+
 ```typescript jsx
 useEffect(() => {
 
@@ -76,11 +97,17 @@ useEffect(() => {
         }
 
         socketInitializer()
-
 }, [])
 ```
 
-&emsp;&emsp; 🔹 Сервер
+----
+
+</details>
+
+<details>
+<summary> 🔹 Сервер</summary>
+
+----
 
 ```typescript jsx
 const SocketHandler = (req, res) => {
@@ -102,13 +129,33 @@ const SocketHandler = (req, res) => {
 }
 ```
 
+----
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
 💠 Реконект  
 &emsp;&emsp; 👆 Настроен в socket.io под капотом     
 
 <br>
 
-💠 Broadcast   
+<details>
+<summary> 💠 Broadcast</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
 &emsp;&emsp; 👆 Рассылка со стороны сервера всем подключенным юзерам, кроме отправителя событий
+
+<details>
+<summary> 📜 <code>server broadcast</code></summary>
+
+----
+
 ```typescript jsx
 let connectedUserList = []
 
@@ -138,34 +185,26 @@ const SocketHandler = (req, res) => {
 }
 ```
 
-<br>
+----
 
-💠 Плюсы
+</details>
 
-&emsp;&emsp; 🎯 [`reconnect`, `room`, `id`, `broadcast`],  из под капота      
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-&emsp;&emsp; 🎯 Почти одинаковый синтаксис и на клиенте и на сервере
-
-&emsp;&emsp; 🎯 Работает даже если нет поддержки `ws`
-
-&emsp;&emsp; 🎯 Под капотом производиться распределение нагрузки
-
-&emsp;&emsp; 🎯 Сильное сообщество, документация
+</details>
 
 <br>
 
-💠 Минусы
+<details>
+<summary> 💠 Стандартный пример событий сокет соединения</summary>
 
-&emsp;&emsp; 🎯 Весит больше чем `react` и `redux` вместе взятые
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-&emsp;&emsp; 🎯 Как хамер на трассе  
-&emsp;&emsp;&emsp;&emsp; 👆 Очень много разных фичь, в которых нет необходимости   
+<details>
+<summary> 🔹 Клиент</summary>
 
-<br>
+----
 
-💠 Стандартный пример событий сокет соединения
-
-&emsp;&emsp; 🔹 Клиент      
 ```typescript jsx
 import {useState, useEffect} from 'react'
 import io, { Socket } from "socket.io-client";
@@ -216,7 +255,13 @@ export const useSocket = ({username, onConnected, onJoined, onDisconnected, onMe
 }
 ```
 
-&emsp;&emsp; 🔹 Сервер
+----
+
+<details>
+<summary> 🔹 Сервер</summary>
+
+----
+
 ```typescript jsx
 import {Server} from 'socket.io'
 
@@ -267,6 +312,42 @@ const SocketHandler = (req, res) => {
 
 export default SocketHandler
 ```
+
+
+----
+
+</details>
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+
+<br>
+
+💠 Плюсы
+
+&emsp;&emsp; 🎯 [`reconnect`, `room`, `id`, `broadcast`],  из под капота      
+
+&emsp;&emsp; 🎯 Почти одинаковый синтаксис и на клиенте и на сервере
+
+&emsp;&emsp; 🎯 Работает даже если нет поддержки `ws`
+
+&emsp;&emsp; 🎯 Под капотом производиться распределение нагрузки
+
+&emsp;&emsp; 🎯 Сильное сообщество, документация
+
+<br>
+
+💠 Минусы
+
+&emsp;&emsp; 🎯 Весит больше чем `react` и `redux` вместе взятые
+
+&emsp;&emsp; 🎯 Как хамер на трассе  
+&emsp;&emsp;&emsp;&emsp; 👆 Очень много разных фичь, в которых нет необходимости   
+
 
 <br>
 

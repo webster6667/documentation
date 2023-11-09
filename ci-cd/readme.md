@@ -3,4 +3,6 @@
 
 * **<a href="./pages/start/readme.md">start</a>**
 
-back
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**

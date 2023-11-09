@@ -1,61 +1,54 @@
 # WebSocket
-> Класс реализующий работу с сокетами в js
- 
-<details>
-<summary> 🔥 <code>Shortcut</code></summary>
-
-___
-
-🔹 Поддерживаеться без всяких библиотеке при помощи класса `WebSocket`  
-
-🔹 Гоняет данные по двум каналам  
-&emsp;&emsp; 🎯 `ws`  
-&emsp;&emsp;&emsp;&emsp; 👆 Открытый, может не отработать на старых серверах  
-  
-
-&emsp;&emsp; 🎯 `wss`   
-&emsp;&emsp;&emsp;&emsp; 👆 Зашифрованый, работает на всех серверах, + обеспечивает безопастность данных
-
-🔹 Вся архитектура стоиться на костях событий
-
-&emsp;&emsp; 🎯 `open`   
-&emsp;&emsp;&emsp;&emsp; 👆 Соединение установлено   
-
-&emsp;&emsp; 🎯 `message`   
-&emsp;&emsp;&emsp;&emsp; 👆 Пришли данные с сервера, обычно в этом событии прокидывают имя события на проекте
-
-&emsp;&emsp; 🎯 `error`   
-&emsp;&emsp;&emsp;&emsp; 👆 Произошла ошибка
-
-&emsp;&emsp; 🎯 `close`   
-&emsp;&emsp;&emsp;&emsp; 👆 Обычно используют для рекконекта соединения, проверив статус код закрытия
-
-🔹 `Broadcast`   
-&emsp;&emsp; 👆 Настройка на сервере, рассылающая оповещение всем подключенным клиентам по айдишнику, кроме отправляющего   
-
-___
-
-</details>
+👆🏽 Класс реализующий работу с сокетами в `js`
 
 ```javascript
 let socket = new WebSocket("ws://my-host.ru");
 ```
 
-## 🚩 Протоколы
+<details>
+<summary>📗 Доп информация</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+🎯 https://wanago.io/2021/12/20/redux-middleware-websockets/    
+🎯 https://www.taniarascia.com/websockets-in-redux/    
+🎯 https://www.youtube.com/watch?v=o43iiH4kGqg&t=1284s
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+
+   
+<br>
+
+
+
+<details>
+<summary>💠 Протоколы</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🔹 `ws`  
-&emsp;&emsp; 👆 Открытый    
+&emsp;&emsp; 👆 Открытый
 
 🔹 `wss`  
 &emsp;&emsp; 👆 Зашифрованный
 
-📗 Старые прокси сервера которые не знают о технологии сокетов, закроют соединение, получив незнакомые для них заголовки
+> 📗 Старые прокси сервера которые не знают о технологии сокетов, закроют соединение, получив незнакомые для них заголовки
 
-По этому всегда предпочтительней использовать `wss` шифрования, закрывая содержимое запроса от прокси серверов
+> По этому всегда предпочтительней использовать `wss` шифрования, закрывая содержимое запроса от прокси серверов
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
 
 <br>
 
-## 🚩 События
+<details>
+<summary> 💠 События </summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 💠 `open`   
 👆🏽 Соединение установлено, можно начинать передавать данные по сокетам
@@ -63,10 +56,17 @@ let socket = new WebSocket("ws://my-host.ru");
 <br>
 
 💠 `message`  
-👆🏽 Пришли данные  
-&emsp;&emsp; 🔹 Передавать можно как строки так и `ArrayBuffer` данные
+<details>
+<summary> 👆🏽 Пришли данные</summary>
 
-&emsp;&emsp; 📗 Чаще всего передают `json` объекты
+----
+
+🎯 Передавать можно как строки так и `ArrayBuffer` данные      
+🎯 Чаще всего передают `json` объекты
+
+----
+
+</details>
 
 <br>
 
@@ -75,28 +75,50 @@ let socket = new WebSocket("ws://my-host.ru");
 
 <br>
 
-💠 `close`  
-👆🏽 Соединение закрыто
+💠 `close`
+<details>
+<summary> 👆🏽 Соединение закрыто</summary>
 
-&emsp;&emsp; 🔹 Может приходить с разными кодами
+----
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `1000`   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 По умолчанию, нормальное закрытие    
+👆 Может приходить с разными кодами
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `1006`   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Соединение было потеряно (нет фрейма закрытия)
+ 🎯 `1000`   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 По умолчанию, нормальное закрытие
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `1001`   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Сторона отключилась, например сервер выключен или пользователь покинул страницу
+ 🎯 `1006`   
+&emsp;&emsp; 👆 Соединение было потеряно (нет фрейма закрытия)
 
-&emsp;&emsp;&emsp;&emsp; 🎯 `1009`  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 👆 Сообщение слишком большое для обработки
+ 🎯 `1001`   
+&emsp;&emsp; 👆 Сторона отключилась, например сервер выключен или пользователь покинул страницу
+
+ 🎯 `1009`  
+&emsp;&emsp; 👆 Сообщение слишком большое для обработки
+
+----
+
+</details>
+
+<br>
 
 > 📗 На этих дефолтных событиях обычно строят свою архитектуру своих событий, прокидывая в json объектах название своих событий
 
-## 🚩 Инициализация
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
-🔹 Клиент
+</details>
+
+<br>
+
+<details>
+<summary> 💠 Инициализация</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+<details>
+<summary> 🔹 Клиент</summary>
+
+----
+
 ```typescript jsx
 useEffect(() => {
     const socket = new WebSocket('ws://localhost:3005/chat')
@@ -128,7 +150,15 @@ useEffect(() => {
 }, [])
 ```
 
-&emsp;&emsp; 🔹 Сервер
+----
+
+</details>
+
+<details>
+<summary> 🔹 Сервер</summary>
+
+----
+
 ```typescript jsx
 app.ws('/chat', (ws, res) => {
     ws.send('socket is worck') // 👉🏼 Соединение установленно
@@ -153,18 +183,35 @@ app.ws('/chat', (ws, res) => {
 })
 ```
 
-## 🚩 Broadcast 
+----
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>  
+
+<br>
+
+<details>
+<summary> 💠 Broadcast</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🎯 В примере выше, соединение происходит только между одним клиентом и сервером
 
 🎯 Для оповещения всех подключенных юзеров о любом событии с сокетом, нужно произвести определенные настройки на сервере
 
 🎯 Написать функцию `broadcast`  
-&emsp;&emsp; 👆 Она отправляет данные всем подключенным юзерам, кроме юзера который передал эти данные на сервер  
+&emsp;&emsp; 👆 Она отправляет данные всем подключенным юзерам, кроме юзера который передал эти данные на сервер
 
 <br>
 
-&emsp;&emsp; 🔹 Сервер
+<details>
+<summary> 🔹 Сервер</summary>
+
+----
+
 ```typescript jsx
 import express from "express";
 import expressWs from 'express-ws';
@@ -176,8 +223,8 @@ const app = express(),
 app.ws('/chat', (ws, res) => {
     ws.send('socket is worck') // 👉🏼 Соединение установленно
 
-    const connectedClientList = aWSS.clients,
-          broadcastSend = ({event, ws, ...resData}) => {
+    const connectedClientList = aWSS.clients, 
+          broadcastSend = ({event, ws, ...resData}) => { // 👉🏼 Функция рассылки всем подключенным юзерам
             connectedClientList.forEach((client) => {
 
             if (+client.id !== +ws.id) {
@@ -211,7 +258,15 @@ app.ws('/chat', (ws, res) => {
 })
 ```
 
-&emsp;&emsp; 🔹 Клиент
+----
+
+</details>
+
+<details>
+<summary> 🔹 Клиент</summary>
+
+----
+
 ```typescript jsx
 socket.onmessage = ({data}) => { // 👉🏼 Получаем с бека данные и обрабатываем событие которое указал бек
     const resData = JSON.parse(data)
@@ -221,7 +276,7 @@ socket.onmessage = ({data}) => { // 👉🏼 Получаем с бека дан
         case 'connected':
             console.log(`you was connected to chat`)
         break;
-        case 'joined':
+        case 'joined': // 👉🏼 Получаем с broadcast бека событие подключения нового юзера
             console.log(`user ${name} was joined to chat`)
         break;    
     }
@@ -229,8 +284,22 @@ socket.onmessage = ({data}) => { // 👉🏼 Получаем с бека дан
 }
 ```
 
-## 🚩 Реконект
-> По дефолту при потери соединения переподключение к сокетам отсутствует, но сделать его достаточно просто
+----
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+<details>
+<summary> 💠 Реконект </summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+> По дефолту при потери соединения переподключение к сокетам отсутствует, но сделать его достаточно просто  
 
 🎯 Создать функцию создания сокета со всеми обработчиками
 
@@ -242,7 +311,11 @@ socket.onmessage = ({data}) => { // 👉🏼 Получаем с бека дан
 
 🎯 В событии `connected` выключить функцию интервал
 
-&emsp;&emsp; 🔹 Клиент
+<details>
+<summary> 🔹 Клиент </summary>
+
+----
+
 ```typescript jsx
 useEffect(() => {
         const createWs = () => {
@@ -267,12 +340,13 @@ useEffect(() => {
             }
 
             socket.onclose = (event) => {
+                
                 if (!event.wasClean) {
                     reconnectIntervalId = setTimeout(() => {
                         createWs()
                     }, 300)
-
                 }
+                
             }
 
         }
@@ -280,9 +354,205 @@ useEffect(() => {
     }, [])
 ```
 
-## 🚩 Примеры
+----
 
-&emsp;&emsp; 🔹 Клиентский хук для сокетов
+</details>
+
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+<details>
+<summary> 💠 Redux</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+👆 Работа с сокетами в редаксе удобней всего реализовать через `middleware`  
+
+<details>
+<summary>📜 <code>socket help class</code></summary>
+
+```javascript
+class Socket {
+  constructor() {
+    this.socket = null
+  }
+
+  connect(url) {
+    if (!this.socket) {
+      this.socket = new WebSocket(url)
+    }
+  }
+
+  disconnect() {
+    if (this.socket) {
+      this.socket.close()
+      this.socket = null
+    }
+  }
+
+  send(message) {
+    if (this.socket) {
+      this.socket.send(JSON.stringify(message))
+    }
+  }
+
+  on(eventName, callback) {
+    if (this.socket) {
+      this.socket.addEventListener(eventName, callback)
+    }
+  }
+}
+
+export { Socket }
+```
+
+</details>
+  
+
+<details>
+<summary>📜 <code>chatSlice</code></summary>
+
+```javascript
+const initialState: ChatState = {
+    messages: [],
+    isEstablishingConnection: false,
+    isConnected: false,
+    userList: []
+};
+
+const chatSlice = createSlice({
+  name: 'chat',
+  initialState,
+  reducers: {
+    startConnecting: (state => {
+      state.isEstablishingConnection = true;
+    }),
+    connectionEstablished: (state => {
+      state.isConnected = true;
+      state.isEstablishingConnection = true;
+    }),
+    includeUserToChat: ((state, action) => {
+      state.userList.push(action.payload)
+    }),
+    excludeUserFromChat: ((state, action) => {
+      state.userList = state.userList.filter((item) => item.id !== action.payload.disconnectedId) 
+    }),
+    writeMesaageList: ((state, action) => {
+      state.messages = action.payload
+    }),
+  },
+});
+ 
+export const chatActions = chatSlice.actions;
+ 
+export default chatSlice;
+```
+
+</details>
+
+<details>
+<summary>📜 <code>middleware</code></summary>
+
+----
+
+```typescript jsx
+import { chatActions } from './chatSlice';
+import ChatEvent from './chatEvent';
+import {SOCKET_CONNECT, SOCKET_DISCONNECT} from '@common-const';
+
+
+export const chatMiddleware = (socket) => (params) => (next) => (action) => {
+    const { dispatch, getState } = params
+    const { type } = action
+    let reconnectInterval
+
+    switch (type) {
+        case SOCKET_CONNECT:
+            socket.connect('wss://example.com')
+            
+            socket.on('open', () => {
+                dispatch(chatActions.startConnecting());
+                const id = String(Date.now())
+
+                const connectData = {
+                    id,
+                    username,
+                    event: 'connecting',
+                }
+                socket.send(connectData)
+            })
+            
+            socket.on('message', ({data}) => {
+                const resData = JSON.parse(data)
+                const {event, id, username, messagesList} = resData
+
+                switch (event) {
+                    case 'connected':
+                        clearInterval(reconnectInterval)
+                        dispatch(chatActions.connectionEstablished());
+                        console.log(`you was connected to chat`)
+                        break;
+                    case 'joined': // 👉🏼 Получаем с broadcast бека событие подключения нового юзера
+                        dispatch(chatActions.includeUserToChat({id, username}));
+                        console.log(`user ${name} was joined to chat`)
+                        break;
+                    case 'disconnected': // 👉🏼 Получаем с broadcast бека событие отключенных юзеров
+                        dispatch(chatActions.excludeUserFromChat({disconnectedId: id}));
+                        console.log(`user with id ${id} was disconnected from chat`)
+                        break;
+                    case 'messageWritten': // 👉🏼 Перезаписываем пропс с сообщениями, актуальными данными с бека
+                        dispatch(chatActions.writeMesaageList(messagesList));
+                        console.log(`message list was updated`)
+                        break;
+                }
+                
+            })
+            
+            socket.on('close', () => {
+                
+                if (!event.wasClean) {
+
+                    reconnectInterval = setTimeout(() => {
+                        const creatChatWS = createAction(SOCKET_CONNECT)
+                        dispatch(creatChatWS());
+                    }, 300)
+
+                }
+            })
+            
+            break
+        case SOCKET_DISCONNECT:
+            socket.disconnect()
+            break
+
+        default:
+            break
+    }
+
+    return next(action)
+}
+```
+
+----
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+<details>
+<summary> 💠 Хук для подключения сокета</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
 ```typescript jsx
 export const useSocket = ({username, onConnected, onJoined, onDisconnected, onMessageWritten}) => {
     const [ws, setWs] = useState<undefined | WebSocket>()
@@ -356,11 +626,19 @@ export const useSocket = ({username, onConnected, onJoined, onDisconnected, onMe
 }
 ```
 
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 <br>
 
-&emsp;&emsp; 🔹 Серверный класс для сервера
-```typescript jsx
+<details>
+<summary> 💠 Серверный класс сокета</summary>
 
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```typescript jsx
 let disconnectFnList = {}
 
 class Socket {
@@ -482,6 +760,10 @@ app.ws('/chat', (ws, res) => {
   })
 })
 ```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>  
 
 <br>
 
