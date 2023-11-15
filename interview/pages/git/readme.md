@@ -1,7 +1,7 @@
 # GIT
 
 <details>
-<summary> 1. Что такое git config, какой бывает, зачем он нужен</summary>
+<summary> 1. Что такое <code>git config</code>, какой бывает, зачем он нужен</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -32,7 +32,7 @@
 &emsp;&emsp; 👆 Файл не отслеживаеться гитом при любых манипуляциях с репозиторием
 
 🔹 `Stage for commit`  
-&emsp;&emsp; 👆 Либо `Untracked` добавленный в `WorkDirectory`, либо файл уже лежащий в репозитории, но измененный
+&emsp;&emsp; 👆 Либо `Untracked` добавленный в `WorkDirectory`, либо файл уже лежащий в репозитории, но измененный (`modified`)
 
 🔹 `Comited`  
 &emsp;&emsp; 👆 Уже закомиченные файлы
@@ -199,7 +199,7 @@ git stash save 'stashName'
 </details>
 
 <details>
-<summary> 11. Что такое detached HEAD, как туда попасть, чем опасна, как исправить</summary>
+<summary> 11. Что такое <code>detached HEAD</code>, как туда попасть, чем опасна, как исправить</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -229,7 +229,7 @@ git stash save 'stashName'
 
 
 <details>
-<summary> 12. Что такое git stash, в каких случаях применяют </summary>
+<summary> 12. Что такое <code>git stash</code>, в каких случаях применяют </summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -255,7 +255,7 @@ git stash save 'stashName'
 </details>
 
 <details>
-<summary> 13. Что такое reflog | Как получить хеши недостежимых комитов</summary>
+<summary> 13. Что такое <code>reflog</code> | Как получить хеши недостежимых комитов</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -270,7 +270,7 @@ git reflog --oneline
 </details>
 
 <details>
-<summary> 14. Как делать откаты комитов | Что такое git reset</summary>
+<summary> 14. Как делать откаты комитов | Что такое <code>git reset</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -299,7 +299,7 @@ git reset --'mod' 'commitHash'
 </details>
 
 <details>
-<summary> 15. Как вернуться к недостежимому комиту, с которого мы сделали reset?</summary>
+<summary> 15. Как вернуться к недостежимому комиту, с которого мы сделали <code>reset</code>?</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -331,7 +331,7 @@ git reset --keep @{1}
 </details>
 
 <details>
-<summary> 15.5. Как быстро откатиться на прошлый коммит? </summary>
+<summary> 15.5. Как быстро откатиться на прошлый коммит? | Что такое <code>ORIG_HEAD</code> </summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -350,7 +350,7 @@ git reset --hard ORIG_HEAD
 <br>
 
 <details>
-<summary> 16. Что такое merge | Как обьединить две ветки</summary>
+<summary> 16. Что такое <code>merge</code> | Как обьединить две ветки</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -399,7 +399,7 @@ git merge feature
 </details>
 
 <details>
-<summary> 19. Откатить изменения merge request</summary>
+<summary> 19. Откатить изменения <code>merge request</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -419,7 +419,7 @@ git reset --hard 'comitHashBeforeMergeRequestOnBranch'
 <br>
 
 <details>
-<summary> 20. Как подтянуть изменения, без дополнительного слияния | Что такое rebase</summary>
+<summary> 20. Как подтянуть изменения, без дополнительного слияния | Что такое <code>rebase</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -438,7 +438,7 @@ git reset --hard 'comitHashBeforeMergeRequestOnBranch'
 </details>
 
 <details>
-<summary> 21. При подтягивании обновлений из master ветки, исчез комит сделаный в feature ветки, куда он мог исчезнуть?</summary>
+<summary> 21. При подтягивании обновлений из <code>master</code> ветки, исчез комит сделаный в <code>feature</code> ветки, куда он мог исчезнуть?</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -450,7 +450,7 @@ git reset --hard 'comitHashBeforeMergeRequestOnBranch'
 </details>
 
 <details>
-<summary> 22. Как продолжить rebase, после решения конфликта</summary>
+<summary> 22. Как продолжить <code>rebase</code>, после решения конфликта</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -466,7 +466,7 @@ git rebase --continue
 </details>
 
 <details>
-<summary> 23. Как отменить rebase если в процессе произошел конфликт</summary>
+<summary> 23. Как отменить <code>rebase</code> если в процессе произошел конфликт</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -486,7 +486,7 @@ git rebase --abort
 </details>
 
 <details>
-<summary> 24. Как отменить успешно завершенный rebase</summary>
+<summary> 24. Как отменить успешно завершенный <code>rebase</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -535,7 +535,7 @@ git rebase -i @~n # или ветка вместо @
 </details>
 
 <details>
-<summary> 26. Как подтянуть изменения ветки, не подтягивая ее историю комитов | Что такое squash </summary>
+<summary> 26. Как подтянуть изменения ветки, не подтягивая ее историю комитов | Что такое <code>squash</code> </summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -559,7 +559,7 @@ git commit -m"commit message"
 </details>
 
 <details>
-<summary> 27. Как подтянуть только нужные комиты из ветки | Что такое cherry-pick</summary>
+<summary> 27. Как подтянуть только нужные комиты из ветки | Что такое <code>cherry-pick</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
@@ -589,7 +589,7 @@ git cherry-pick master..feature
 <br>
 
 <details>
-<summary> 28. Как отменить комит, который уже есть в удаленном репозитории | Что такое revert</summary>
+<summary> 28. Как отменить комит, который уже есть в удаленном репозитории | Что такое <code>revert</code></summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
