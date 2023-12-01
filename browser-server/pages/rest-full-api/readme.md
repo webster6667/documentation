@@ -1,6 +1,8 @@
 # REST FULL API
 ![illustration](img/illustration.png)
 
+<a href="https://www.youtube.com/watch?v=EaFr0wYaxxM&t=37s">REST</a>  
+
 👆🏽 Это сервер, который получает и отдает данные следуя правилам `rest`
 
 <details>
