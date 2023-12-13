@@ -19,6 +19,8 @@
 * **<a href="./pages/tag/readme.md">Теги</a>**
 * **<a href="./pages/commit-style/readme.md">Правила коммита</a>**
 * **<a href="./pages/branch-history-style/readme.md">Методика ведения истории</a>**
+* **<a href="./pages/submodules/readme.md">Подмодули</a>**
+
 
 <br>
 
