@@ -676,4 +676,86 @@ git revert 'commitHash'
 
 <br>
 
+<details>
+<summary> 31. Сабмодули</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+👆 Вложенные репозитории внутри основного
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> 32. Добавить сабмодуль в основной</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```shell
+git submodule add https://github.com/chaconinc/DbConnector
+```
+
+🎯 Появляеться файл `.gitmodules`, в котором храниться структура модулей
+
+🎯 Появляеться сама папка сабмодуля
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> 33. Изменение сабмодуля</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🎯 Переходим в папку репозитория  
+🎯 Комитим  
+🎯 `MR` в master  
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+
+<details>
+<summary> 34. Подтянуть данные <code>сабмодуль</code> при инициализации проекта</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+👆 При инициализации в репо есть данные о сабмодуле, но его содержимое подтягивается отдельными командами, на подобии `npm i`
+
+```
+git submodule init
+git submodule update
+```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+
+<details>
+<summary> 35. Подтянуть изменения <code>сабмодуля</code></summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```
+git submodule update --remote
+```
+
+👆 Смерджит все новые изменения в локальную папку сабмодуля
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
 ### ⟵ **<a href="../../readme.md">Назад</a>**

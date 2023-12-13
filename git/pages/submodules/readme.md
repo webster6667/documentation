@@ -25,9 +25,9 @@ git submodule add https://github.com/chaconinc/DbConnector
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-🎯 Переходим в папку репозитория
-🎯 Комитим
-🎯 `MR` в master
+🎯 Переходим в папку репозитория  
+🎯 Комитим  
+🎯 `MR` в master  
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
