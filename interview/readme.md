@@ -2,7 +2,8 @@
 
 * **<a href="./pages/psychological-preparation/readme.md">Психологическая подготовка</a>**
 * **<a href="./pages/about-me/readme.md">Расказ о своем опыте</a>**
-
+* **<a href="./pages/action-plan/readme.md">План действий</a>**
+  
 * **<a href="./pages/git/readme.md">GIT</a>**
 * **<a href="./pages/common/readme.md">Общие технологии</a>**
 * **<a href="./pages/bundler/readme.md">Бандлеры</a>**

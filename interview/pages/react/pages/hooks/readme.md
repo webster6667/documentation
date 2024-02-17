@@ -68,8 +68,8 @@ export default function Counter() {
 
 ----
 
-🎯 Хук срабатывает при `mount` компонента, и при каждом изменении указанных пропсов      
-🎯 Хук возвращает функцию, которая сработает при `unmount` либо при изменении указаных пропсов  
+🎯 Хук срабатывает при `mount` компонента, и при каждом изменении указанных `deps`-ов        
+🎯 Хук возвращает функцию, которая сработает при `unmount` либо при изменении указаных `deps`-ов  
 
 ```typescript jsx
 useEffect(() => {
@@ -78,7 +78,36 @@ useEffect(() => {
     return () => {
         console.log('was unmount')
     }
-}, []) 
+}, [])
+```  
+
+```typescript jsx
+const [clickCount, setclickCount] = useState(0)
+
+useEffect(() => {
+    const clickingStarted = clickCount > 0
+    
+    if (clickingStarted) {
+
+        // Старт таймера после первого клика
+        const timer = setTimeout(() => {
+            alert('late 1s after last click')
+        }, 1000)
+
+        // 🎯 Функция срабатывает при новом клике, который изменяет clickCount
+        // 🎯 Называется функция отчистки, потому что срабатывает при изменении зависимостей или unmount
+        // 🎯 При этом хранит в замыкании данные записанные еще до изменения зависимостей или unmount 
+        // 🎯 Тем самым позволяет подчищать листенеры и таймеры объявленные в предыдущем вызове useEffect    
+        // 🎯 Перед тем как будут объявленны новые или произведен или unmount 
+        return () => {
+            // Отчистит предыдущий таймер, если след клик произошел раньше 1s 
+            clearTimeout(timer)
+        }
+        
+    }
+    
+    
+}, [clickCount])
 ```
 
 ----
@@ -92,13 +121,36 @@ useEffect(() => {
 
 👆 Хук хранящий стейт или `DOM` элемент в замыкании      
 &emsp;&emsp; 🎯 При изменении значений внутри `ref.current`, не происходит ререндера      
-  
+&emsp;&emsp; 🎯 Не переписывает данные внутри `ref.current` при ререндере    
+
 ```typescript jsx
 const MyInput = () => {
-    const inputRef = useRef();;
+    const inputRef = useRef();
     return <input ref={inputRef} />;
 }
 ```
+---
+```typescript jsx
+const MyForm = () => {
+    const [value, setValue] = useState('')
+    const clickCountRef = useRef(0)
+    const clickCountHandler = () => {
+        clickCountRef.current += 1
+    }
+    const submitHandler = () => {
+        saveClickCoutToServer(clickCountRef.current)
+    }
+
+    return <form onSubmit={} >
+        <input onclick={clickCountHandler} value={value} onChange={(e) => setValue(e.target.value)} />
+        <button type='submit' >Submit</button>
+    </form>;
+}
+```
+
+🎯 Хранит технические данные(клики по инпуту), которые мутируются на ходу, не вызывая ререндера      
+
+🎯 При вводе данных в `input` вызывается `setState`, вызывается ререндер, но кол-во кликов не обнуляется
 
 ----
 
@@ -110,7 +162,7 @@ const MyInput = () => {
 ----
 
 👆 Хук который пробрасывает переданные данные всем дочерним компонентам, без `propsDrilling`  
-  
+
 ```typescript jsx
 const AlertContext = React.createContext()
 
@@ -210,7 +262,6 @@ const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
 </details>
 
-
 <details>
 <summary> 🔹 <code>useSyncExternalStore</code></summary>
 
@@ -221,7 +272,6 @@ const calculation = useMemo(() => expensiveCalculation(count), [count]);
 ----
 
 </details>
-
 
 <details>
 <summary> 🔹 <code>useInsertionEffect</code></summary>
@@ -304,7 +354,6 @@ export const MyForm = () => {
 ----
 
 </details>
-
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
