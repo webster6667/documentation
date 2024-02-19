@@ -13,6 +13,6 @@
 * **<a href="./pages/web-hooks">Web Hooks</a>**
 * **<a href="./pages/server-sent-events">Server Sent Event</a>**
 * **<a href="./pages/cors">CORS</a>**
-* **<a href="./pages/JWT">jwt</a>**  
+* **<a href="./pages/jwt">jwt</a>**  
 * **<a href="./pages/sessions">Sessions</a>**
 * **<a href="./pages/o-auth2">oAuth2</a>**  
