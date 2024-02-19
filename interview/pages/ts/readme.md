@@ -59,9 +59,24 @@ typeof 'my name' // string
 type Arr<T> = T extends (infer U)[] ? U : never;
 ```
 
+```typescript
+const myObject = {
+  name: 'Ben',
+  age: 22
+}
+
+type GenericInf<T> = T extends {
+  [key: string]: infer U
+} ? U : never
+
+type A = GenericInf<typeof myObject> // 👉🏼 A: string | number
+```
+
 🔹 `infer` Используеться только в условных дженериках
 
 🔹 Заданный алиас доступен только в `true` конструкции условия
+
+
 
 ---
 
@@ -119,6 +134,59 @@ function isAdmin(user: any): user is Admin {
 &emsp;&emsp; 👆 Вернет тип промисов      
   
 
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> Как полчуить конкретные значения, а не просто типы?</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+Используем `as const`
+
+```typescript
+const animals = ['cat', 'dog', 'mouse'] as const
+type Animal = typeof animals[number]
+```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> Как получить все ключи объекта?</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> Перебор типов циклом</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```typescript
+type FormProps = {
+  name: string,
+  age: number
+}
+
+type ValidationScheme<T> = {
+  [K in keyof T]: {
+      value: T[K],
+      check: boolean,
+      inputName: K
+  }
+}
+
+type ValidationSchemeForm = ValidationScheme<FormProps>
+```
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
