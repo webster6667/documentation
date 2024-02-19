@@ -16,3 +16,7 @@
 * **<a href="./pages/jwt">jwt</a>**  
 * **<a href="./pages/sessions">Sessions</a>**
 * **<a href="./pages/o-auth2">oAuth2</a>**  
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
