@@ -1,15 +1,53 @@
 # Render
 
 <details>
+<summary> Влияние <code>async/defer</code> на загрузку html странички</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🔹 `async`         
+&emsp;&emsp; 🎯 Ассинхронный скрипт, не блокирующий поток  
+&emsp;&emsp; 🎯 Загружает в произвольном порядке  
+&emsp;&emsp; 🎯 Запускается сразу, даже если `dom` не готов           
+
+🔹 `deffer`        
+&emsp;&emsp; 🎯 Ассинхронный скрипт, не блокирует поток  
+&emsp;&emsp; 🎯 Загрузяться только после полной загрузки странички      
+&emsp;&emsp; 🎯 Запустятся в порядке объявления     
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
 <summary> Как происходит процесс рендеринга странички</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-🎯 Браузер парсит `html` документ, создавая `DOM` и `CSSOM`        
+🎯 Идет запрос в `dns` для определения доменного имени   
+🎯 Получаем `ip`, установка соединения, проходит запрос на сервер        
+🎯 Сервер возращает `html` файл  
+🎯 Браузер парсит `html` документ, создавая `DOM` и `CSSOM`             
+🎯 Если встречаются скрипты без тега `async/deffer`, блокируют создание `DOM`   
 🎯 Далее идет сопоставление `DOM` и `CSSOM` для того что бы создать (`дерево рендера` | `renderTree`), которое включает в себя только те теги и стили, которые нужно отрисовать в браузере  
 🎯 Далее идет стадия `Layout` || `Reflow`, в которой отрисовываеться геометрия и расположение блоков  
 🎯 Далее идет `paint` - процесс раскрашивание пикселей    
 🎯 Последним идет `Composite` - вынос отрисованой картинки на видео карту, и любая работа со слоями(Вынос элемента на новый слой, opacity, transform)    
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> Что такое <code>Reflow</code> и <code>Repaint</code></summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+🎯 `Reflow`       
+&emsp;&emsp 👆 Изменение геометрии, затрагивающее позицию всех остальных элементов    
+  
+🎯 `Repaint`      
+&emsp;&emsp 👆 Перекраска только одного элемента   
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

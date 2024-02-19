@@ -239,6 +239,52 @@ console.log(DomElement.radius); //обращение к статическому
 
 </details>
 
+<details>
+<summary> Класс может наследоваться только от одного класса, а что делать если нужны методы из двух?</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+В таких случаях выполняют примеси - просто копирования методов из одного класса в прототип другого
+
+```javascript
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+    
+    getName() {
+        return this.name;
+    }
+}
+
+class Admin extends User {
+    constructor(name, soft) {
+        super(name)
+        this.soft = soft;
+    }
+    
+    getSoft() {
+        return this.soft;
+    }
+}
+
+let userMixins = {
+    getPrice(kind) {
+        return kind * 5;
+    }
+};
+
+Object.assign(Admin.prototype, userMixins)
+
+const admin = new Admin({name: 'ben', soft: 'linux'})
+
+console.log(admin.getPrice(5));
+```
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**

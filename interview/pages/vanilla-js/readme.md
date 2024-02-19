@@ -17,9 +17,16 @@
 * **<a href="./pages/constructor/readme.md">Конструкторы</a>**
 * **<a href="./pages/arrays/readme.md">Прототипное наследование</a>**   
 * **<a href="./pages/classes/readme.md">Классы</a>**   
-* **<a href="./pages/arrays/readme.md">Map</a>**     
-
-
+* **<a href="./pages/map/readme.md">Map</a>**    
+* **<a href="./pages/week-map/readme.md">WeekMap</a>**
+* **<a href="./pages/set/readme.md">Set</a>**  
+* **<a href="./pages/week-set/readme.md">WeekSet</a>**    
+* **<a href="./pages/date/readme.md">Работа с датой</a>**   
+* **<a href="./pages/error/readme.md">Обработка ошибок</a>**
+* **<a href="./pages/promise/readme.md">Промисы</a>**  
+* **<a href="./pages/async-await/readme.md">Async/Await</a>**
+* **<a href="./pages/iterators/readme.md">Итераторы</a>**
+* **<a href="./pages/proxy/readme.md">Прокси</a>**
 * **<a href="./pages/generators/readme.md">Генератор</a>**
 
 <br>
