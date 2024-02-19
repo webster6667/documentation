@@ -23,7 +23,7 @@
 ---
 
 * **<a href="./pages/architecture/readme.md">Архитектура</a>**   
-* **<a href="./pages/clear-js/readme.md">Чистый JS</a>**   
+* **<a href="./pages/vanilla-js/readme.md">Чистый JS</a>**   
 * **<a href="./pages/browser-js/readme.md">Браузерный JS</a>**   
 
 ---
