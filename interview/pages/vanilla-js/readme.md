@@ -23,6 +23,10 @@
 * **<a href="./pages/week-set/readme.md">WeekSet</a>**    
 * **<a href="./pages/date/readme.md">Работа с датой</a>**   
 * **<a href="./pages/error/readme.md">Обработка ошибок</a>**
+
+
+* **<a href="./pages/event-loop/readme.md">Event Loop</a>**
+
 * **<a href="./pages/promise/readme.md">Промисы</a>**  
 * **<a href="./pages/async-await/readme.md">Async/Await</a>**
 * **<a href="./pages/iterators/readme.md">Итераторы</a>**
