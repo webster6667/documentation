@@ -44,10 +44,10 @@
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🎯 `Reflow`       
-&emsp;&emsp 👆 Изменение геометрии, затрагивающее позицию всех остальных элементов    
+&emsp;&emsp; 👆 Изменение геометрии, затрагивающее позицию всех остальных элементов    
   
 🎯 `Repaint`      
-&emsp;&emsp 👆 Перекраска только одного элемента   
+&emsp;&emsp; 👆 Перекраска только одного элемента   
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

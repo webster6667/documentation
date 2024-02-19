@@ -10,19 +10,19 @@ const newElem = document.createElement("div").innerHTML = 'content'
 ```
 
 `element.append(newElem)`  
-&emsp;&emsp 👆 Вставить в начало дочерней коллекции  
+&emsp;&emsp; 👆 Вставить в начало дочерней коллекции  
 
 `element.prepend(newElem)`  
-&emsp;&emsp 👆 Вставить в конец дочерней коллекции  
+&emsp;&emsp; 👆 Вставить в конец дочерней коллекции  
 
 `element.before(newElem)`  
-&emsp;&emsp 👆 Вставить до элемента
+&emsp;&emsp; 👆 Вставить до элемента
 
 `element.after(newElem)`  
-&emsp;&emsp 👆 Вставить после элемента
+&emsp;&emsp; 👆 Вставить после элемента
 
 `element.replaceWidth(newElem)`  
-&emsp;&emsp 👆 Заменить указанный элемент на новый  
+&emsp;&emsp; 👆 Заменить указанный элемент на новый  
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
@@ -40,16 +40,16 @@ element.insertAdjacentHTML('afterbegin');
 ```
 
 🎯 `beforeBegin`      
-&emsp;&emsp 👆 До элемента    
+&emsp;&emsp; 👆 До элемента    
 
 🎯 `afterBegin`      
-&emsp;&emsp 👆 В начало
+&emsp;&emsp; 👆 В начало
 
 🎯 `beforeEnd`      
-&emsp;&emsp 👆 В конец  
+&emsp;&emsp; 👆 В конец  
 
 🎯 `afterEnd`      
-&emsp;&emsp 👆 Сразу после элемента   
+&emsp;&emsp; 👆 Сразу после элемента   
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

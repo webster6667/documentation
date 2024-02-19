@@ -170,6 +170,8 @@ export const useAlert = () => {
   return useContext(AlertContext)
 }
 
+///
+
 export const AlertProvider = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false)
     const toggle = () => setIsVisible(prev => !prev)
@@ -184,6 +186,8 @@ export const AlertProvider = ({ children }) => {
     )
 }
 
+//
+
 const Alert = () => {
     const {visible} = useAlert()
 
@@ -193,6 +197,8 @@ const Alert = () => {
         Alert
     </div>)  
 }
+
+//
 
 const Main = () => {
     const {toggle} = useAlert()

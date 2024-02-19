@@ -6,16 +6,16 @@
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🎯 `DomContenLoaded`      
-&emsp;&emsp 👆 Дом построен, и с ним можно работать    
+&emsp;&emsp;👆 Дом построен, и с ним можно работать    
   
 🎯 `loaded`      
-&emsp;&emsp 👆 Все ресурсы загружены    
+&emsp;&emsp; 👆 Все ресурсы загружены    
 
 🎯 `before`    
-&emsp;&emsp 👆 Событие перед уходом со странички  
+&emsp;&emsp; 👆 Событие перед уходом со странички  
 
 🎯 `unload`    
-&emsp;&emsp 👆 Пользователь покинул сраничку   
+&emsp;&emsp; 👆 Пользователь покинул сраничку   
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
