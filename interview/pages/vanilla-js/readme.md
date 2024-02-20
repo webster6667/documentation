@@ -13,9 +13,9 @@
 * **<a href="./pages/numbers/readme.md">Работа с числами</a>**  
 * **<a href="./pages/arrays/readme.md">Работа с массивами</a>**
 * **<a href="./pages/object/readme.md">Работа с объектами</a>**
-* **<a href="./pages/arrays/readme.md">Работа с контекстом</a>**  
+* **<a href="./pages/this/readme.md">Работа с контекстом</a>**  
 * **<a href="./pages/constructor/readme.md">Конструкторы</a>**
-* **<a href="./pages/arrays/readme.md">Прототипное наследование</a>**   
+* **<a href="./pages/proto/readme.md">Прототипное наследование</a>**   
 * **<a href="./pages/classes/readme.md">Классы</a>**   
 * **<a href="./pages/map/readme.md">Map</a>**    
 * **<a href="./pages/week-map/readme.md">WeekMap</a>**
