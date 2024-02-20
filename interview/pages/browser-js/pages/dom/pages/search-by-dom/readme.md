@@ -7,11 +7,11 @@
 
 При помощи команд:  
 
-🎯 `document.querySelector`
-🎯 `document.querySelectorAll`
-🎯 `document.getElementById`
-🎯 `document.getElementsByClassName`  
-🎯 `document.getElementsByTagName`
+🎯 `document.querySelector`   
+🎯 `document.querySelectorAll`   
+🎯 `document.getElementById`   
+🎯 `document.getElementsByClassName`     
+🎯 `document.getElementsByTagName`   
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 
