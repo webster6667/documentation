@@ -2,7 +2,6 @@
 
 * **<a href="./pages/life-cycle/readme.md">Жизненый цикл реакта</a>**
 * **<a href="./pages/dom-update/readme.md">React Fiber</a>**    
-* **<a href="./pages/react/readme.md">Процесс рендеринга компонента - </a>**
 * **<a href="./pages/hooks/readme.md">Хуки</a>**
 * **<a href="./pages/hydrate/readme.md">SSR Hydrate</a>**  
 * **<a href="./pages/memo/readme.md">memo</a>**  
