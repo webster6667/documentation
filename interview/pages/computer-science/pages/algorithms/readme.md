@@ -32,3 +32,7 @@ ___
 **<a href="./pages/bubble-sort/readme.md">Сортировка пузырьком</a>**  
 **<a href="./pages/quick-sort/readme.md">Быстрая сортировка</a>**  
 **<a href="./pages/graph/readme.md">Графы</a>**
+
+<br>
+
+### ⟵ **<a href="../../readme.md">Назад</a>**
