@@ -23,7 +23,7 @@
 </details>
 
 <details>
-<summary> Куча</summary>
+<summary> Куча (Пирамида)</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
