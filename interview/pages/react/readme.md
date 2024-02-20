@@ -251,6 +251,44 @@ const MyCmp = <K extends string>({value}: MyCmpProps<K>) => {
 
 </details>
 
+<details>
+<summary> Вставка html кода, без отчистки кода</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+```typescript jsx
+const htmlContent = "<p>Это HTML контент</p>";   
+
+<Component dangerouslySetInnerHTML={{ __html: htmlContent }} />
+```
+
+<details>
+<summary> <sup>⭐</sup>❓ Зачем может быть нужно?</summary>
+
+---
+
+Когда нужно дать пользователю сохранить в базу какую-то визуальную составляющую   
+При этом важно проверять этот `html` на валидность на сервере   
+
+---
+
+</details>
+
+<details>
+<summary> <sup>⭐</sup>❓ Как можно обойтись?  </summary>
+
+---
+
+Создать структуру данных объектами(мапу), которые будет сохранят сервер, и парсить клиент, правильно отображая данные
+
+---
+
+</details>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
