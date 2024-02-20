@@ -49,6 +49,8 @@
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
+🎯 Однонаправленные      
+🎯 Двунаправленные      
 
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
