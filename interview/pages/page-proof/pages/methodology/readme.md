@@ -38,7 +38,18 @@
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
-Полностью исключает конфликты, в микрофронтендах, где очень много сущностей, которые всетаки могут пересечся названиями    
+Полностью исключает конфликты, в микрофронтендах, где очень много сущностей, которые всетаки могут пересечся названиями
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
+<details>
+<summary> CSS-in-JS</summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+Генерация `css` кода `js`-ом в рантайме  
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
 

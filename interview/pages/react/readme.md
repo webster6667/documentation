@@ -160,19 +160,6 @@ useEffect(() => {
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 <details>
-<summary> <sup>⭐</sup>❓ useRef</summary>
-
----
-
-```typescript jsx
-const myRef = useRef<HTMLElement>(null);
-```
-
----
-
-</details>
-
-<details>
 <summary> <sup>⭐</sup>❓ <code>HTML</code> компоненты</summary>
 
 ---
@@ -190,12 +177,74 @@ export const MyCmp: FC<MyCmpProps> = () => {
 ```
 
 🎯 `HTMLAttributes`    
-&emsp;&emsp; 👆 Дефолтные `html` пропсы без реактовских особенностей   
+&emsp;&emsp; 👆 Дефолтные `html` пропсы без реактовских особенностей
 
 🎯 `HTMLProps`    
-&emsp;&emsp; 👆 Это `HTMLAttributes` с чилдренами и key и прочим      
+&emsp;&emsp; 👆 Это `HTMLAttributes` с чилдренами и key и прочим
 
 
+
+---
+
+</details>
+
+<details>
+<summary> <sup>⭐</sup>❓ useRef</summary>
+
+---
+
+```typescript jsx
+const htmlElementRef = useRef<HTMLElement>(null);
+```
+
+```typescript jsx
+import { RefObject, useEffect, useState } from "react";
+
+export type UseIsDOMElementOverflow = (props: {
+  inputRef: RefObject<HTMLElement>;
+  depsValue: any;
+}) => boolean;
+
+export const useIsHtmlElementOverflow: UseIsDOMElementOverflow = ({
+  htmlRef,
+  depsValue,
+}) => {
+  const [isInputOverflow, setIsInputOverflow] = useState(false);
+
+  useEffect(() => {
+    if (htmlRef.current) {
+      setIsInputOverflow(
+        htmlRef.current.scrollWidth > htmlRef.current.offsetWidth
+      );
+    }
+  }, [depsValue]);
+
+  return isInputOverflow;
+};
+```
+
+---
+
+</details>
+
+<details>
+<summary> <sup>⭐</sup>❓ forwardRef</summary>
+
+---
+
+```typescript jsx
+import React, { forwardRef, ForwardedRef } from 'react';
+
+interface MyComponentProps {
+  // Your component props
+}
+
+// Define your component
+const MyComponent = forwardRef<HTMLDivElement, MyComponentProps>((props, ref: ForwardedRef<HTMLDivElement>) => {
+  // Use ref as a regular ref
+  return <div ref={ref}>{/* Your component JSX */}</div>;
+});
+```
 
 ---
 

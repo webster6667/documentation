@@ -128,6 +128,17 @@
 
 </details>
 
+<details>
+<summary> Как узнать является ли элемент <code>a</code> дочерним элементом <code>b</code></summary>
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
+
+
+
+![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-down.svg)
+
+</details>
+
 <br>
 
 ### ⟵ **<a href="../../readme.md">Назад</a>**
