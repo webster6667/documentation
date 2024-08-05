@@ -43,6 +43,8 @@ https://fsymbols.com/signs/arrow/
 💊 - Как лечить   
 &emsp;&emsp; - табуляция  
 
+💻 - code
+
 <img src="https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/ts.svg" height="20px" title="ts" >
 
 📜 - файл
