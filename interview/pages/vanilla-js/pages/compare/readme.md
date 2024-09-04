@@ -48,7 +48,7 @@
 </details>
 
 <details>
-<summary> Какие типы операторы сравнения знаешь?</summary>
+<summary> Какие операторы сравнения знаешь?</summary>
 
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
