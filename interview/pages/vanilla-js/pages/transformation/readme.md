@@ -214,7 +214,24 @@ String([1, 2, 3, [3, 4], () => 5, {}]) // 👉🏼 '1,2,3,3,4,() => 5,[object Ob
 ![illustration](https://raw.githubusercontent.com/webster6667/documentation/master/documentation-data/illustrations/dd-up.svg)
 
 🎯 `Boolean(1)`      
-🎯 `!!5`
+🎯 `!!5`  
+🎯 `!5`  
+&emsp;&emsp; 👆 Так же преобразует в `boolean`, но вернет противоположное значение     
+  
+<details>
+<summary> 🧠 Образ для заучивания</summary>
+
+---
+
+🎯 `!` волшебная палочка, превращающая любое значение в `boolean`    
+&emsp;&emsp; 👆 Но с побочным эффектом, `boolean`, становится противоположным  
+🎯 `!!`      
+&emsp;&emsp; 👆 Что бы после превращения избавится от побочного эффекта, нужно дополнительное заклинание, второй взмах палочки    
+
+
+---
+
+</details>
 
 <details>
 <summary> <sup>⭐</sup>❓ Что вернет <code>Boolean(1)</code></summary>

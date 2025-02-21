@@ -256,7 +256,6 @@
 
 🎯 `undefined == undefined`         
 🎯 `undefined === undefined`  
-🎯 `undefined >= null`  
 ---
 
 </details>
